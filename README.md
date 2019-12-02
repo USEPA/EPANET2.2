@@ -1,1 +1,1 @@
-# EPANET2.2.
+# EPANET2.2
