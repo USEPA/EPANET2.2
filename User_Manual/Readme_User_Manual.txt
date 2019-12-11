@@ -1,0 +1,1 @@
+This folder will manage the HTML source code files for the EPANET User's Manual.
