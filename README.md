@@ -1,4 +1,4 @@
-# EPANET2.2
+# EPANET 2.2
 # DESCRIPTION
 This repository was established to provide U.S. EPA’s release of 2.2.0.  The last official release of EPANET was version 2.00.12, dated 2008.  The release of EPANET 2.2.0 represents a significant step forward in two important ways.  First, the EPANET 2.2.0 release represents a new, open source software project in collaboration with the community at OpenWaterAnalytics (https://github.com/OpenWaterAnalytics/EPANET) to maintain and extend EPANET.  The EPANET developers’ community at OWA is composed of dedicated volunteers from around the world who have a passion for EPANET.  Second, EPANET 2.2.0 includes major updates to the hydraulic and water quality engines of EPANET 2.00.12.
 This repository is being set up to bring together the EPANET engine contributions from the EPA/OWA’s release of EPANET 2.2.0 along with U.S. EPA’s effort to update the Delphi-based user interface, user’s manual, and the integrated Help manual, which resides within the EPANET graphical user interface.
