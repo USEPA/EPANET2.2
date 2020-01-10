@@ -622,9 +622,9 @@ over the project's lifetime.
 
 #### PR16. Perform version control of identified software product artifacts
 
-A software repository has been set up for EPANET using GitHub and can be
-found at https://github.com/USEPA/Water-Distribution-Network-Model and
-at https://github.com/USEPA/SWMM-EPANET\_User\_Interface.
+Multiple Github.com software repositories have been set up and will be used for 
+maintaining, testing, and advancing EPANET, e.g., <https://github.com/USEPA/EPANET2.2> 
+and at <https://github.com/openwateranalytics/EPANET>.
 
 #### PR17. Record and track issues associated with the software product.
 
@@ -659,8 +659,8 @@ satisfactory.
 
 #### PR19. Plan and generate the release package.
 
-Official release versions of EPANET software will be produced at least
-bi-annually. The release includes updated documentation, updated GitHub
+Official release versions of EPANET software will be produced regularly. 
+The release includes updated documentation, updated GitHub
 websites, and testing reports. The most current version of the software
 under active development is continuously available via GitHub. The
 software repository will include instructions for developers interested
@@ -676,7 +676,8 @@ software practices suggest that code coverage tests should evaluate 90%
 of files and 60% of lines of code. EPA will provide a software testing
 report documenting the results tests and testing metrics. Additionally,
 EPA will manually evaluate the software release before public
-distribution and perform cross-platform portability tests. EPA staff
+distribution while also coordinating and collborating with the community to
+other needed tests and reviews, e.g., perform cross-platform portability tests. EPA staff
 will also review all updates to user manuals.
 
 Data Acquisition and Management
@@ -715,7 +716,7 @@ repeatability information is obtained from the source of the data.
 Calibration practices include recording the mismatch in the data as a
 function of different input parameter values. The frequency with which
 model calibration must be conducted is dependent on the data, the model
-and the intended use of the mode; however, any time model parameters are
+and the intended use of the model; however, any time model parameters are
 varied, the calibration process is repeated.
 
 #### PR21. Document objectives and methods of model calibration activities \[acceptance criteria, frequency, method of assessing goodness-of-fit\]
