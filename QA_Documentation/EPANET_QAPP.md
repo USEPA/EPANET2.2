@@ -1,7 +1,7 @@
 ﻿Quality Assurance Project Plan
 ==============================
 
-Research and Development on ORD’s Water Distribution Network Model – EPANET
+Research and Development on U.S. EPA’s Software Application for Modeling Hydraulic and Water Quality Behavior of Drinking Water Distribution Systems:  EPANET
 ---------------------------------------------------------------------------
 
 #### US EPA / ORD / CESER / Water Infrastructure Division / Drinking Water Management Branch
@@ -38,6 +38,8 @@ RAP - Research Action Plan
 
 UI - User Interface
 
+U.S. EPA - United States Environmental Protection Agency
+
 VOTD - Version of the Day
 
 WDN - Water Distribution Network
@@ -67,30 +69,31 @@ Introduction
 
 This document describes the Quality Assurance (QA) program for U.S.
 Environmental Protection Agency (EPA) Office of Research and Development
-(ORD)'s development and maintenance of its water distribution network
-(WDN) simulation model EPANET. Development of tools such as EPANET for
-the simulation of hydraulics and water quality in the nations drinking
-water systems is central to EPA's mission of protecting public health.
-EPANET is widely used to plan, design, analyze, and regulate WDNs.
-EPANET is also an important component of CESER's water security tools
-and has been adopted by third party commercial vendors as the
-computational core of their derivative products.
+(ORD)'s development and maintenance of its software application for modeling 
+hydraulic and water quality behavior of drinking water distribution systems, 
+known as EPANET. Development of tools such as EPANET for the simulation of 
+hydraulics and water quality in the nations drinking water systems is central 
+to EPA's mission of protecting public health.  EPANET is widely used to plan, 
+design, analyze, and regulate drinking water distribution systems.  EPANET is 
+also an important component of CESER's water security and resilience tools and 
+has been adopted by third party commercial vendors as the computational core 
+of their derivative products.
 
-ORD developed EPANET in the 1990's out of a need to improve
-understanding of water quality processes that occur in WDNs. Major work
-on EPANET ceased in the early 2000's. It last received a minor update in
-2008. It is of the utmost importance that EPANET is well engineered
-software that is fully capable of supporting these important stakeholder
+ORD developed EPANET in the 1990's out of a need to improve understanding of 
+hydraulic and water quality processes that occur in WDNs. Major work
+on EPANET ceased in the early 2000's. EPANET was last updated (minor) in
+2008. It is important that EPANET be well engineered and maintained
+software that is fully capable of supporting needed important stakeholder
 activities. CESER will work in close cooperation with EPANET developer and 
-User Community to develop and maintain EPANET software. This work is focused 
-on advancing EPANET development through community cooperation,
+User Community to develop and maintain EPANET software. This project is focused 
+on advancing EPANET development and maintenance through community cooperation,
 modernizing the code base, and integrating new features in response to
 EPA mission driven decisions and stakeholder needs.
 
-This work is performed under the authority granted by Congress to the
+This project is performed under the authority granted by Congress to the
 EPA within the Safe Drinking Water Act. This work directly supports
 drinking water research activities within ORD and water regulatory
-activities of the Office of Water (OW). This work seeks to help communities
+activities of the Office of Water (OW). This project seeks to help communities
 efficiently direct WDN infrastructure investments by providing utilities
 with modeling tools for planning and design.
 
@@ -106,7 +109,8 @@ Documentation (EPA, 2015). ASC is a Department of Energy (DOE) program
 that is focused on developing advanced modeling and simulation
 capabilities that leverage high-performance computing resources. This
 ASC derivative plan has been successfully used to manage project quality
-in several EPA NHSRC modeling software projects including WST and WNTR.
+in two EPA water distribution system modeling software projects, specifically
+WST and WNTR.
 
 Project Description
 -------------------
@@ -122,7 +126,7 @@ commercially available software technologies, integrating EPANET-MSX, and
 features from the WST and WNTR toolkits and other EPANET-based software
 tools. Features from other toolkits may be modified to adapt them to the
 general planning, design, and daily operational analysis tasks for which
-EPANET is commonly used. We will also work with the broader Water
+EPANET is commonly used. EPA will also work with the broader Water
 Distribution System Analysis (WDSA) research community and our
 stakeholders to encourage the development of innovative new features for
 the EPANET.
@@ -140,10 +144,10 @@ Project Objectives
 ------------------
 
 The primary objective of this project is to perform in house research
-and development on the EPANET UI application and computational engine
+and development on the EPANET UI application and computational engines and their
 features and to work with open-source development communities and other
 stakeholder organizations on integrating their feature contributions.
-The project team will employ software development best practices related
+EPA project team will employ software development best practices related
 to design, development, testing, documentation, delivery, installation,
 and maintenance to ensure cost effectiveness of this project and
 performance of the resulting software applications.
@@ -154,19 +158,18 @@ This research project comprises three major objectives:
     system (GIS) functionality, Python scripting capabilities, and
     support for third party plugins.
 
-2.  To modernize EPANET's computational engine making it a modular and
-    extensible software library that utilizes multi-threading and
-    graphics processing unit (GPU) computing capabilities to accelerate
-    innovative WDN analysis applications by EPA, our stakeholders, and
-    third party commercial developers.
+2.  To modernize and maintain EPANET's computational engines, e.g., 
+    ensuring the use of modular and extensible software library that utilizes 
+    multi-threading and graphics processing unit (GPU) computing capabilities to accelerate
+    innovative WDN analysis applications by EPA, our stakeholders, and third party commercial developers.
 
 3.  To harness EPANET as a technology transfer channel for delivering
-    NHSRC's EPANET-based tools to a wider audience of potential users.
+    EPA's EPANET-based tools to a wide audience of potential users.
 
 Project Schedule
 ----------------
 
-The goal of this project is to establish a development regimen for
+The goal of this project is to establish and coordinate a development regimen for
 EPANET that results in a cyclical schedule of periodic feature releases
 and software patches as needed. Periodic feature releases will integrate
 EPA and community feature development. Software patches will be
@@ -176,7 +179,7 @@ verification as described in this document will be utilized to minimize
 the incidence and severity of software quality issues.
 
 A bi-annual software release schedule is envisioned where EPANET UI and
-engine feature releases will occur every other year. Software patches
+engine feature releases will occur frequently. Software patches
 will be developed and released on demand as the need arises. Separating
 feature release and software patches in this manner will help improve
 software quality since defects are frequently introduced along with new
@@ -209,13 +212,13 @@ Quality Definition and Goals
 Quality is defined as the degree of excellence of something. Software
 quality can be measured in several meaningful ways:
 
-> • develop robust, reliable WDN modeling tools that can be effectively
+> • Develop robust, reliable WDN modeling tools that can be effectively
 > applied to realistic large-scale problems,\
-> • solve real-world water problems as described by our stakeholders,\
-> • satisfy the stated and implied needs, budget, and schedules of the
+> • Solve real-world water problems as described by our stakeholders,\
+> • Satisfy the stated and implied needs, budget, and schedules of the
 > EPA and our stakeholders,\
-> • be technically innovative, cost efficient, and\
-> • ensure continual quality improvement of the ongoing research and
+> • Be technically innovative, cost efficient, and\
+> • Ensure continual quality improvement of the ongoing research and
 > development activities.
 
 The quality assurance/quality control (QA/QC) goals for this software
@@ -242,7 +245,7 @@ Quality Assurance Practices
 ---------------------------
 
 This document adopts the breakdown of QA practices that are similar to
-those adopted in NHSRC project QA/QC documentation and EPA Requirements
+those adopted in WST and WNTR projects QA/QC documentation and EPA Requirements
 for Quality Assurance Project Plans (QAPPs) for Modeling:
 
 > • Project Management\
@@ -312,10 +315,10 @@ will have a medium-high LOF. This same risk based approach will also be
 applied to open source contributions as they are integrated with the
 code base. These applications will include software testing, version
 control, and documentation. Communication on these applications will
-occur during team meetings and on the software repository sites
-(<https://github.com/USEPA/Water-Distribution-Network-Model> and
-<https://github.com/USEPA/SWMM-EPANET_User_Interface>) and will be
-documented in meeting notes.
+occur during team meetings and on various Github.com software repository sites
+managed by U.S. EPA, e.g., <https://github.com/USEPA/EPANET2.2>. and at recognized
+community development sites, e.g., <https://github.com/OpenWaterAnalytics/EPANET>,
+and through documented meetings.
 
 Requirements Analysis
 ---------------------
@@ -331,19 +334,21 @@ Requirements are inputs to other practice areas.
 
 #### PR2. Identify, gather and manage stakeholders' expectations and requirements.
 
-EPA and community members are stakeholders of this project and help to
-define the project requirements. Members of the EPA project team will be
+EPA and community members are important stakeholders of this project and help to
+define and implement the project requirements. Members of the EPA project team will be
 regularly updated through team meetings. These meetings might be open to
 other stakeholders (e.g., open source community members, such as Open
-Water Analytics (OWA), EPA's OW staff or water utility staff) as needed.
+Water Analytics (OWA) at <https://github.com/OpenWaterAnalytics/EPANET/wiki>, 
+EPA's OW staff or water utility staff) as needed.
 
 #### PR3. Derive, negotiate, manage, and trace requirements. 
 
 Project requirements are broadly stated in the Statement of Work for
-project tasks and this QAPP. These requirements will be refined as the
-project continues. Negotiation, management, and tracking of these
-requirements will occur during research group meetings and will be
-documented in meeting notes.
+project tasks, by and in cooperation with the community stakeholders, e.g., OWA, and this QAPP. 
+These requirements will be refined as the project continues. Negotiation, management, 
+and tracking of these requirements will occur during research group meetings, documented in meeting notes,
+and formalized and implemented through the software repositories of the U.S. EPA and the community 
+contributors and stakeholders (e.g., <https://github.com/OpenWaterAnalytics/EPANET>).
 
 Risk Management
 ---------------
