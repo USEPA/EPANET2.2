@@ -774,7 +774,7 @@ repositories on EPA computers.
 The research has been carried out on Windows workstations. The primary
 compute engine for this effort is a 64-bit Windows workstation. Support
 for other platforms such as Linux and Mac OS will be developed and
-documented.
+documented, as needed.
 
 Software Verification
 =====================
@@ -799,7 +799,9 @@ changed, retesting and reevaluation of the changes will need to occur.
 In this project, software verification includes: team review of models,
 algorithms, and code; peer review of user manuals, tutorial documents,
 and webinars; automated software tests and documentation (included in
-the software release packages); issue tracking through the GitHub site.
+the software release packages); issue tracking through the GitHub site, both 
+U.S. EPA Github.com site (<https://github.com/USEPA/EPANET2.2> and the community
+development Github.com site (<https://github.com/OpenWaterAnalytics/EPANET>).
 
 #### PR27. Conduct tests to demonstrate that acceptance criteria are met and to ensure that previously tested capabilities continue to perform as expected.
 
@@ -815,13 +817,14 @@ performing as expected.
 
 #### PR28. Conduct independent technical reviews to evaluate adequacy with respect to requirements.
 
-EPA will define the independent technical reviews that are required for
+EPA will define any independent technical reviews that are required for
 software verification, including peer reviews of user manuals and other
-training materials. For this project, technical reviews of documentation
-and training materials are completed by team members and by technical
-peer review. Software is tested by team members and outside users. The
-GitHub sites are used to communicate reviews of the software to the
-development team.
+training materials. For this project, technical reviews are regularly and 
+consistently performed through coordination and collaboration with the community 
+software developers.  Additionally, reviews of documentation and training materials 
+are completed by team members and by technical peer review. Software is tested by team 
+members and community developers and users. Project GitHub.com sites are used to facilitate, document,
+and communicate reviews of the software to the development team as well as the wider user community.
 
 Training
 ========
