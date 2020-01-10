@@ -379,11 +379,14 @@ identified and analyzed in meetings and documented as necessary.
 Tasks are included in this project in order to mitigate risks, and these
 include: maintaining the software in a version control repository;
 continuous improvements of test coverage; performing a standard suite of
-tests prior to each public release; routine updates to the GitHub site
-(https://github.com/USEPA/Water-Distribution-Network-Model) and EPA's
+tests prior to each public release; routine updates and maintenance of the 
+U.S. EPA's GitHub archival repository for the project (e.g.,
+<https://github.com/USEPA/EPANET2.2> and EPA's
 EPANET website (<https://www.epa.gov/water-research/epanet>) to
 communicate new features; regular communication on budget and personnel
-issues between EPA project officers and EPA management.
+issues between EPA project officers and EPA management.  Central to this
+project is coordination and collaboration with the community stakeholders for
+EPANET development and maintenance (e.g., <https://github.com/OpenWaterAnalytics/EPANET>).
 
 Project Planning, Tracking, and Oversight
 -----------------------------------------
@@ -406,7 +409,9 @@ and re-negotiating requirements or acceptance criteria.
 
 The "project plan" is the aggregate of the individual tasks in the scope
 of work. The team will review and discuss the project plan during team
-meetings.
+meetings.  Again, central to this project is coordination and collaboration 
+with the community stakeholders for EPANET development and maintenance 
+(e.g., <https://github.com/OpenWaterAnalytics/EPANET>).
 
 #### PR7. Track project performance versus project plan and implement needed (corrective) actions.
 
@@ -446,13 +451,15 @@ being modeled.
 
 Modeling assumptions, related algorithmic formulations, and the
 limitations of these capabilities will be reviewed and critiqued
-internally during team meetings or dedicated peer reviews depending upon
+internally during team meetings, coordination and collaboration activities
+with community stakeholders or dedicated peer reviews depending upon
 the required LOF. Preliminary reviews focus on initial ideas or
 direction for a specific work product. These reviews seek both a "sanity
 check" and consider possible alternatives. Detailed reviews focus on the
 completed work product to ensure its acceptability and typically will
 invite customer participation. Additionally, external reviews are
-conducted through peer-reviewed journal articles and conferences.
+conducted through community software repository collaborations, peer-reviewed 
+journal articles and conferences.
 
 #### PR8. Document designs for models and algorithms
 
@@ -475,7 +482,7 @@ Preliminary software development efforts are targeted at developing
 "proof of concept" demonstrations that modeling and algorithmic
 techniques are effective for research purposes. These efforts typically
 employ small-scale or synthetic data sets to demonstrate the
-capabilities of the software. Furthermore, software design processes are
+capabilities of the software. Software design processes are
 generally minimized in favor of rapidly generating a basic modeling or
 analytic capability. Preliminary software development is done at low LOF
 unless specifically (by task and work breakdown) required to be at
@@ -487,7 +494,9 @@ Preliminary software implementations will be documented in the code
 itself, with command-line help features, and/or simple 'readme' files.
 As the implementations mature, they will be documented in the software
 user manuals. The extent and formality of the software's documentation
-will evolve along with the software itself.
+will evolve along with the software itself.  Software quality is improved
+through the coordination and collaboration with community software developers, e.g.,
+OWA.
 
 Testing Models and Algorithmic Techniques
 -----------------------------------------
@@ -504,7 +513,10 @@ validate models and algorithms in this manner.
 Automated unit tests will be developed to test individual modules of
 software packages against a suite of test problems with known solutions.
 All modeling and algorithmic outputs will be reviewed by the project
-team and external users.
+team and external users.  Community stakeholders and software developers will
+be leveraged to help ensure the highest quality.  Testing, reviews, and associated
+documentation will be conducted via the various Github.com repositories that support
+the project.
 
 Software Engineering
 ====================
@@ -526,16 +538,16 @@ always, software. Generally, software development processes include
 design, implementation, and testing of the software products or reuse of
 existing implementations. The specific instantiation of these practices
 depends on the LOF. Preliminary reviews of work products are done within
-the team. Final reviews invite external participation and are generally
-more formal.
+the team and, often, with the coordination and collaboration of the community
+stakeholders and software developers. Final reviews are generally more formal.
 
 #### PR12. Communicate and review design
 
 Software development design will be discussed during team meetings,
 described in the software documentation, and in white papers when
 appropriate. All changes to the code will be automatically tracked at
-GitHub.com/USEPA website with open access to the public
-(https://github.com/USEPA/Water-Distribution-Network-Model).
+at a GitHub.com/USEPA website with open access to the public
+(e.g., <https://github.com/USEPA/EPANET2.2>).
 
 #### PR13. Create required software and product documentation
 
@@ -543,11 +555,11 @@ As changes to the software are made, documentation will be updated. All
 changes to the code will be recorded by the GitHub websites. Whenever a
 change is made, the GitHub site instantaneously documents all changes to
 the code, the person who made the changes, and the date and time of the
-change. User manuals will be updated on a bi-annual basis to reflect the
+change. User manuals will be updated on as needed basis to reflect the
 latest release. Software and product documentation will be available at
-all times to all users via GitHub
-(https://github.com/USEPA/Water-Distribution-Network-Model) and EPA's
-EPANET (https://www.epa.gov/water-research/epanet) websites.
+all times to all users via a GitHub.com/USEPA website repository
+(e.g., <https://github.com/USEPA/EPANET2.2>) and EPA's
+EPANET (<https://www.epa.gov/water-research/epanet>) websites.
 
 #### PR14. Create and implement software tests
 
