@@ -1,0 +1,546 @@
+{-------------------------------------------------------------------}
+{                    Unit:    Consts.txt                            }
+{                    Project: EPANET2W                              }
+{                    Version: 2.2                                   }
+{                    Date:    6/24/19                               }
+{                    Author:  L. Rossman                            }
+{                                                                   }
+{  Constants used with EPANET2W and imported into Uglobals.pas.     }
+{-------------------------------------------------------------------}
+
+const
+
+// File names
+  INIFILE = 'epanet2.ini';
+  HLPFILE = 'epanet2.chm';
+  TUTORFILE = 'tutorial.chm';
+
+// Labels for network objects
+  ObjectLabel: array[JUNCS..OPTS] of PChar =
+    ('Junction','Reservoir','Tank',
+     'Pipe','Pump','Valve','Label',
+     'Pattern','Curve','Control','Option');
+
+//Control categories
+  ControlCategories: PChar = 'Simple'#13'Rule-Based'#0;
+
+//Option categories
+  OptionCategories: PChar =
+    'Hydraulics'#13'Quality'#13'Reactions'#13'Times'#13'Energy'#0;
+
+// Labels of X-Y curve types
+  CurveLabel: array [0..3] of PChar =
+    ('VOLUME','PUMP','EFFICIENCY','HEADLOSS');
+
+// Water Quality parameters
+  QualParams: array[0..3] of PChar = ('None', 'Chemical', 'Trace', 'Age');
+
+//WQ source types
+  SourceType: array[0..3] of PChar =
+    ('CONCEN','MASS','SETPOINT','FLOWPACED');
+
+//Data reporting units
+  USFlowUnits: array[0..4] of PChar =
+                 ('CFS', 'GPM', 'MGD', 'IMGD', 'AFD');
+  SIFlowUnits: array[0..4] of PChar =
+                 ('LPS', 'LPM', 'MLD', 'CMH', 'CMD');
+  BaseQualUnits: array[0..3] of PChar =
+                 ('', 'mg/L', 'percent', 'hours');
+  MassUnits:     array[0..1] of PChar = ('mg/L', 'ug/L');
+  BaseNodeUnits: array[0..NODEVIEWS,TUnitSystem] of PChar =
+                 (('',''),('ft','m'),('CFS','LPS'),('mg/L','mg/L'),
+                  ('CFS','LPS'),('ft','m'),('psi','m'),('mg/L','mg/L'));
+  BaseLinkUnits: array[0..LINKVIEWS,TUnitSystem] of PChar =
+                 (('',''),('ft','m'),('in','mm'),('mft','mm'),('',''),
+                  ('',''),('CFS','LPS'),('fps','m/s'),('ft/Kft','m/km'),
+                  ('',''),('mg/L/d','mg/L/d'),('mg/L','mg/L'));
+  MapUnits: array[0..3] of PChar =
+                  ('Feet', 'Meters', 'Degrees', 'None');
+
+//Link status conditions
+  LinkStatus: array[0..7] of PChar =
+    ('Closed', 'Closed', 'Closed', 'Open', 'Active', 'Open', 'Open', 'Open');
+
+//Auto-Length status
+  AutoLengthStatus: array[0..1] of PChar = ('Off', 'On');
+
+//Map Label meter types
+  MeterTypes: array[0..2] of PChar = ('None','Node','Link');
+
+//Relations used in search filters (these correspond to the elements of
+//TRelationType which is declared in the unit Uutils.pas)
+  FilterRelation: array[0..2] of PChar = ('Below','Equal To','Above');
+
+//Network object property lists (* denotes a required parameter)
+//The fields of a TPropRecord are defined in the PropEdit.pas unit.
+  JuncProps: array [0..15] of TPropRecord =
+   ((Name:'*Junction ID';      Style:esEdit;    Mask:emNoSpace; Length:MAXID),
+    (Name:'X-Coordinate';      Style:esEdit;    Mask:emNumber;  Length:0),
+    (Name:'Y-Coordinate';      Style:esEdit;    Mask:emNumber;  Length:0),
+    (Name:'Description';       Style:esEdit;    Mask:emNone;    Length:0),
+    (Name:'Tag';               Style:esEdit;    Mask:emNoSpace; Length:0),
+    (Name:'*Elevation';        Style:esEdit;    Mask:emNumber;  Length:0),
+    (Name:'Base Demand';       Style:esEdit;    Mask:emNumber;  Length:0),
+    (Name:'Demand Pattern';    Style:esEdit;    Mask:emNoSpace; Length:MAXID),
+    (Name:'Demand Categories'; Style:esButton;  Mask:emNone;    Length:0),
+    (Name:'Emitter Coeff.';    Style:esEdit;    Mask:emNumber;  Length:0),
+    (Name:'Initial Quality';   Style:esEdit;    Mask:emNumber;  Length:0),
+    (Name:'Source Quality';    Style:esButton;  Mask:emNone;    Length:0),
+    (Name:'Actual Demand';     Style:esReadOnly;Mask:emNone),
+    (Name:'Total Head';        Style:esReadOnly;Mask:emNone),
+    (Name:'Pressure';          Style:esReadOnly;Mask:emNone),
+    (Name:'Quality';           Style:esReadOnly;Mask:emNone));
+
+  ReservProps: array [0..12] of TPropRecord =
+   ((Name:'*Reservoir ID';   Style:esEdit;    Mask:emNoSpace; Length:MAXID),
+    (Name:'X-Coordinate';    Style:esEdit;    Mask:emNumber),
+    (Name:'Y-Coordinate';    Style:esEdit;    Mask:emNumber),
+    (Name:'Description';     Style:esEdit;    Mask:emNone),
+    (Name:'Tag';             Style:esEdit;    Mask:emNoSpace),
+    (Name:'*Total Head';     Style:esEdit;    Mask:emNumber),
+    (Name:'Head Pattern';    Style:esEdit;    Mask:emNoSpace; Length:MAXID),
+    (Name:'Initial Quality'; Style:esEdit;    Mask:emPosNumber),
+    (Name:'Source Quality';  Style:esButton;  Mask:emNone),
+    (Name:'Net Inflow';      Style:esReadOnly;Mask:emNone),
+    (Name:'Elevation';       Style:esReadOnly;Mask:emNone),
+    (Name:'Pressure';        Style:esReadOnly;Mask:emNone),
+    (Name:'Quality';         Style:esReadOnly;Mask:emNone));
+
+  TankProps:  array [0..21] of TPropRecord =
+   ((Name:'*Tank ID';       Style:esEdit;    Mask:emNoSpace;  Length:MAXID),
+    (Name:'X-Coordinate';   Style:esEdit;    Mask:emNumber),
+    (Name:'Y-Coordinate';   Style:esEdit;    Mask:emNumber),
+    (Name:'Description';    Style:esEdit;    Mask:emNone),
+    (Name:'Tag';            Style:esEdit;    Mask:emNoSpace),
+    (Name:'*Elevation';     Style:esEdit;    Mask:emNumber),
+    (Name:'*Initial Level'; Style:esEdit;    Mask:emPosNumber),
+    (Name:'*Minimum Level'; Style:esEdit;    Mask:emPosNumber),
+    (Name:'*Maximum Level'; Style:esEdit;    Mask:emPosNumber),
+    (Name:'*Diameter';      Style:esEdit;    Mask:emPosNumber),
+    (Name:'Minimum Volume'; Style:esEdit;    Mask:emPosNumber),
+    (Name:'Volume Curve';   Style:esEdit;    Mask:emNoSpace;  Length:MAXID),
+    (Name:'Can Overflow';   Style:esComboList; Mask:emNone;   Length:0;
+     List:'No'#13'Yes'),
+    (Name:'Mixing Model';   Style:esComboList; Mask:emNone;   Length:0;
+     List:'Mixed'#13'2Comp'#13'FIFO'#13'LIFO'),
+    (Name:'Mixing Fraction';Style:esEdit;    Mask:emPosNumber),
+    (Name:'Reaction Coeff.';Style:esEdit;    Mask:emNumber),
+    (Name:'Initial Quality';Style:esEdit;    Mask:emPosNumber),
+    (Name:'Source Quality'; Style:esButton;  Mask:emNone),
+    (Name:'Net Inflow';     Style:esReadOnly;Mask:emNone),
+    (Name:'Elevation';      Style:esReadOnly;Mask:emNone),
+    (Name:'Pressure';       Style:esReadOnly;Mask:emNone),
+    (Name:'Quality';        Style:esReadOnly;Mask:emNone));
+
+  PipeProps:  array [0..18] of TPropRecord =
+   ((Name:'*Pipe ID';      Style:esEdit; Mask:emNoSpace;  Length:MAXID),
+    (Name:'*Start Node';   Style:esEdit; Mask:emNoSpace;  Length:MAXID),
+    (Name:'*End Node';     Style:esEdit; Mask:emNoSpace;  Length:MAXID),
+    (Name:'Description';   Style:esEdit; Mask:emNone),
+    (Name:'Tag';           Style:esEdit; Mask:emNoSpace),
+    (Name:'*Length';       Style:esEdit; Mask:emPosNumber),
+    (Name:'*Diameter';     Style:esEdit; Mask:emPosNumber),
+    (Name:'*Roughness';    Style:esEdit; Mask:emPosNumber),
+    (Name:'Loss Coeff.';   Style:esEdit; Mask:emPosNumber),
+    (Name:'Initial Status';Style:esComboList; Mask:emNone; Length:0;
+     List:'Open'#13'Closed'#13'CV'),
+    (Name:'Bulk Coeff.';   Style:esEdit; Mask:emNumber),
+    (Name:'Wall Coeff.';   Style:esEdit; Mask:emNumber),
+    (Name:'Flow';          Style:esReadOnly;Mask:emNone),
+    (Name:'Velocity';      Style:esReadOnly;Mask:emNone),
+    (Name:'Unit Headloss'; Style:esReadOnly;Mask:emNone), {*** Updated 3/1/01 ***}
+    (Name:'Friction Factor';Style:esReadOnly;Mask:emNone),
+    (Name:'Reaction Rate'; Style:esReadOnly;Mask:emNone),
+    (Name:'Quality';       Style:esReadOnly;Mask:emNone),
+    (Name:'Status';        Style:esReadOnly;Mask:emNone));
+
+  PumpProps:  array [0..16] of TPropRecord =
+   ((Name:'*Pump ID';      Style:esEdit; Mask:emNoSpace;  Length:MAXID),
+    (Name:'*Start Node';   Style:esEdit; Mask:emNoSpace;  Length:MAXID),
+    (Name:'*End Node';     Style:esEdit; Mask:emNoSpace;  Length:MAXID),
+    (Name:'Description';   Style:esEdit; Mask:emNone),
+    (Name:'Tag';           Style:esEdit; Mask:emNoSpace),
+    (Name:'Pump Curve';    Style:esEdit; Mask:emNoSpace;  Length:MAXID),
+    (Name:'Power';         Style:esEdit; Mask:emPosNumber),
+    (Name:'Speed';         Style:esEdit; Mask:emPosNumber),
+    (Name:'Pattern';       Style:esEdit; Mask:emNoSpace;  Length:MAXID),
+    (Name:'Initial Status';Style:esComboList; Mask:emNone; Length:0;
+     List:'Open'#13'Closed'),
+    (Name:'Effic. Curve';  Style:esEdit; Mask:emNoSpace;  Length:MAXID),
+    (Name:'Energy Price';  Style:esEdit; Mask:emPosNumber),
+    (Name:'Price Pattern'; Style:esEdit; Mask:emNoSpace;  Length:MAXID),
+    (Name:'Flow';          Style:esReadOnly;Mask:emNone),
+    (Name:'Headloss';      Style:esReadOnly;Mask:emNone),
+    (Name:'Quality';       Style:esReadOnly;Mask:emNone),
+    (Name:'Status';        Style:esReadOnly;Mask:emNone));
+
+  ValveProps: array [0..14] of TPropRecord =
+   ((Name:'*Valve ID';      Style:esEdit;    Mask:emNoSpace;  Length:MAXID),
+    (Name:'*Start Node';    Style:esEdit;    Mask:emNoSpace;  Length:MAXID),
+    (Name:'*End Node';      Style:esEdit;    Mask:emNoSpace;  Length:MAXID),
+    (Name:'Description';    Style:esEdit;    Mask:emNone),
+    (Name:'Tag';            Style:esEdit;    Mask:emNoSpace),
+    (Name:'*Diameter';      Style:esEdit;    Mask:emPosNumber),
+    (Name:'*Type';          Style:esComboList; Mask:emNone;   Length:0;
+     List:'PRV'#13'PSV'#13'PBV'#13'FCV'#13'TCV'#13'GPV'),
+    (Name:'*Setting';       Style:esEdit;    Mask:emNoSpace;  Length:MAXID),
+    (Name:'Loss Coeff.';    Style:esEdit;    Mask:emPosNumber),
+    (Name:'Fixed Status';   Style:esComboList; Mask:emNone;   Length:0;
+     List:'None'#13'Open'#13'Closed'),
+    (Name:'Flow';           Style:esReadOnly;Mask:emNone),
+    (Name:'Velocity';       Style:esReadOnly;Mask:emNone),
+    (Name:'Headloss';       Style:esReadOnly;Mask:emNone),
+    (Name:'Quality';        Style:esReadOnly;Mask:emNone),
+    (Name:'Status';         Style:esReadOnly;Mask:emNone));
+
+  LabelProps: array [0..6] of TPropRecord =
+   ((Name:'Text';           Style:esEdit;      Mask:emNone),
+    (Name:'X-Coordinate';   Style:esEdit;      Mask:emNumber),
+    (Name:'Y-Coordinate';   Style:esEdit;      Mask:emNumber),
+    (Name:'Anchor Node';    Style:esEdit;      Mask:emNoSpace;  Length:MAXID),
+    (Name:'Meter Type';     Style:esComboList; Mask:emNone;     Length:0;
+     List:'None'#13'Node'#13'Link'),
+    (Name:'Meter ID';       Style:esEdit;      Mask:emNoSpace;  Length:MAXID),
+    (Name:'Font';           Style:esButton;    Mask:emNone));
+
+  HydraulicProps: array [0..19] of TPropRecord =
+    ((Name:'Flow Units';         Style:esComboList;  Mask:emNone; Length:0;
+      List:'CFS'#13'GPM'#13'MGD'#13'IMGD'#13'AFD'#13 +
+           'LPS'#13'LPM'#13'MLD'#13'CMH'#13'CMD'),
+     (Name:'Headloss Formula';   Style:esComboList;  Mask:emNone; Length:0;
+      List:'H-W'#13'D-W'#13'C-M'),
+     (Name:'Specific Gravity';   Style:esEdit; Mask:emPosNumber),
+     (Name:'Relative Viscosity'; Style:esEdit; Mask:emPosNumber),
+     (Name:'Maximum Trials';     Style:esEdit; Mask:emPosNumber),
+     (Name:'Accuracy';           Style:esEdit; Mask:emPosNumber),
+     (Name:'If Unbalanced';      Style:esComboList; Mask:emNone;  Length:0;
+      List:'Stop'#13'Continue'),
+     (Name:'Default Pattern';    Style:esEdit; Mask:emNoSpace;    Length:MAXID),
+     (Name:'Demand Multiplier';  Style:esEdit; Mask:emPosNumber),
+     (Name:'Emitter Exponent';   Style:esEdit; Mask:emPosNumber),
+     (Name:'Status Report';      Style:esComboList; Mask:emNone;  Length:0;
+      List:'No'#13'Yes'#13'Full'),
+
+     (Name:'Max. Head Error';    Style:esEdit; Mask:emPosNumber),
+     (Name:'Max. Flow Change';   Style:esEdit; Mask:emPosNumber),
+     (Name:'Demand Model';       Style:esComboList; Length:0; List:'DDA'#13'PDA'),
+     (Name:'Minimum Pressure';   Style:esEdit; Mask:emPosNumber),
+     (Name:'Required Pressure';  Style:esEdit; Mask:emPosNumber),
+     (Name:'Pressure Exponent';  Style:esEdit; Mask:emPosNumber),
+     (Name:'CHECKFREQ';          Style:esEdit; Mask:emPosNumber),
+     (Name:'MAXCHECK';           Style:esEdit; Mask:emPosNumber),
+     (Name:'DAMPLIMIT';          Style:esEdit; Mask:emPosNumber));
+
+  QualityProps: array[0..4] of TPropRecord =
+    ((Name:'Parameter';            Style:esComboEdit; Mask:emNone; Length:0;
+      List:'None'#13'Chemical'#13'Trace'#13'Age'),
+     (Name:'Mass Units';           Style:esComboList; Mask:emNone; Length:0;
+      List:'mg/L'#13'ug/L'#13),
+     (Name:'Relative Diffusivity'; Style:esEdit; Mask:emPosNumber),
+     (Name:'Trace Node';           Style:esEdit; Mask:emNoSpace; Length:MAXID),
+     (Name:'Quality Tolerance';    Style:esEdit; Mask:emPosNumber));
+
+  ReactionProps: array[0..5] of TPropRecord =
+    ((Name:'Bulk Reaction Order';     Style:esEdit; Mask:emNumber),
+     (Name:'Wall Reaction Order';     Style:esComboList; Mask:emNone; Length:0;
+      List:'Zero'#13'First'),
+     (Name:'Global Bulk Coeff.';      Style:esEdit; Mask:emNumber),
+     (Name:'Global Wall Coeff.';      Style:esEdit; Mask:emNumber),
+     (Name:'Limiting Concentration';  Style:esEdit; Mask:emNumber),
+     (Name:'Wall Coeff. Correlation'; Style:esEdit; Mask:emNumber));
+
+  TimeProps: array [0..8] of TPropRecord =
+    ((Name:'Total Duration';      Style:esEdit; Mask:emNone),
+     (Name:'Hydraulic Time Step'; Style:esEdit; Mask:emNone),
+     (Name:'Quality Time Step';   Style:esEdit; Mask:emNone),
+     (Name:'Pattern Time Step';   Style:esEdit; Mask:emNone),
+     (Name:'Pattern Start Time';  Style:esEdit; Mask:emNone),
+     (Name:'Reporting Time Step'; Style:esEdit; Mask:emNone),
+     (Name:'Report Start Time';   Style:esEdit; Mask:emNone),
+     (Name:'Clock Start Time';    Style:esEdit; Mask:emNone),
+     (Name:'Statistic';           Style:esComboList; Mask:emNone; Length:0;
+      List:'None'#13'Average'#13'Minimum'#13'Maximum'#13'Range'));
+
+  EnergyProps: array[0..3] of TPropRecord =
+    ((Name:'Pump Efficiency (%)';  Style:esEdit; Mask:emPosNumber),
+     (Name:'Energy Price/kwh';     Style:esEdit; Mask:emPosNumber),
+     (Name:'Price Pattern';        Style:esEdit; Mask:emNoSpace;  Length:MAXID),
+     (name:'Demand Charge';        Style:esEdit; Mask:emPosNumber));
+
+//Default property values for network objects
+  DefJunc:   array[0..10] of String =               //Index in JuncProps:
+                  ('',        //0 - Comment               (3)
+                   '',        //1 - Tag                   (4)
+                   '0',       //2 - Elevation             (5)
+                   '0',       //3 - Primary Demand        (6)
+                   '',        //4 - Prmary Demand Pattern (7)
+                   '1',       //5 - Demand Categories     (8)
+                   '',        //6 - Emitter Coeff.        (9)
+                   '',        //7 - Initial Quality       (10)
+                   '',        //8 - Source Quality        (11)
+                   '',        //9 - Source Pattern
+                   'CONCEN'); //10 - Source Type
+
+  DefReserv: array [0..7] of String =               //Index in ReservProps:
+                    ('',        //0 - Comment             (3)
+                     '',        //1 - Tag                 (4)
+                     '0',       //2 - Head                (5)
+                     '',        //3 - Head Pattern        (6)
+                     '',        //4 - Initial Quality     (7)
+                     '',        //5 - Source Quality      (8)
+                     '',        //6 - Source Pattern
+                     'CONCEN'); //7 - Source Type
+
+  DefTank:   array [0..16] of String =              //Index in TankProps:
+                   ('',        //0 - Comment              (3)
+                    '',        //1 - Tag                  (4)
+                    '0',       //2 - Elevation            (5)
+                    '10',      //3 - Initial Level        (6)
+                    '0',       //4 - Min. Level           (7)
+                    '20',      //5 - Max. Level           (8)
+                    '50',      //6 - Diameter             (9)
+                    '',        //7 - Min. Volume          (10)
+                    '',        //8 - Volume Curve         (11)
+                    'Mixed',   //9 - Mixing Model         (12)
+                    '',        //10 - Mixing Fraction     (13)
+                    '',        //11 - Bulk React. Coeff.  (14)
+                    '',        //12 - Initial Quality     (15)
+                    '',        //13 - Source Quality      (16)
+                    '',        //14 - Source Pattern
+                    'CONCEN',  //15 - Source Type
+                    'No');     //16 - Can Overflow
+
+  DefPipe:   array [0..8] of String =               //Index in PipeProps:
+                   ('',        //0 - Comment              (3)
+                    '',        //1 - Tag                  (4)
+                    '1000',    //2 - Length               (5)
+                    '12',      //3 - Diameter             (6)
+                    '100',     //4 - Roughness Coeff.     (7)
+                    '0',       //5 - Minor Loss Coeff.    (8)
+                    'Open',    //6 - Status               (9)
+                    '',        //7 - Bulk React. Coeff.   (10)
+                    '');       //8 - Wall React. Coeff.   (11)
+
+  DefPump:   array [0..9] of String =               //Index in PumpProps:
+                   ('',        //0 - Comment              (3)
+                    '',        //1 - Tag                  (4)
+                    '',        //2 - Head Curve           (5)
+                    '',        //3 - Power                (6)
+                    '',        //4 - Speed                (7)
+                    '',        //5 - Speed Pattern        (8)
+                    'Open',    //6 - Status               (9)
+                    '',        //7 - Effic. Curve         (10)
+                    '',        //8 - Energy Price         (11)
+                    '');       //9 - Price Pattern        (12)
+
+  DefValve:  array [0..6] of String =               //Index in ValveProps
+                   ('',        //0 - Comment              (3)
+                    '',        //1 - Tag                  (4)
+                    '12',      //2 - Diameter             (5)
+                    'PRV',     //3 - Valve Type           (6)
+                    '0',       //4 - Setting              (7)
+                    '0',       //5 - Minor Loss Coeff.    (8)
+                    'None');   //6 - Fixed Status         (9)
+
+  DefOptions: array [0..MAXOPTIONS] of String =
+                    ('GPM',         {0-Flow units}
+                     'H-W',         {1-Headloss formula}
+                     '1',           {2-Specific grav.}
+                     '1',           {3-Rel. Viscosity}
+                     '40',          {4-Max. trials}
+                     '0.001',       {5-Accuracy}
+                     'Continue',    {6-Unbalanced}
+                     '1',           {7-Global Pattern}
+                     '1.0',         {8-Demand Multiplier}
+                     '0.5',         {9-Emitter Exponent}
+                     'No',          {10-Status Report}
+
+                     'None',        {11-Quality param.}
+                     'mg/L',        {12-Quality units}
+                     '1',           {13-Rel. Diffusivity}
+                     '',            {14-Trace node}
+                     '0.01',        {15-Quality tolerance}
+                     '',            {16-Max. Segments (not used)}
+
+                     '1',           {17-Bulk react. order}
+                     'First',       {18-Wall react. order}
+                     '0',           {19-Global Kbulk}
+                     '0',           {20-Global Kwall}
+                     '0',           {21-Limiting quality}
+                     '0',           {22-Wall correl.}
+
+                     '0',           {23-Duration}
+                     '1:00',        {24-Hyd. timestep}
+                     '0:05',        {25-Qual. timestep}
+                     '1:00',        {26-Pat. timestep}
+                     '0:00',        {27-Pat. start}
+                     '1:00',        {28-Rpt. timesetp}
+                     '0:00',        {29-Rpt. start}
+                     '12 am',       {30-Start time}
+                     'None',        {31-Rpt. statistic}
+
+                     '75',          {32-Pump efficiency}
+                     '0',           {33-Energy price}
+                     '',            {34-Price pattern}
+                     '0',           {35-Demand charge}
+
+                     '2',           {36-CHECKFREQ}
+                     '10',          {37-MAXCHECK}
+                     '0',           {38-DAMPLIMIT}
+
+                     '0',           {39-Max Head Error}
+                     '0',           {40-Max Flow Change}
+                     'DDA',         {41-Demand Model}
+                     '0',           {42-Minimum Pressure}
+                     '0.1',         {43-Required Pressure}
+                     '0.5');        {44-Pressure Exponent}
+
+//Node reporting variables
+//  Name         = name of variable
+//  Source       = vsInput if input variable;
+//               = vsOutput if computed variable
+//  SourceIndex  = for input variables, index in Data[] array;
+//                 for computed variables, order in which written
+//                 by solver to output file (see Output File topic
+//                 in EPANET Programmers Toolkit Help file)
+//  DefIntervals = default legend intervals (# intervals =
+//                 MAXINTERVALS constant defined in Uglobals.pas)
+  NodeVariable: array[0..NODEQUAL] of TNodeVariable =
+    (
+     (Name:'No View';
+      Source:vsInput;
+      SourceIndex:(-1,-1,-1);
+      DefIntervals:(0,0,0,0)),
+
+     (Name:'Elevation';
+      Source:vsInput;
+      SourceIndex:(2,2,2);
+      DefIntervals:(25,50,75,100)),
+
+     (Name:'Base Demand';
+      Source:vsInput;
+      SourceIndex:(3,-1,-1);
+      DefIntervals:(25,50,75,100)),
+
+     (Name:'Initial Quality';
+      Source:vsInput;
+      SourceIndex:(7,4,12);
+      DefIntervals:(0.25,0.5,0.75,1.0)),
+
+     (Name:'Demand';
+      Source:vsOutput;
+      SourceIndex:(1,1,1);
+      DefIntervals:(25,50,75,100)),
+
+     (Name:'Head';
+      Source:vsOutput;
+      SourceIndex:(2,2,2);
+      DefIntervals:(25,50,75,100)),
+
+     (Name:'Pressure';
+      Source:vsOutput;
+      SourceIndex:(3,3,3);
+      DefIntervals:(25,50,75,100)),
+
+     (Name:'Quality';
+      Source:vsOutput;
+      SourceIndex:(4,4,4);
+      DefIntervals:(0.25,0.5,0.75,1.0))
+    );
+
+//Link reporting variables -- see notes above for Node reporting variables
+  LinkVariable: array[0..LINKSET] of TLinkVariable =
+    (
+     (Name:'No View';
+      Source:vsInput;
+      SourceIndex:(-1,-1,-1);
+      DefIntervals:(0,0,0,0)),
+
+     (Name:'Length';
+      Source:vsInput;
+      SourceIndex:(2,-1,-1);
+      DefIntervals:(100,500,1000,5000)),
+
+     (Name:'Diameter';
+      Source:vsInput;
+      SourceIndex:(3,-1,2);
+      DefIntervals:(6,12,24,36)),
+
+     (Name:'Roughness';
+      Source:vsInput;
+      SourceIndex:(4,-1,-1);
+      DefIntervals:(50,75,100,125)),
+
+     (Name:'Bulk Coeff.';
+      Source:vsInput;
+      SourceIndex:(7,-1,-1);
+      DefIntervals:(0.25,0.5,0.75,1.0)),
+
+     (Name:'Wall Coeff.';
+      Source:vsInput;
+      SourceIndex:(8,-1,-1);
+      DefIntervals:(0.25,0.5,0.75,1.0)),
+
+     (Name:'Flow';
+      Source:vsOutput;
+      SourceIndex:(1,1,1);
+      DefIntervals:(25,50,75,100)),
+
+     (Name:'Velocity';
+      Source:vsOutput;
+      SourceIndex:(2,2,2);
+      DefIntervals:(0.01,0.1,1.0,2.0)),
+
+     (Name:'Unit Headloss';
+      Source:vsOutput;
+      SourceIndex:(3,3,3);
+      DefIntervals:(0.025,0.05,0.075,0.1)),
+
+     (Name:'Friction Factor';
+      Source:vsOutput;
+      SourceIndex:(8,8,8);
+      DefIntervals:(0.001, 0.01, 0.1, 1.0)),
+
+     (Name:'Reaction Rate';
+      Source:vsOutput;
+      SourceIndex:(7,7,7);
+      DefIntervals:(0.1, 0.5, 1.0, 5.0)),
+
+     (Name:'Quality';
+      Source:vsOutput;
+      SourceIndex:(4,4,4);
+      DefIntervals:(0.25,0.5,0.75,1.0)),
+
+     (Name:'Status';
+      Source:vsOutput;
+      SourceIndex:(5,5,5);
+      DefIntervals:(0,0,0,0)),
+
+     (Name:'Setting';
+      Source:vsOutput;
+      SourceIndex:(6,6,6);
+      DefIntervals:(0,0,0,0))
+    );
+
+// Quality variables (used to set default legend intervals for
+// the different types of WQ parameters)
+  QualVariable: array[0..MAXQUALPARAMS] of TNodeVariable =
+    (
+     (Name:'None';
+      Source:vsInput;
+      SourceIndex:(-1,-1,-1);
+      DefIntervals:(0.2,0.4,0.6,0.8)),
+     (Name:'Chemical';
+      Source:vsInput;
+      SourceIndex:(-1,-1,-1);
+      DefIntervals:(0.2,0.4,0.6,0.8)),
+     (Name:'Trace';
+      Source:vsInput;
+      SourceIndex:(-1,-1,-1);
+      DefIntervals:(20,40,60,80)),
+     (Name:'Age';
+      Source:vsInput;
+      SourceIndex:(-1,-1,-1);
+      DefIntervals:(2,6,12,24))
+    );
+
