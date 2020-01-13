@@ -1,0 +1,432 @@
+{
+    "Application_Reference": {
+        "description": "win32 514_1",
+        "name": "epanet",
+        "version": "7738b5c9a4206578f4bca23b7b62418fb2492676"
+    },
+    "Application_UnderTest": {
+        "description": "win32 local",
+        "name": "epanet",
+        "version": "80fe19e"
+    },
+    "CompareTolerance": {
+        "absolute": 0.0,
+        "relative": 0.01
+    },
+    "Tests": [
+        {
+            "description": "Simple loop network with two pressure reducing valves.",
+            "error_msg": null,
+            "name": "2PRVs",
+            "passed": true
+        },
+        {
+            "description": "Another loop network with two pressure reducing valves",
+            "error_msg": null,
+            "name": "2PRVs-a",
+            "passed": true
+        },
+        {
+            "description": "Another variation of a loop network with two pressure reducing valves.",
+            "error_msg": null,
+            "name": "2PRVs-aquis",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "2Tanks",
+            "passed": true
+        },
+        {
+            "description": "Simple branch network with two flow control valves",
+            "error_msg": null,
+            "name": "2fcvs",
+            "passed": true
+        },
+        {
+            "description": "Branch network with pump header and five flow control valves.",
+            "error_msg": null,
+            "name": "5fcvs",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "6848-68nodes",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Elhay-ZeroFlow",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "GES4-9",
+            "passed": true
+        },
+        {
+            "description": "Zero flow condition",
+            "error_msg": null,
+            "name": "Gorev2",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "JEP5-13",
+            "passed": true
+        },
+        {
+            "description": "Example network one with tank mixing",
+            "error_msg": null,
+            "name": "NET1",
+            "passed": true
+        },
+        {
+            "description": "Example network one with control.",
+            "error_msg": null,
+            "name": "NET1-3",
+            "passed": true
+        },
+        {
+            "description": "Network one with pressure breaker valve.",
+            "error_msg": null,
+            "name": "NET1-PBV",
+            "passed": true
+        },
+        {
+            "description": "Example network one with check valve.",
+            "error_msg": null,
+            "name": "NET1cv",
+            "passed": true
+        },
+        {
+            "description": "Example network one with emitter.",
+            "error_msg": null,
+            "name": "NET1emit",
+            "passed": true
+        },
+        {
+            "description": "Network one with emitter and negative pressure condition",
+            "error_msg": null,
+            "name": "NET1negemit",
+            "passed": true
+        },
+        {
+            "description": "Network one with steady-state hydraulics and no water quality.",
+            "error_msg": null,
+            "name": "NET1np",
+            "passed": true
+        },
+        {
+            "description": "Network one with steady-state hydrulics and no water quality.",
+            "error_msg": null,
+            "name": "NET1para",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "NW_Model",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "NW_Model1",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "anytown-3",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "bakryun",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "belerma",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "blacksburg",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "bocika",
+            "passed": true
+        },
+        {
+            "description": "Pressure dependant demands",
+            "error_msg": null,
+            "name": "cheung",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "d-town",
+            "passed": true
+        },
+        {
+            "description": "A simple example of modeling chlorine decay",
+            "error_msg": null,
+            "name": "example1",
+            "passed": true
+        },
+        {
+            "description": "Tank mixing model 2 compartments",
+            "error_msg": null,
+            "name": "example1_2comp",
+            "passed": true
+        },
+        {
+            "description": "Tank mixing model last in first out",
+            "error_msg": null,
+            "name": "example1_LIFO",
+            "passed": true
+        },
+        {
+            "description": "Example of modeling a 55-hour fluoride tracer study.",
+            "error_msg": null,
+            "name": "example2",
+            "passed": true
+        },
+        {
+            "description": "Dual-source system example",
+            "error_msg": null,
+            "name": "example3",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "exnet",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "exnet-3",
+            "passed": true
+        },
+        {
+            "description": "convergence criteria head",
+            "error_msg": null,
+            "name": "exnet-3H",
+            "passed": true
+        },
+        {
+            "description": "convergence criteria flow",
+            "error_msg": null,
+            "name": "exnet-3Q",
+            "passed": true
+        },
+        {
+            "description": "Flow control valve on line between two reservoirs.",
+            "error_msg": null,
+            "name": "fcv",
+            "passed": true
+        },
+        {
+            "description": "Flow control valve between two reservoirs under a no flow condition.",
+            "error_msg": null,
+            "name": "fcv-noflow",
+            "passed": true
+        },
+        {
+            "description": "Variation of flow control valve on line between two reservoirs.",
+            "error_msg": null,
+            "name": "fcv2",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "fossolo",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "gestar1",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "gestar1mod",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "gestar1modHW",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "goyang",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "hanoi-3",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "mod_anytown-3",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "mod_anytown-3a",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "modena",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "noflow",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "nytun",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "pescara",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "richmond_skeleton",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "richmond_standard",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "sampletown",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "simplenet",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "simpson_test",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "simpson_test_2-12",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "st-net3",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "st-net3-3",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "test101",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "test101-3",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "todinitest",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "two-loop",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "two-reservoir",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "wolf-3",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "wolf-initial",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "wolf-modified",
+            "passed": true
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "wolf-output",
+            "passed": true
+        }
+    ]
+}
