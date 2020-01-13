@@ -1,4 +1,4 @@
-# EPANET 2.2
+﻿# EPANET 2.2
 # DESCRIPTION
 This repository was established to provide U.S. EPA’s release of 2.2.0.  The last official release of EPANET was version 2.00.12, dated 2008.  The release of EPANET 2.2.0 represents a significant step forward in two important ways.  First, the EPANET 2.2.0 release represents a new, open source software project in collaboration with the community at OpenWaterAnalytics (https://github.com/OpenWaterAnalytics/EPANET) to maintain and extend EPANET.  The EPANET developers’ community at OWA is composed of dedicated volunteers from around the world who have a passion for EPANET.  Second, EPANET 2.2.0 includes major updates to the hydraulic and water quality engines of EPANET 2.00.12.
 This repository is being set up to bring together the EPANET engine contributions from the EPA/OWA’s release of EPANET 2.2.0 along with U.S. EPA’s effort to update the Delphi-based user interface, user’s manual, and the integrated Help manual, which resides within the EPANET graphical user interface.
@@ -7,3 +7,5 @@ This repository is for archiving the source code and document files associated w
 Anyone interested in examining the source code and document files associated with the EPA/OWA EPANET 2.2.0 release can peruse the appropriate folder. Instructions for installing and running EPANET 2.2.0 can be found in the installation file instructions.
 # CONTRIBUTING
 Anyone wanting to contribute to the open source, collaborative project for EPANET should go to https://github.com/OpenWaterAnalytics/EPANET.  Everyone is welcome to participate in the EPANET project. Whether you are helping others to resolve issues, reporting a new issue that hasn't yet been discovered, suggesting a new feature that would benefit your workflow, or writing code, we value and appreciate your time and effort. The path for contribution starts with entering an issue at https://github.com/OpenWaterAnalytics/EPANET/issues. Examine the open issues at this link and the conversation around them, and then get engaged!
+
+Finally, the issues identified and resolved here were the result of U.S. EPA's efforts to coordinate beta testing of the EPA/OWA EPANET version 2.2.0.  
