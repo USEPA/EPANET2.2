@@ -12,10 +12,10 @@ This repository is being set up to bring together the EPANET engine contribution
 
 This repository is for archiving the source code and document files associated with the EPA/OWA EPANET 2.2.0 release.  Anyone interested in examining these files can peruse the appropriate folder in this repository.
 
-#Intended Audience
+# Intended Audience
 The intended audience for this repository is anyone working on water distribution system modeling and also interested in knowing more about the source code and documentation associated with the official release of EPANET 2.2.0.
 
-#License
+# License
 EPANET is released under the MIT license. See the LICENSE.txt file.
 
 # CONTRIBUTING
@@ -23,11 +23,11 @@ EPANET has an active open source software community including consulting enginee
 
 Finally, the issues identified and resolved here were the result of U.S. EPA's efforts to coordinate beta testing of the EPA/OWA EPANET version 2.2.0.  
 
-#Documentation
+# Documentation
 EPANET's Users Manual is available for download here at https://github.com/USEPA/EPANET2.2/tree/master/User_Manual.
 
-#Contact
+# Contact
 epanet@epa.gov
 
-#EPA Disclaimer
+# EPA Disclaimer
 The United States Environmental Protection Agency (EPA) GitHub project code is provided on an "as is" basis and the user assumes responsibility for its use. EPA has relinquished control of the information and no longer has responsibility to protect the integrity, confidentiality, or availability of the information. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by EPA. The EPA seal and logo shall not be used in any manner to imply endorsement of any commercial product or activity by EPA or the United States Government.
