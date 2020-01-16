@@ -24,7 +24,7 @@ EPANET has an active open source software community including consulting enginee
 Finally, the issues identified and resolved here were the result of U.S. EPA's efforts to coordinate beta testing of the EPA/OWA EPANET version 2.2.0.  
 
 # Documentation
-EPANET's Users Manual is available for download here at https://github.com/USEPA/EPANET2.2/tree/master/User_Manual.
+An EPANET User's Manual is available for download here at https://github.com/USEPA/EPANET2.2/tree/master/User_Manual.
 
 # Contact
 epanet@epa.gov
