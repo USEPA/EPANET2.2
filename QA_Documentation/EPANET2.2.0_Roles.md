@@ -11,5 +11,4 @@ Key Personnel, Responsibilities, and Contact Information
 | Feng Shang | EPA/ORD/CESER/WID collaborator for EPANET development. | [Shang.feng@epa.gov](mailto:Shang.feng@epa.gov)(513) 569-7025 |
 | Michelle Simon | EPA/ORD/CESER/WID collaborator for EPANET development. | [michelle.simon@epa.gov](mailto:michelle.simon@epa.gov)(513)-569-7469 |
 | Michael Tryby | EPA/ORD/CESER/WID collaborator for EPANET development. | [tryby.michael@epa.gov](mailto:tryby.michael@epa.gov)(513)-569-7559 |
-| Jeff Yang | EPA/ORD/CESER/WID collaborator for EPANET development. | [yang.jeff@epa.gov](mailto:yang.jeff@epa.gov)(513)-569-7655 |
 | John Olszewski | EPA/ORD/CESER/WID QA officerResponsible for reviewing and approving QAPP, he will: perform, at his option, one external audit during the project; notify the EPA project officer if an external audit indicates that data quality is being compromised; prepare and distribute an assessment report summarizing the results of the external audit, if one is performed; and review final products from this project.   |  [olszewski.john@epa.gov](mailto:olszewski.john@epa.gov)(513)-569-7481 |
