@@ -27,7 +27,7 @@ uses
   SysUtils, WinTypes, WinProcs, Messages, Classes, Graphics, Controls,
   Forms, Dialogs, Menus, ExtCtrls, Buttons, StdCtrls, ComCtrls,
   ExtDlgs, ImgList, System.ImageList, System.UITypes, Vcl.ToolWin,
-  Printers, System.IOUtils,
+  Printers, System.IOUtils, Vcl.HtmlHelpViewer,
   PgSetup, OpenDlg, Xprinter, Uglobals, Uutils;
 
 const
