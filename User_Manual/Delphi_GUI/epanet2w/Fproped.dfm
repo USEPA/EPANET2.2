@@ -1,0 +1,30 @@
+object PropEditForm: TPropEditForm
+  Left = 489
+  Top = 145
+  HorzScrollBar.Visible = False
+  VertScrollBar.Visible = False
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSizeToolWin
+  Caption = 'Property Editor'
+  ClientHeight = 331
+  ClientWidth = 200
+  Color = clWindow
+  Ctl3D = False
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OldCreateOrder = True
+  PopupMode = pmExplicit
+  PopupParent = MainForm.Owner
+  Position = poMainFormCenter
+  OnClose = FormClose
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnDeactivate = FormDeactivate
+  OnKeyDown = FormKeyDown
+  PixelsPerInch = 96
+  TextHeight = 15
+end

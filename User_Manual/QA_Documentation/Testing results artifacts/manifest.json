@@ -1,0 +1,3001 @@
+{
+    "Application": {
+        "description": "win32 local",
+        "name": "epanet",
+        "version": "80fe19e"
+    },
+    "Tests": [
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "01Jun62_1",
+            "output_files": {
+                "01Jun62_1.out": "epanet allclose",
+                "01Jun62_1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "03Apr75_1",
+            "output_files": {
+                "03Apr75_1.out": "epanet allclose",
+                "03Apr75_1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "05Aug67_1",
+            "output_files": {
+                "05Aug67_1.out": "epanet allclose",
+                "05Aug67_1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "05Aug67_1er",
+            "output_files": {
+                "05Aug67_1er.out": "epanet allclose",
+                "05Aug67_1er.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": "Non-zero exit code",
+            "name": "1962_1",
+            "output_files": {
+                "1962_1.out": "epanet allclose",
+                "1962_1.rpt": "epanet report"
+            },
+            "passed": false,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "1962_1a",
+            "output_files": {
+                "1962_1a.out": "epanet allclose",
+                "1962_1a.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "1962_1b",
+            "output_files": {
+                "1962_1b.out": "epanet allclose",
+                "1962_1b.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "2008-09-12-noVSD",
+            "output_files": {
+                "2008-09-12-noVSD.out": "epanet allclose",
+                "2008-09-12-noVSD.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "2pumps",
+            "output_files": {
+                "2pumps.out": "epanet allclose",
+                "2pumps.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "4_ZONE2",
+            "output_files": {
+                "4_ZONE2.out": "epanet allclose",
+                "4_ZONE2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "57460",
+            "output_files": {
+                "57460.out": "epanet allclose",
+                "57460.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "6-19-03",
+            "output_files": {
+                "6-19-03.out": "epanet allclose",
+                "6-19-03.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "AA",
+            "output_files": {
+                "AA.out": "epanet allclose",
+                "AA.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "AACL2",
+            "output_files": {
+                "AACL2.out": "epanet allclose",
+                "AACL2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "ADF",
+            "output_files": {
+                "ADF.out": "epanet allclose",
+                "ADF.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "AGE2B",
+            "output_files": {
+                "AGE2B.out": "epanet allclose",
+                "AGE2B.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "ATUALTLG",
+            "output_files": {
+                "ATUALTLG.out": "epanet allclose",
+                "ATUALTLG.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "AWWA",
+            "output_files": {
+                "AWWA.out": "epanet allclose",
+                "AWWA.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Axworthy",
+            "output_files": {
+                "Axworthy.out": "epanet mincdd",
+                "Axworthy.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Azusa",
+            "output_files": {
+                "Azusa.out": "epanet allclose",
+                "Azusa.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "BAC_1472",
+            "output_files": {
+                "BAC_1472.out": "epanet allclose",
+                "BAC_1472.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "BARSTOW",
+            "output_files": {
+                "BARSTOW.out": "epanet allclose",
+                "BARSTOW.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "BIGCHES",
+            "output_files": {
+                "BIGCHES.out": "epanet allclose",
+                "BIGCHES.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "BOULOS",
+            "output_files": {
+                "BOULOS.out": "epanet allclose",
+                "BOULOS.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "BOULOS1",
+            "output_files": {
+                "BOULOS1.out": "epanet allclose",
+                "BOULOS1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "BRAGA",
+            "output_files": {
+                "BRAGA.out": "epanet allclose",
+                "BRAGA.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "BRAGA1",
+            "output_files": {
+                "BRAGA1.out": "epanet allclose",
+                "BRAGA1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "BRAGA2",
+            "output_files": {
+                "BRAGA2.out": "epanet allclose",
+                "BRAGA2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "BRENT",
+            "output_files": {
+                "BRENT.out": "epanet allclose",
+                "BRENT.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "BROWARD",
+            "output_files": {
+                "BROWARD.out": "epanet allclose",
+                "BROWARD.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "BRUSHY1",
+            "output_files": {
+                "BRUSHY1.out": "epanet allclose",
+                "BRUSHY1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "BRUSHY2",
+            "output_files": {
+                "BRUSHY2.out": "epanet allclose",
+                "BRUSHY2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "BRUSHY3",
+            "output_files": {
+                "BRUSHY3.out": "epanet allclose",
+                "BRUSHY3.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "BRUSHY4",
+            "output_files": {
+                "BRUSHY4.out": "epanet allclose",
+                "BRUSHY4.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "BUBBA",
+            "output_files": {
+                "BUBBA.out": "epanet allclose",
+                "BUBBA.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "BUG",
+            "output_files": {
+                "BUG.out": "epanet allclose",
+                "BUG.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Bad_Pump",
+            "output_files": {
+                "Bad_Pump.out": "epanet allclose",
+                "Bad_Pump.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Bould3a",
+            "output_files": {
+                "Bould3a.out": "epanet allclose",
+                "Bould3a.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Brushy",
+            "output_files": {
+                "Brushy.out": "epanet allclose",
+                "Brushy.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "CASTRO1B",
+            "output_files": {
+                "CASTRO1B.out": "epanet allclose",
+                "CASTRO1B.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "CCWD4DH",
+            "output_files": {
+                "CCWD4DH.out": "epanet allclose",
+                "CCWD4DH.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Csu1",
+            "output_files": {
+                "Csu1.out": "epanet allclose",
+                "Csu1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "DAVIS13",
+            "output_files": {
+                "DAVIS13.out": "epanet allclose",
+                "DAVIS13.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "DESCAR",
+            "output_files": {
+                "DESCAR.out": "epanet allclose",
+                "DESCAR.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "DPLUS",
+            "output_files": {
+                "DPLUS.out": "epanet allclose",
+                "DPLUS.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "DPLUS1",
+            "output_files": {
+                "DPLUS1.out": "epanet allclose",
+                "DPLUS1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "DUMCLA",
+            "output_files": {
+                "DUMCLA.out": "epanet allclose",
+                "DUMCLA.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "DUMCLA1",
+            "output_files": {
+                "DUMCLA1.out": "epanet allclose",
+                "DUMCLA1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "DVEM",
+            "output_files": {
+                "DVEM.out": "epanet allclose",
+                "DVEM.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "DVEM2",
+            "output_files": {
+                "DVEM2.out": "epanet allclose",
+                "DVEM2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "EA9B1002",
+            "output_files": {
+                "EA9B1002.out": "epanet allclose",
+                "EA9B1002.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "EMITTERS",
+            "output_files": {
+                "EMITTERS.out": "epanet allclose",
+                "EMITTERS.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "EPA1",
+            "output_files": {
+                "EPA1.out": "epanet allclose",
+                "EPA1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "EXAMPLE1",
+            "output_files": {
+                "EXAMPLE1.out": "epanet allclose",
+                "EXAMPLE1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "EXAMPLE2",
+            "output_files": {
+                "EXAMPLE2.out": "epanet allclose",
+                "EXAMPLE2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "EXER1",
+            "output_files": {
+                "EXER1.out": "epanet allclose",
+                "EXER1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "EXER2",
+            "output_files": {
+                "EXER2.out": "epanet allclose",
+                "EXER2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "FCV-mystery",
+            "output_files": {
+                "FCV-mystery.out": "epanet allclose",
+                "FCV-mystery.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "FCVTEST",
+            "output_files": {
+                "FCVTEST.out": "epanet allclose",
+                "FCVTEST.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "FFFL",
+            "output_files": {
+                "FFFL.out": "epanet allclose",
+                "FFFL.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "FLETCHER",
+            "output_files": {
+                "FLETCHER.out": "epanet allclose",
+                "FLETCHER.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Ffcl-1",
+            "output_files": {
+                "Ffcl-1.out": "epanet allclose",
+                "Ffcl-1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "GAR11",
+            "output_files": {
+                "GAR11.out": "epanet allclose",
+                "GAR11.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "GAR5",
+            "output_files": {
+                "GAR5.out": "epanet allclose",
+                "GAR5.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "GAR8",
+            "output_files": {
+                "GAR8.out": "epanet allclose",
+                "GAR8.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "GDB2EPANetA",
+            "output_files": {
+                "GDB2EPANetA.out": "epanet allclose",
+                "GDB2EPANetA.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "GES4-10",
+            "output_files": {
+                "GES4-10.out": "epanet allclose",
+                "GES4-10.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "GES4-9",
+            "output_files": {
+                "GES4-9.out": "epanet allclose",
+                "GES4-9.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "GID1",
+            "output_files": {
+                "GID1.out": "epanet allclose",
+                "GID1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Gar3",
+            "output_files": {
+                "Gar3.out": "epanet allclose",
+                "Gar3.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Gar4",
+            "output_files": {
+                "Gar4.out": "epanet allclose",
+                "Gar4.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Gar_2",
+            "output_files": {
+                "Gar_2.out": "epanet allclose",
+                "Gar_2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "HKWBWV1",
+            "output_files": {
+                "HKWBWV1.out": "epanet allclose",
+                "HKWBWV1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "HP-GPM",
+            "output_files": {
+                "HP-GPM.out": "epanet allclose",
+                "HP-GPM.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "HP-MGD",
+            "output_files": {
+                "HP-MGD.out": "epanet allclose",
+                "HP-MGD.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Ham12",
+            "output_files": {
+                "Ham12.out": "epanet allclose",
+                "Ham12.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Hicreek",
+            "output_files": {
+                "Hicreek.out": "epanet allclose",
+                "Hicreek.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Hybrid11_15mk",
+            "output_files": {
+                "Hybrid11_15mk.out": "epanet allclose",
+                "Hybrid11_15mk.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "ICTEST",
+            "output_files": {
+                "ICTEST.out": "epanet allclose",
+                "ICTEST.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Irwd11cc",
+            "output_files": {
+                "Irwd11cc.out": "epanet allclose",
+                "Irwd11cc.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "JAVEA",
+            "output_files": {
+                "JAVEA.out": "epanet allclose",
+                "JAVEA.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "JEP5-13",
+            "output_files": {
+                "JEP5-13.out": "epanet allclose",
+                "JEP5-13.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "JEPP5-6",
+            "output_files": {
+                "JEPP5-6.out": "epanet allclose",
+                "JEPP5-6.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "KYP5A",
+            "output_files": {
+                "KYP5A.out": "epanet allclose",
+                "KYP5A.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "KYP5A1",
+            "output_files": {
+                "KYP5A1.out": "epanet allclose",
+                "KYP5A1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "KYP5A2",
+            "output_files": {
+                "KYP5A2.out": "epanet allclose",
+                "KYP5A2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Khalid",
+            "output_files": {
+                "Khalid.out": "epanet allclose",
+                "Khalid.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "LAMINAR",
+            "output_files": {
+                "LAMINAR.out": "epanet allclose",
+                "LAMINAR.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "LAMINAR1",
+            "output_files": {
+                "LAMINAR1.out": "epanet allclose",
+                "LAMINAR1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "LANSDALE",
+            "output_files": {
+                "LANSDALE.out": "epanet allclose",
+                "LANSDALE.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "LITDYN242-Lew",
+            "output_files": {
+                "LITDYN242-Lew.out": "epanet allclose",
+                "LITDYN242-Lew.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "LOXT01",
+            "output_files": {
+                "LOXT01.out": "epanet allclose",
+                "LOXT01.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "LUH",
+            "output_files": {
+                "LUH.out": "epanet allclose",
+                "LUH.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "LUHA",
+            "output_files": {
+                "LUHA.out": "epanet allclose",
+                "LUHA.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "LUHA1",
+            "output_files": {
+                "LUHA1.out": "epanet allclose",
+                "LUHA1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "LUHA3",
+            "output_files": {
+                "LUHA3.out": "epanet allclose",
+                "LUHA3.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "LUHACO1",
+            "output_files": {
+                "LUHACO1.out": "epanet allclose",
+                "LUHACO1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "LUHACOVICE",
+            "output_files": {
+                "LUHACOVICE.out": "epanet allclose",
+                "LUHACOVICE.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "LVVWD",
+            "output_files": {
+                "LVVWD.out": "epanet allclose",
+                "LVVWD.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "LaPresa",
+            "output_files": {
+                "LaPresa.out": "epanet allclose",
+                "LaPresa.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Lpz",
+            "output_files": {
+                "Lpz.out": "epanet allclose",
+                "Lpz.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "MALLA2",
+            "output_files": {
+                "MALLA2.out": "epanet allclose",
+                "MALLA2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "MAO",
+            "output_files": {
+                "MAO.out": "epanet allclose",
+                "MAO.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "MATTA",
+            "output_files": {
+                "MATTA.out": "epanet allclose",
+                "MATTA.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "MB",
+            "output_files": {
+                "MB.out": "epanet allclose",
+                "MB.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "MB-Test1",
+            "output_files": {
+                "MB-Test1.out": "epanet mincdd",
+                "MB-Test1.rpt": "null"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "MB-Test1-24",
+            "output_files": {
+                "MB-Test1-24.out": "epanet mincdd",
+                "MB-Test1-24.rpt": "null"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "MBNew",
+            "output_files": {
+                "MBNew.out": "epanet allclose",
+                "MBNew.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "MHTSIOS1",
+            "output_files": {
+                "MHTSIOS1.out": "epanet allclose",
+                "MHTSIOS1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "MMWD",
+            "output_files": {
+                "MMWD.out": "epanet allclose",
+                "MMWD.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "MOL2016",
+            "output_files": {
+                "MOL2016.out": "epanet allclose",
+                "MOL2016.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "MOOREPK3",
+            "output_files": {
+                "MOOREPK3.out": "epanet allclose",
+                "MOOREPK3.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "MORESVIL",
+            "output_files": {
+                "MORESVIL.out": "epanet allclose",
+                "MORESVIL.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "MassBooster",
+            "output_files": {
+                "MassBooster.out": "epanet allclose",
+                "MassBooster.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Mesopolis_2009-03-23_LR_mdd-DM2.3",
+            "output_files": {
+                "Mesopolis_2009-03-23_LR_mdd-DM2.3.out": "epanet mincdd",
+                "Mesopolis_2009-03-23_LR_mdd-DM2.3.rpt": "null"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Micropolis_Adjusted_PumpCurve3&4_WQ-10s_Lew",
+            "output_files": {
+                "Micropolis_Adjusted_PumpCurve3&4_WQ-10s_Lew.out": "epanet mincdd",
+                "Micropolis_Adjusted_PumpCurve3&4_WQ-10s_Lew.rpt": "null"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Milford",
+            "output_files": {
+                "Milford.out": "epanet allclose",
+                "Milford.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Model",
+            "output_files": {
+                "Model.out": "epanet allclose",
+                "Model.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Moresvil1",
+            "output_files": {
+                "Moresvil1.out": "epanet allclose",
+                "Moresvil1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Mws_ips2",
+            "output_files": {
+                "Mws_ips2.out": "epanet allclose",
+                "Mws_ips2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "NET1THM",
+            "output_files": {
+                "NET1THM.out": "epanet allclose",
+                "NET1THM.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "NET2PMP",
+            "output_files": {
+                "NET2PMP.out": "epanet allclose",
+                "NET2PMP.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Narva2",
+            "output_files": {
+                "Narva2.out": "epanet allclose",
+                "Narva2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Net1",
+            "output_files": {
+                "Net1.out": "epanet mincdd",
+                "Net1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Net1-3-30",
+            "output_files": {
+                "Net1-3-30.out": "epanet allclose",
+                "Net1-3-30.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Net1-9-7",
+            "output_files": {
+                "Net1-9-7.out": "epanet allclose",
+                "Net1-9-7.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Net1-mod",
+            "output_files": {
+                "Net1-mod.out": "epanet allclose",
+                "Net1-mod.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Net1_PCE",
+            "output_files": {
+                "Net1_PCE.out": "epanet allclose",
+                "Net1_PCE.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Net1anchor",
+            "output_files": {
+                "Net1anchor.out": "epanet allclose",
+                "Net1anchor.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Net1bd",
+            "output_files": {
+                "Net1bd.out": "epanet allclose",
+                "Net1bd.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Net1curved",
+            "output_files": {
+                "Net1curved.out": "epanet allclose",
+                "Net1curved.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Net1exp",
+            "output_files": {
+                "Net1exp.out": "epanet allclose",
+                "Net1exp.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Net1new1",
+            "output_files": {
+                "Net1new1.out": "epanet allclose",
+                "Net1new1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Net1plus",
+            "output_files": {
+                "Net1plus.out": "epanet allclose",
+                "Net1plus.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Net1prv",
+            "output_files": {
+                "Net1prv.out": "epanet allclose",
+                "Net1prv.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Net1tags",
+            "output_files": {
+                "Net1tags.out": "epanet allclose",
+                "Net1tags.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Net1test",
+            "output_files": {
+                "Net1test.out": "epanet allclose",
+                "Net1test.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Net2",
+            "output_files": {
+                "Net2.out": "epanet allclose",
+                "Net2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Net2test",
+            "output_files": {
+                "Net2test.out": "epanet allclose",
+                "Net2test.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Net31",
+            "output_files": {
+                "Net31.out": "epanet allclose",
+                "Net31.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Net3SS",
+            "output_files": {
+                "Net3SS.out": "epanet allclose",
+                "Net3SS.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Net3a",
+            "output_files": {
+                "Net3a.out": "epanet allclose",
+                "Net3a.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "NetE_EPA2005CALWIN-4-28_TEVA_Jan06_TESTING",
+            "output_files": {
+                "NetE_EPA2005CALWIN-4-28_TEVA_Jan06_TESTING.out": "epanet allclose",
+                "NetE_EPA2005CALWIN-4-28_TEVA_Jan06_TESTING.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "NetF_TEVA_Dec_3_2008",
+            "output_files": {
+                "NetF_TEVA_Dec_3_2008.out": "epanet allclose",
+                "NetF_TEVA_Dec_3_2008.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "NetF_TEVA_Dec_3_2008_mod1",
+            "output_files": {
+                "NetF_TEVA_Dec_3_2008_mod1.out": "epanet allclose",
+                "NetF_TEVA_Dec_3_2008_mod1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "NetworkWithAReallyLongName",
+            "output_files": {
+                "NetworkWithAReallyLongName.out": "epanet allclose",
+                "NetworkWithAReallyLongName.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Network_A",
+            "output_files": {
+                "Network_A.out": "epanet allclose",
+                "Network_A.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Network_Aa",
+            "output_files": {
+                "Network_Aa.out": "epanet allclose",
+                "Network_Aa.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "No-Minvol",
+            "output_files": {
+                "No-Minvol.out": "epanet allclose",
+                "No-Minvol.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "No-Minvol1",
+            "output_files": {
+                "No-Minvol1.out": "epanet allclose",
+                "No-Minvol1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Noff",
+            "output_files": {
+                "Noff.out": "epanet allclose",
+                "Noff.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "OBERLIN1",
+            "output_files": {
+                "OBERLIN1.out": "epanet allclose",
+                "OBERLIN1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "OBERLIN2",
+            "output_files": {
+                "OBERLIN2.out": "epanet allclose",
+                "OBERLIN2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "OBFTST",
+            "output_files": {
+                "OBFTST.out": "epanet allclose",
+                "OBFTST.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "OGDEN3",
+            "output_files": {
+                "OGDEN3.out": "epanet allclose",
+                "OGDEN3.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "OZONIA",
+            "output_files": {
+                "OZONIA.out": "epanet allclose",
+                "OZONIA.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "PDNA_Test_100_98",
+            "output_files": {
+                "PDNA_Test_100_98.out": "epanet allclose",
+                "PDNA_Test_100_98.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "PRIBISJE1",
+            "output_files": {
+                "PRIBISJE1.out": "epanet allclose",
+                "PRIBISJE1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "PSVTEST",
+            "output_files": {
+                "PSVTEST.out": "epanet allclose",
+                "PSVTEST.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "PSV_valve",
+            "output_files": {
+                "PSV_valve.out": "epanet allclose",
+                "PSV_valve.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "PUMPHRBOR",
+            "output_files": {
+                "PUMPHRBOR.out": "epanet allclose",
+                "PUMPHRBOR.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "ParallelPRVs",
+            "output_files": {
+                "ParallelPRVs.out": "epanet allclose",
+                "ParallelPRVs.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Pumps2",
+            "output_files": {
+                "Pumps2.out": "epanet allclose",
+                "Pumps2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "QP5_EPANET",
+            "output_files": {
+                "QP5_EPANET.out": "epanet allclose",
+                "QP5_EPANET.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "RScada",
+            "output_files": {
+                "RScada.out": "epanet allclose",
+                "RScada.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "RegionalScada",
+            "output_files": {
+                "RegionalScada.out": "epanet allclose",
+                "RegionalScada.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "SALEM2001",
+            "output_files": {
+                "SALEM2001.out": "epanet allclose",
+                "SALEM2001.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "SIMPLE1",
+            "output_files": {
+                "SIMPLE1.out": "epanet allclose",
+                "SIMPLE1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "SIMPLE1B",
+            "output_files": {
+                "SIMPLE1B.out": "epanet allclose",
+                "SIMPLE1B.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "SPU-08-18-06",
+            "output_files": {
+                "SPU-08-18-06.out": "epanet allclose",
+                "SPU-08-18-06.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "SROSA",
+            "output_files": {
+                "SROSA.out": "epanet allclose",
+                "SROSA.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "STEADY10",
+            "output_files": {
+                "STEADY10.out": "epanet allclose",
+                "STEADY10.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "STEADY_3",
+            "output_files": {
+                "STEADY_3.out": "epanet allclose",
+                "STEADY_3.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "TC-95-4B",
+            "output_files": {
+                "TC-95-4B.out": "epanet allclose",
+                "TC-95-4B.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "TUTORIAL",
+            "output_files": {
+                "TUTORIAL.out": "epanet allclose",
+                "TUTORIAL.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "TUTORIAL-metric",
+            "output_files": {
+                "TUTORIAL-metric.out": "epanet mincdd",
+                "TUTORIAL-metric.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Tank_Floating_Valve",
+            "output_files": {
+                "Tank_Floating_Valve.out": "epanet allclose",
+                "Tank_Floating_Valve.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "TayaAllen",
+            "output_files": {
+                "TayaAllen.out": "epanet allclose",
+                "TayaAllen.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "TayaAllen1",
+            "output_files": {
+                "TayaAllen1.out": "epanet allclose",
+                "TayaAllen1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Test11x45",
+            "output_files": {
+                "Test11x45.out": "epanet allclose",
+                "Test11x45.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Test14x06",
+            "output_files": {
+                "Test14x06.out": "epanet allclose",
+                "Test14x06.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Test18a",
+            "output_files": {
+                "Test18a.out": "epanet allclose",
+                "Test18a.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": "Non-zero exit code",
+            "name": "Test19",
+            "output_files": {
+                "Test19.out": "epanet allclose",
+                "Test19.rpt": "epanet report"
+            },
+            "passed": false,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": "Non-zero exit code",
+            "name": "Test19c",
+            "output_files": {
+                "Test19c.out": "epanet allclose",
+                "Test19c.rpt": "epanet report"
+            },
+            "passed": false,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Test3a",
+            "output_files": {
+                "Test3a.out": "epanet allclose",
+                "Test3a.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Test6c",
+            "output_files": {
+                "Test6c.out": "epanet allclose",
+                "Test6c.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Test6e",
+            "output_files": {
+                "Test6e.out": "epanet allclose",
+                "Test6e.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Test6e_rev_pumps_curves",
+            "output_files": {
+                "Test6e_rev_pumps_curves.out": "epanet allclose",
+                "Test6e_rev_pumps_curves.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Test7a",
+            "output_files": {
+                "Test7a.out": "epanet allclose",
+                "Test7a.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Ubertest",
+            "output_files": {
+                "Ubertest.out": "epanet allclose",
+                "Ubertest.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "V2TEST",
+            "output_files": {
+                "V2TEST.out": "epanet allclose",
+                "V2TEST.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "VAL_DIN1",
+            "output_files": {
+                "VAL_DIN1.out": "epanet allclose",
+                "VAL_DIN1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "VDJ_HPRIM_2",
+            "output_files": {
+                "VDJ_HPRIM_2.out": "epanet allclose",
+                "VDJ_HPRIM_2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "VENDFUT2",
+            "output_files": {
+                "VENDFUT2.out": "epanet allclose",
+                "VENDFUT2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "WA5Model",
+            "output_files": {
+                "WA5Model.out": "epanet allclose",
+                "WA5Model.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "WADISO6",
+            "output_files": {
+                "WADISO6.out": "epanet allclose",
+                "WADISO6.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "WADISO7",
+            "output_files": {
+                "WADISO7.out": "epanet allclose",
+                "WADISO7.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "WA_cal1",
+            "output_files": {
+                "WA_cal1.out": "epanet allclose",
+                "WA_cal1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "WA_cal2",
+            "output_files": {
+                "WA_cal2.out": "epanet allclose",
+                "WA_cal2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "WJRDBLDT",
+            "output_files": {
+                "WJRDBLDT.out": "epanet allclose",
+                "WJRDBLDT.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Wad2epa",
+            "output_files": {
+                "Wad2epa.out": "epanet allclose",
+                "Wad2epa.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Waterloo",
+            "output_files": {
+                "Waterloo.out": "epanet allclose",
+                "Waterloo.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "Watloo",
+            "output_files": {
+                "Watloo.out": "epanet allclose",
+                "Watloo.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "angus2",
+            "output_files": {
+                "angus2.out": "epanet allclose",
+                "angus2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "angus2b",
+            "output_files": {
+                "angus2b.out": "epanet allclose",
+                "angus2b.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "angus2d",
+            "output_files": {
+                "angus2d.out": "epanet allclose",
+                "angus2d.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "angus2di",
+            "output_files": {
+                "angus2di.out": "epanet allclose",
+                "angus2di.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "angus2e",
+            "output_files": {
+                "angus2e.out": "epanet allclose",
+                "angus2e.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "angus2f",
+            "output_files": {
+                "angus2f.out": "epanet allclose",
+                "angus2f.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "awwarf2554",
+            "output_files": {
+                "awwarf2554.out": "epanet allclose",
+                "awwarf2554.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "bulk-wall-rate-test-exp",
+            "output_files": {
+                "bulk-wall-rate-test-exp.out": "epanet allclose",
+                "bulk-wall-rate-test-exp.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "burb79",
+            "output_files": {
+                "burb79.out": "epanet allclose",
+                "burb79.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "burb79-L",
+            "output_files": {
+                "burb79-L.out": "epanet allclose",
+                "burb79-L.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "cobb",
+            "output_files": {
+                "cobb.out": "epanet allclose",
+                "cobb.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "demandtest",
+            "output_files": {
+                "demandtest.out": "epanet allclose",
+                "demandtest.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "demandtest2",
+            "output_files": {
+                "demandtest2.out": "epanet allclose",
+                "demandtest2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "demandtest3",
+            "output_files": {
+                "demandtest3.out": "epanet allclose",
+                "demandtest3.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "demandtest4",
+            "output_files": {
+                "demandtest4.out": "epanet allclose",
+                "demandtest4.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "dinamico",
+            "output_files": {
+                "dinamico.out": "epanet allclose",
+                "dinamico.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "fairfield",
+            "output_files": {
+                "fairfield.out": "epanet allclose",
+                "fairfield.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "future1",
+            "output_files": {
+                "future1.out": "epanet allclose",
+                "future1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "gar10",
+            "output_files": {
+                "gar10.out": "epanet allclose",
+                "gar10.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "gar6",
+            "output_files": {
+                "gar6.out": "epanet allclose",
+                "gar6.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "gmtest",
+            "output_files": {
+                "gmtest.out": "epanet allclose",
+                "gmtest.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "injection_test",
+            "output_files": {
+                "injection_test.out": "epanet allclose",
+                "injection_test.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "leecounty",
+            "output_files": {
+                "leecounty.out": "epanet allclose",
+                "leecounty.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "loff",
+            "output_files": {
+                "loff.out": "epanet allclose",
+                "loff.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "long-network",
+            "output_files": {
+                "long-network.out": "epanet allclose",
+                "long-network.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "lpz1",
+            "output_files": {
+                "lpz1.out": "epanet allclose",
+                "lpz1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "luh-1.1",
+            "output_files": {
+                "luh-1.1.out": "epanet allclose",
+                "luh-1.1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "luh-1a",
+            "output_files": {
+                "luh-1a.out": "epanet allclose",
+                "luh-1a.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "luha2",
+            "output_files": {
+                "luha2.out": "epanet allclose",
+                "luha2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "luhanew",
+            "output_files": {
+                "luhanew.out": "epanet allclose",
+                "luhanew.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "lvvwd2",
+            "output_files": {
+                "lvvwd2.out": "epanet allclose",
+                "lvvwd2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "m0425ep1",
+            "output_files": {
+                "m0425ep1.out": "epanet allclose",
+                "m0425ep1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "m0425new",
+            "output_files": {
+                "m0425new.out": "epanet allclose",
+                "m0425new.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "mhtsios",
+            "output_files": {
+                "mhtsios.out": "epanet allclose",
+                "mhtsios.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "moreheadv3_02",
+            "output_files": {
+                "moreheadv3_02.out": "epanet allclose",
+                "moreheadv3_02.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "mytest",
+            "output_files": {
+                "mytest.out": "epanet allclose",
+                "mytest.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "net12345890000000000",
+            "output_files": {
+                "net12345890000000000.out": "epanet allclose",
+                "net12345890000000000.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "net1new",
+            "output_files": {
+                "net1new.out": "epanet allclose",
+                "net1new.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "net_2",
+            "output_files": {
+                "net_2.out": "epanet allclose",
+                "net_2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "net_2a",
+            "output_files": {
+                "net_2a.out": "epanet allclose",
+                "net_2a.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "new2554",
+            "output_files": {
+                "new2554.out": "epanet allclose",
+                "new2554.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "nw0699",
+            "output_files": {
+                "nw0699.out": "epanet allclose",
+                "nw0699.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "order2",
+            "output_files": {
+                "order2.out": "epanet allclose",
+                "order2.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "picasent",
+            "output_files": {
+                "picasent.out": "epanet allclose",
+                "picasent.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "polly_6",
+            "output_files": {
+                "polly_6.out": "epanet allclose",
+                "polly_6.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "reseau_galeries2-exp",
+            "output_files": {
+                "reseau_galeries2-exp.out": "epanet allclose",
+                "reseau_galeries2-exp.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "rossman",
+            "output_files": {
+                "rossman.out": "epanet allclose",
+                "rossman.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "slc",
+            "output_files": {
+                "slc.out": "epanet allclose",
+                "slc.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "source",
+            "output_files": {
+                "source.out": "epanet allclose",
+                "source.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "spu_shang",
+            "output_files": {
+                "spu_shang.out": "epanet allclose",
+                "spu_shang.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "strassers",
+            "output_files": {
+                "strassers.out": "epanet allclose",
+                "strassers.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "strassers1",
+            "output_files": {
+                "strassers1.out": "epanet allclose",
+                "strassers1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "tempe1",
+            "output_files": {
+                "tempe1.out": "epanet allclose",
+                "tempe1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "tempe5",
+            "output_files": {
+                "tempe5.out": "epanet allclose",
+                "tempe5.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "tempe7",
+            "output_files": {
+                "tempe7.out": "epanet allclose",
+                "tempe7.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "test1",
+            "output_files": {
+                "test1.out": "epanet allclose",
+                "test1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "test20",
+            "output_files": {
+                "test20.out": "epanet allclose",
+                "test20.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "test20a",
+            "output_files": {
+                "test20a.out": "epanet allclose",
+                "test20a.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "testinp",
+            "output_files": {
+                "testinp.out": "epanet allclose",
+                "testinp.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "testnet",
+            "output_files": {
+                "testnet.out": "epanet allclose",
+                "testnet.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "tide_run",
+            "output_files": {
+                "tide_run.out": "epanet allclose",
+                "tide_run.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "victor_valley",
+            "output_files": {
+                "victor_valley.out": "epanet allclose",
+                "victor_valley.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "water_age_JB",
+            "output_files": {
+                "water_age_JB.out": "epanet allclose",
+                "water_age_JB.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "waterage3",
+            "output_files": {
+                "waterage3.out": "epanet allclose",
+                "waterage3.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "waterage4",
+            "output_files": {
+                "waterage4.out": "epanet allclose",
+                "waterage4.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "wtr-kir.inp",
+            "output_files": {
+                "wtr-kir.inp.out": "epanet allclose",
+                "wtr-kir.inp.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "wvwd-Max",
+            "output_files": {
+                "wvwd-Max.out": "epanet allclose",
+                "wvwd-Max.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "wvwd-Max1",
+            "output_files": {
+                "wvwd-Max1.out": "epanet allclose",
+                "wvwd-Max1.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        },
+        {
+            "description": "",
+            "error_msg": null,
+            "name": "zero-order-react",
+            "output_files": {
+                "zero-order-react.out": "epanet allclose",
+                "zero-order-react.rpt": "epanet report"
+            },
+            "passed": true,
+            "version": "1.0"
+        }
+    ]
+}
