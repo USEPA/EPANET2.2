@@ -1,0 +1,88 @@
+
+  ******************************************************************
+  *                           E P A N E T                          *
+  *                   Hydraulic and Water Quality                  *
+  *                   Analysis for Pipe Networks                   *
+  *                         Version 2.2                            *
+  ******************************************************************
+
+  EPANET TUTORIAL
+
+      Input Data File ................... docs\tutorial.inp
+      Number of Junctions................ 5
+      Number of Reservoirs............... 1
+      Number of Tanks ................... 1
+      Number of Pipes ................... 6
+      Number of Pumps ................... 1
+      Number of Valves .................. 0
+      Headloss Formula .................. Hazen-Williams
+      Nodal Demand Model ................ DDA
+      Hydraulic Timestep ................ 1.00 hrs
+      Hydraulic Accuracy ................ 0.001000
+      Status Check Frequency ............ 2
+      Maximum Trials Checked ............ 10
+      Damping Limit Threshold ........... 0.000000
+      Maximum Trials .................... 200
+      Quality Analysis .................. Chlorine
+      Water Quality Time Step ........... 5.00 min
+      Water Quality Tolerance ........... 0.01 mg/L
+      Specific Gravity .................. 1.00
+      Relative Kinematic Viscosity ...... 1.00
+      Relative Chemical Diffusivity ..... 1.00
+      Demand Multiplier ................. 1.00
+      Total Duration .................... 24.00 hrs
+      Reporting Criteria:
+         All Nodes
+         All Links
+
+  Energy Usage:
+  ----------------------------------------------------------------
+             Usage   Avg.     Kw-hr      Avg.      Peak      Cost
+  Pump      Factor Effic.     /Mgal        Kw        Kw      /day
+  ----------------------------------------------------------------
+  7         100.00  75.00    745.97     51.35     51.59      0.00
+  ----------------------------------------------------------------
+                                         Demand Charge:      0.00
+                                         Total Cost:         0.00
+
+
+  Node Results at 0:00:00 hrs:
+  --------------------------------------------------------
+                     Demand      Head  Pressure  Chlorine
+  Node                  gpm        ft       psi      mg/L
+  --------------------------------------------------------
+  2                    0.00    893.19    387.02      0.00
+  3                  325.00    879.67     73.52      0.00
+  4                   75.00    874.36     75.55      0.00
+  5                  100.00    872.62     76.96      0.00
+  6                   75.00    872.65     74.81      0.00
+  1                -1049.81    700.00      0.00      1.00  Reservoir
+  7                  474.81    855.00      2.17      0.00  Tank
+
+
+  Link Results at 0:00:00 hrs:
+  ----------------------------------------------
+                       Flow  Velocity  Headloss
+  Link                  gpm       fps   /1000ft
+  ----------------------------------------------
+  1                 1049.81      2.98      4.51
+  2                  559.25      1.59      1.40
+  3                  165.56      1.06      1.06
+  4                   90.56      0.58      0.35
+  5                   -9.44      0.06      0.01
+  6                  474.81      1.94      2.52
+  7                 1049.81      0.00   -193.19  Pump
+
+
+  Node Results at 1:00:00 hrs:
+  --------------------------------------------------------
+                     Demand      Head  Pressure  Chlorine
+  Node                  gpm        ft       psi      mg/L
+  --------------------------------------------------------
+  2                    0.00    893.74    387.26      1.00
+  3                  325.00    880.31     73.80      0.99
+  4                   75.00    875.05     75.85      0.00
+  5                  100.00    873.33     77.27      0.00
+  6                   75.00    873.36     75.12      0.00
+  1                -1045.87    700.00      0.00      1.00  Reservoir
+  7                  470.87    855.99      2.60      0.00  Tank
