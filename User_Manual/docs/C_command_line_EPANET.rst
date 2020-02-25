@@ -43,22 +43,30 @@ Input File Format
   begins with a keyword enclosed in brackets. The various keywords are
   listed below in :numref:`table-inp_file_format`.
 
-.. tabularcolumns:: |p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|
+.. tabularcolumns:: |p{3.0cm}|p{2.5cm}|p{2.5cm}|p{2.5cm}|p{3.0cm}|
 
 .. _table-inp_file_format:
 .. table:: EPANET Input File Format	
 
   +-------------+-------------+-------------+-------------+--------------+
-  | *Network    | *System     | *Water      | *Options*   | *Network     |
-  | Components* | Operation*  | Quality*    |             | Map/Tags*    |
+  | *Network*   | *System*    | *Water*     | *Options*   | *Network*    |
+  |             |             |             |             |              |
+  | *Components*| *Operation* | *Quality*   |             | *Map/Tags*   |
   +=============+=============+=============+=============+==============+
   | [TITLE]     | [CURVES]    | [QUALITY]   | [OPTIONS]   | [COORDINATES]|
+  |             |             |             |             |              |
   | [JUNCTIONS] | [PATTERNS]  | [REACTIONS] | [TIMES]     | [VERTICES]   |
+  |             |             |             |             |              |
   | [RESERVOIRS]| [ENERGY]    | [SOURCES]   | [REPORT]    | [LABELS]     |
+  |             |             |             |             |              |
   | [TANKS]     | [STATUS]    | [MIXING]    |             | [BACKDROP]   |
+  |             |             |             |             |              |
   | [PIPES]     | [CONTROLS]  |             |             | [TAGS]       |
+  |             |             |             |             |              |
   | [PUMPS]     | [RULES]     |             |             |              |
+  |             |             |             |             |              |
   | [VALVES]    | [DEMANDS]   |             |             |              |
+  |             |             |             |             |              |
   | [EMITTERS]  |             |             |             |              |
   +-------------+-------------+-------------+-------------+--------------+
 
@@ -111,6 +119,7 @@ Report File Format
     - Energy Section
     - Nodes Section
     - Links Section
+
 
  .. literalinclude:: tutorial.out
       :name: ex_report_file

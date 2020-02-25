@@ -1,5 +1,22 @@
-﻿EPANET 2.2 User Manual Overview
-======================================
+﻿
+
+.. raw:: latex
+
+    \clearpage
+
+.. only:: html
+
+  EPANET 2.2 User Manual Overview
+  ===============================
+
+..
+
+.. raw:: latex
+
+  \chapter*{EPANET 2.2 User Manual Overview}
+  \addcontentsline{toc}{chapter}{EPANET 2.2 User Manual Overview}
+..
+
 :ref:`introduction` of this manual describes what EPANET is and its
 capabilities.
 

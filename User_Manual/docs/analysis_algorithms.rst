@@ -600,11 +600,11 @@ Water Quality
 
   where :math:`i` = link with flow leaving node :math:`k`, :math:`I_k` = set
   of links with flow into :math:`k`, :math:`L_j` = length of link :math:`j`,
-  :math:`Q_j` = flow (volume/time) in link :math:`j`, :math:`Q_k,ext` =
+  :math:`Q_j` = flow (volume/time) in link :math:`j`, :math:`Q_{k,ext}` =
   external source flow entering the network at node :math:`k`, and
-  :math:`C_k,ext` = concentration of the external flow entering at node
-  :math:`k`. The notation :math:`C_i|x=0` represents the concentration at
-  the start of link :math:`i`, while :math:`C_i|x=L` is the concentration
+  :math:`C_{k,ext}` = concentration of the external flow entering at node
+  :math:`k`. The notation :math:`C_{i|x=0}` represents the concentration at
+  the start of link :math:`i`, while :math:`C_{i|x=L}` is the concentration
   at the end of the link.
 
 
@@ -806,7 +806,7 @@ Water Quality
     time 0
 
   - Boundary conditions that specify values for :math:`C_k,ext` and
-    :math:`Q_k,ext` for all time :math:`t` at each node :math:`k` which
+    :math:`Q_{k,ext}` for all time :math:`t` at each node :math:`k` which
     has external mass inputs
 
   - Hydraulic conditions which specify the volume :math:`V_s` in each
@@ -828,6 +828,17 @@ Water Quality
   the link; therefore, the total volume of all the segments within a pipe
   does not change and the size of the segments between these leading and
   trailing segments remains unchanged (see :numref:`fig-transport`).
+
+
+   .. _fig-transport:
+   .. figure:: media/transport.png
+      :alt: Behavior of Segments in the Lagrangian Solution Method
+      :align: center
+      :scale: 80%
+	  
+      Behavior of segments in the Lagrangian solution method.
+   ..
+
 
   The following steps occur within each such time step:
 
@@ -875,13 +886,6 @@ Water Quality
   of a single segment whose quality equals the initial quality assigned to
   the upstream node.
 
-   .. _fig-transport:
-   .. figure:: media/transport.png
-      :alt: Behavior of Segments in the Lagrangian Solution Method
-      :align: center
-	  
-      Behavior of segments in the Lagrangian solution method.
-   ..
 
 
 .. include:: image_subdefs.rst

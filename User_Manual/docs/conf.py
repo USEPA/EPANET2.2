@@ -160,7 +160,10 @@ latex_elements = {
             
             \vspace*{1mm} %%% * is used to give space from top
             \textbf{\Large {Feng Shang}}
-            
+
+            \vspace*{1mm} %%% * is used to give space from top
+            \textbf{\Large {Robert Janke}}            
+
             \vspace*{1mm} %%% * is used to give space from top
             \textbf{\Large {Terranna Haxton}}
         \end{titlepage}
@@ -169,60 +172,7 @@ latex_elements = {
         \tableofcontents
         \listoffigures
         \listoftables
-        \chapter*{Disclaimer}
-          This User Manual is an updated version of the EPANET 2 Users Manual
-            (EPA/600/R-00/057) written by Lewis Rossman in 2000. The EPANET 2 software
-            was developed by the United States Environmental Protection Agency (EPA).
-
-            EPANET Version 2.2 includes contributions from EPA and individuals outside
-            the United States Government. It has been subjected to review by the Office of Research and Development and approved for publication. Approval does not signify that the contents reflect the views of the Agency, nor does mention of trade names or commercial products constitute endorsement or recommendation for use. 
-
-            Execution of any EPANET installation program, and modification to system configuration files must be made at the user's own risk. Neither the U.S. EPA nor the program author(s) can assume responsibility for program modification, content, output, interpretation, or usage.
-
-            EPANET installation programs have been extensively tested and verified. However, as for all complex software, these programs may not be completely free of errors and may not be applicable for all cases. In no event will the U.S. EPA be liable for direct, indirect, special, incidental, or consequential damages arising out of the use of the programs and/or associated documentation.
-        \chapter*{ACKNOWLEDGEMENT}
-           The U.S. Environmental Protection Agency acknowledges the individuals that 
-           assisted with the technical review and beta-testing of the EPANET software and user manual.
-        \chapter*{ABBREVIATION}
-            \textbf{CAD}: Computer aided design
-
-            \textbf{CV}: Check valve
-
-            \textbf{DDA}: Demand driven analysis
-
-            \textbf{EPA}: Environmental Protection Agency
-
-            \textbf{EPS}: Extended period simulation
-
-            \textbf{FCV}: Flow control valve
-
-            \textbf{FIFO}: First in first out
-
-            \textbf{GGA}: Global gradient algorithm
-
-            \textbf{GIS}: Geographic information system
-
-            \textbf{GPV}: General purpose valve
-
-            \textbf{LIFO}: Last in first out 
-
-            \textbf{PBV}: Pressure breaker valve
-
-            \textbf{PDA}: Pressure driven analysis
-
-            \textbf{PDD}: Pressure driven demand
-
-            \textbf{PRV}: Pressure reducing valve
-
-            \textbf{PSV}: Pressure sustaining valve 
-
-            \textbf{SI}: International System of Units
-
-            \textbf{TCV}: Throttle control valve
-
-            \textbf{THM}: Trihalomethanes
-
-            \textbf{US}: United States
+        \listof{literalblock}{List of Listings}
 
         ''',
     'sphinxsetup': \

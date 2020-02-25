@@ -101,7 +101,9 @@ Setting the Map’s Dimensions
 
    The information provided in the Map Dimensions dialog consists of the
    following (:numref:`table-map_dimensions_prop`):
-   
+
+  .. tabularcolumns:: |p{4cm}|p{11cm}|
+
 .. _table-map_dimensions_prop:
 .. table:: Map Dimensions Properties	
 
@@ -290,76 +292,65 @@ Finding an Object
 Map Legends
 ~~~~~~~~~~~
 
-   .. _fig-ex_map_legend:
-   .. figure:: media/image69.jpeg
-      :alt: Example EPANET Map Legend
-      :align: left
-   
-      Example map legend.
-   ..
-   
-   There are three types of map legends that can be
-   displayed. The Node and Link Legends associate a color with a range
-   of values for the current parameter being viewed on the map (see :numref:`fig-ex_map_legend`). The Time
-   Legend displays the clock time of the simulation time period being
-   viewed. To display or hide any of these legends check or uncheck the
-   legend from the **View >> Legends** menu or right- click over the map
-   and do the same from the popup menu that appears. Double-clicking the
-   mouse over it can also hide a visible legend.
+.. _fig-ex_map_legend: 
+.. figure:: media/image69.png
+   :alt: Example EPANET Map Legend
+   :align: left 
+   :figwidth: 4.5cm
 
-   To move a legend to another location:
+   Example map legend.
+..
 
-    1. Press the left mouse button over the legend.
-
-    2. With the button held down, drag the legend to its new location and
-       release the button.
+There are three types of map legends that can be
+displayed. The Node and Link Legends associate a color with a range
+of values for the current parameter being viewed on the map (see :numref:`fig-ex_map_legend`).
+The Time Legend displays the clock time of the simulation time period being viewed. To display or hide any of these legends check or uncheck the
+legend from the **View >> Legends** menu or right- click over the map
+and do the same from the popup menu that appears. Double-clicking the
+mouse over it can also hide a visible legend.
 
 
-   To edit the Node Legend:
+To move a legend to another location:
 
-    1. Either select **View >> Legends >> Modify >> Node** or right-click on
-       the legend if it is visible.
+   1. Press the left mouse button over the legend.
 
-    2. Use the Legend Editor dialog form that appears (see :numref:`fig-legend_ed_dialog`) to
-       modify the legend's colors and intervals.
+   2. With the button held down, drag the legend to its new location and release the button.
+
+To edit the Node Legend:
+
+   1. Either select **View >> Legends >> Modify >> Node** or right-click on the legend if it is visible.
+
+   2. Use the Legend Editor dialog form that appears (see :numref:`fig-legend_ed_dialog`) to modify the legend's colors and intervals.
 
 
-   A similar method is used to edit the Link Legend.
+A similar method is used to edit the Link Legend.
 
-   The Legend Editor (:numref:`fig-legend_ed_dialog`) is used to set numerical ranges to
-   which different colors are assigned for viewing a particular
-   parameter on the network map. It works as follows:
+The Legend Editor (:numref:`fig-legend_ed_dialog`) is used to set numerical ranges to
+which different colors are assigned for viewing a particular
+parameter on the network map. It works as follows:
 
-    -  Numerical values, in increasing order, are entered in the edit boxes
-       to define the ranges. Not all four boxes need to have values.
+-  Numerical values, in increasing order, are entered in the edit boxes to define the ranges. Not all four boxes need to have values.
 
-    -  To change a color, click on its color band in the Editor and then
-       select a new color from the Color Dialog box that will appear.
+-  To change a color, click on its color band in the Editor and then select a new color from the Color Dialog box that will appear.
 
-    -  Click the **Equal Intervals** button to assign ranges based on
-       dividing the range of the parameter at the current time period into
-       equal intervals.
+-  Click the **Equal Intervals** button to assign ranges based on dividing the range of the parameter at the current time period into equal intervals.
 
-    -  Click the **Equal Quantiles** button to assign ranges so that there
-       are equal numbers of objects within each range, based on values that
-       exist at the current time period.
+-  Click the **Equal Quantiles** button to assign ranges so that there are equal numbers of objects within each range, based on values that exist at the current time period.
 
-    -  The **Color Ramp** button is used to select from a list of built-in
-       color schemes.
+-  The **Color Ramp** button is used to select from a list of built-in color schemes.
 
-    -  The **Reverse Colors** button reverses the ordering of the current
-       set of colors (the color in the lowest range becomes that of the
-       highest range and so on).
+-  The **Reverse Colors** button reverses the ordering of the current set of colors (the color in the lowest range becomes that of the highest range and so on).
 
-    -  Check **Framed** if you want a frame drawn around the legend.
+-  Check **Framed** if you want a frame drawn around the legend.
 
-   .. _fig-legend_ed_dialog:
-   .. figure:: media/image70.png
-      :alt: Legend Editor Dialog in EPANET
-   
-      Legend editor dialog.
-   ..
- 
+.. _fig-legend_ed_dialog:
+.. figure:: media/image70.png
+   :alt: Legend Editor Dialog in EPANET
+   :scale: 100%
+
+   Legend editor dialog.
+..
+
 .. _sec-overview_map:
 
 Overview Map
@@ -431,6 +422,8 @@ Map Display Options
    The Nodes page of the Map Options dialog controls how nodes are
    displayed on the Network Map (:numref:`table-node_op_map`).
 
+.. tabularcolumns:: |p{4cm}|p{11cm}|
+
 .. _table-node_op_map:
 .. table:: Node Options for the Map	
 	
@@ -460,6 +453,8 @@ Map Display Options
    The Links page of the Map Options dialog controls how links are
    displayed on the map (:numref:`table-link_op_map`).
 
+.. tabularcolumns:: |p{4cm}|p{11cm}|
+
 .. _table-link_op_map:
 .. table:: Link Options for the Map	
 	
@@ -480,6 +475,8 @@ Map Display Options
 
    The Label page of the Map Options dialog controls how labels are
    displayed on the map (:numref:`table-label_op_map`).
+
+.. tabularcolumns:: |p{4cm}|p{11cm}|
 
 .. _table-label_op_map:
 .. table:: Label Options for the Map	
@@ -509,6 +506,8 @@ Map Display Options
    The Notation page of the Map Options dialog form determines what kind
    of annotation is provided alongside of the nodes and links of the
    map (:numref:`table-notation_op_map`).
+
+.. tabularcolumns:: |p{4cm}|p{11cm}|
 
 .. _table-notation_op_map:
 .. table:: Notation Options for the Map	
@@ -548,6 +547,8 @@ Map Display Options
    The Symbols page of the Map Options dialog determines which types of
    objects are represented with special symbols on the map (:numref:`table-symbol_op_map`).
 
+.. tabularcolumns:: |p{4cm}|p{11cm}|
+
 .. _table-symbol_op_map:
 .. table:: Symbol Options for the Map	
 
@@ -577,6 +578,8 @@ Map Display Options
 
    The Flow Arrows page of the Map Options dialog controls how
    flow-direction arrows are displayed on the network map (:numref:`table-flow_arrow_op_map`).
+
+.. tabularcolumns:: |p{4cm}|p{11cm}|
 
 .. _table-flow_arrow_op_map:
 .. table:: Flow Arrow Options for the Map	
