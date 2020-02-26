@@ -763,9 +763,9 @@ Non-Physical Components
      |                                      | pump 12 to 1.5 at 16 hours      |
      |                                      | into the simulation)            |
      +--------------------------------------+---------------------------------+
-     | | LINK 12 CLOSED AT CLOCKTIME 10 AM  | (Link 12 is repeatedly closed   |
-     | | LINK 12 OPEN AT CLOCKTIME 8 PM     | at 10 AM and opened at 8 PM     |
-     |                                      | throughout the simulation)      |
+     | LINK 12 CLOSED AT CLOCKTIME 10 AM    | (Link 12 is repeatedly closed   |
+     |                                      | at 10 AM and opened at 8 PM     |                      
+     | LINK 12 OPEN AT CLOCKTIME 8 PM       | throughout the simulation)      |
      +--------------------------------------+---------------------------------+
     ..
 	

@@ -123,6 +123,8 @@ html_context = {
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'EPANETdoc'
 
+latex_logo = 'media/logo.png'
+latex_logo = 'media/epanetlogo.png'
 
 # -- Options for LaTeX output ------------------------------------------------
 latex_engine = 'pdflatex'
@@ -145,27 +147,40 @@ latex_elements = {
    'maketitle': r'''       
         \pagenumbering{Roman}
         \begin{titlepage}
+
+            \vspace{0mm}
+            \begin{figure}[htbp]
+                  \includegraphics[scale=0.8]{logo.png}
+            \end{figure}
+
+            \vspace*{35mm}
             \centering
-            \vspace*{40mm} %%% * is used to give space from top
             \textbf{\Huge {EPANET 2.2 User Manual}}
             
-            \vspace*{10mm} %%% * is used to give space from top
-            \textbf{\Large {Lew Rossman}}
+            \vspace*{20mm} %%% * is used to give space from top
+            \textbf{\large {Lew Rossman}}
             
             \vspace*{1mm} %%% * is used to give space from top
-            \textbf{\Large {Hyoungmin Woo}}
+            \textbf{\large {Hyoungmin Woo}}
             
             \vspace*{1mm} %%% * is used to give space from top
-            \textbf{\Large {Michael Tryby}}
+            \textbf{\large {Michael Tryby}}
             
             \vspace*{1mm} %%% * is used to give space from top
-            \textbf{\Large {Feng Shang}}
+            \textbf{\large {Feng Shang}}
 
             \vspace*{1mm} %%% * is used to give space from top
-            \textbf{\Large {Robert Janke}}            
+            \textbf{\large {Robert Janke}}            
 
             \vspace*{1mm} %%% * is used to give space from top
-            \textbf{\Large {Terranna Haxton}}
+            \textbf{\large {Terranna Haxton}}
+
+           \vspace{30mm}
+            \begin{figure}[htbp]
+                  \centering
+                  \includegraphics[scale=0.75]{epanetlogo.png}
+            \end{figure}
+
         \end{titlepage}
         \setcounter{page}{1}
         \pagenumbering{roman}
@@ -185,6 +200,8 @@ latex_elements = {
 
         'tableofcontents':' ',
 }
+
+
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
