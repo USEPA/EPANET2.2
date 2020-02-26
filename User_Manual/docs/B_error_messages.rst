@@ -10,11 +10,12 @@ Error Messages
 
 :numref:`table-errors` list EPANET error codes and their explanation.
 
-.. tabularcolumns:: |p{2cm}|p{13cm}|
+.. tabularcolumns:: |p{2cm}|p{12.5cm}|
 
 .. _table-errors:
 .. table:: EPANET Error Codes	
- 
+  :class: longtable
+
   +-----------------------------------+-----------------------------------+
   |    *ID*                           |    *EXPLANATION*                  |
   +===================================+===================================+

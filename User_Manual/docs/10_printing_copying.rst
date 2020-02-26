@@ -114,7 +114,7 @@ Copying to the Clipboard or to a File
 
    EPANET can copy the text and graphics of the current window being
    viewed to both the Windows clipboard and to a file. The Copy Network Map 
-   menu screen is shown in :numref:`fig-Copy_Network_Map` below. Views that can be
+   menu screen is shown in :numref:`fig-CopyMap` below. Views that can be
    copied in this fashion include the Network Map, graphs, tables, and
    reports. To copy the current view to the clipboard or to file:
 
@@ -126,12 +126,14 @@ Copying to the Clipboard or to a File
     3. If you selected to copy-to-file, enter the name of the file in the
        Save As dialog box that appears and click **OK**.
 
-   .. _fig-Copy_Network_Map:
-   .. figure:: media/Copy_Network_Map.png
+
+   .. _fig-CopyMap:
+   .. figure:: media/image92.png
       :alt: Copy Network Map Dialog in EPANET
-   
-      Copy network map dialog.
-   ..
+
+      Copy network map dialog
+
+   ..   
    
    Use the Copy dialog as follows to define how you want your data
    copied and to where:

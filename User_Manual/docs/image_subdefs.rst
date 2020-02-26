@@ -169,7 +169,6 @@
 ..  |image137| image:: media/image90.png
 ..  |image138| image:: media/image46.png
 ..  |image139| image:: media/image73.png
-..  |image140| image:: media/image91.png
 ..  |image141| image:: media/image41.png
 ..  |image142| image:: media/image43.png
 ..  |image143| image:: media/image92.png

@@ -1,53 +1,64 @@
 .. raw:: latex
 
-    \clearpage
-	\listoftables
 	\clearpage
-	\listoffigures
-	\clearpage
-	
-Abbreviations
-======================================
 
-**CAD**: Computer aided design
 
-**CV**: Check valve
 
-**DDA**: Demand driven analysis
 
-**EPA**: Environmental Protection Agency
+.. only:: html
 
-**EPS**: Extended period simulation
+  Abbreviations
+  =============
 
-**FCV**: Flow control valve
+..
 
-**FIFO**: First in first out
+.. raw:: latex
+     
+   \chapter*{Abbreviations}
+   \addcontentsline{toc}{chapter}{Abbreviations}
+   
+..
 
-**GGA**: Global gradient algorithm
 
-**GIS**: Geographic information system
+   **CAD**: Computer aided design
 
-**GPV**: General purpose valve
+   **CV**: Check valve
 
-**LIFO**: Last in first out 
+   **DDA**: Demand driven analysis
 
-**PBV**: Pressure breaker valve
+   **EPA**: Environmental Protection Agency
 
-**PDA**: Pressure driven analysis
+   **EPS**: Extended period simulation
 
-**PDD**: Pressure driven demand
+   **FCV**: Flow control valve
 
-**PRV**: Pressure reducing valve
+   **FIFO**: First in first out
 
-**PSV**: Pressure sustaining valve 
+   **GGA**: Global gradient algorithm
 
-**SI**: International System of Units
+   **GIS**: Geographic information system
 
-**TCV**: Throttle control valve
+   **GPV**: General purpose valve
 
-**THM**: Trihalomethanes
+   **LIFO**: Last in first out 
 
-**US**: United States
+   **PBV**: Pressure breaker valve
+
+   **PDA**: Pressure driven analysis
+
+   **PDD**: Pressure driven demand
+   
+   **PRV**: Pressure reducing valve
+
+   **PSV**: Pressure sustaining valve 
+
+   **SI**: International System of Units
+
+   **TCV**: Throttle control valve
+
+   **THM**: Trihalomethanes
+
+   **US**: United States
 
 
 
