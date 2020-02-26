@@ -1,7 +1,7 @@
 ﻿Quality Assurance Project Plan
 ==============================
 
-Research and Development on ORD’s Water Distribution Network Model – EPANET
+Research and Development on U.S. EPA’s Software Application for Modeling Hydraulic and Water Quality Behavior of Drinking Water Distribution Systems:  EPANET
 ---------------------------------------------------------------------------
 
 #### US EPA / ORD / CESER / Water Infrastructure Division / Drinking Water Management Branch
@@ -38,6 +38,8 @@ RAP - Research Action Plan
 
 UI - User Interface
 
+U.S. EPA - United States Environmental Protection Agency
+
 VOTD - Version of the Day
 
 WDN - Water Distribution Network
@@ -67,30 +69,31 @@ Introduction
 
 This document describes the Quality Assurance (QA) program for U.S.
 Environmental Protection Agency (EPA) Office of Research and Development
-(ORD)'s development and maintenance of its water distribution network
-(WDN) simulation model EPANET. Development of tools such as EPANET for
-the simulation of hydraulics and water quality in the nations drinking
-water systems is central to EPA's mission of protecting public health.
-EPANET is widely used to plan, design, analyze, and regulate WDNs.
-EPANET is also an important component of CESER's water security tools
-and has been adopted by third party commercial vendors as the
-computational core of their derivative products.
+(ORD)'s development and maintenance of its software application for modeling 
+hydraulic and water quality behavior of drinking water distribution systems, 
+known as EPANET. Development of tools such as EPANET for the simulation of 
+hydraulics and water quality in the nations drinking water systems is central 
+to EPA's mission of protecting public health.  EPANET is widely used to plan, 
+design, analyze, and regulate drinking water distribution systems.  EPANET is 
+also an important component of CESER's water security and resilience tools and 
+has been adopted by third party commercial vendors as the computational core 
+of their derivative products.
 
-ORD developed EPANET in the 1990's out of a need to improve
-understanding of water quality processes that occur in WDNs. Major work
-on EPANET ceased in the early 2000's. It last received a minor update in
-2008. It is of the utmost importance that EPANET is well engineered
-software that is fully capable of supporting these important stakeholder
+ORD developed EPANET in the 1990's out of a need to improve understanding of 
+hydraulic and water quality processes that occur in WDNs. Major work
+on EPANET ceased in the early 2000's. EPANET was last updated (minor) in
+2008. It is important that EPANET be well engineered and maintained
+software that is fully capable of supporting needed important stakeholder
 activities. CESER will work in close cooperation with EPANET developer and 
-User Community to develop and maintain EPANET software. This work is focused 
-on advancing EPANET development through community cooperation,
+User Community to develop and maintain EPANET software. This project is focused 
+on advancing EPANET development and maintenance through community cooperation,
 modernizing the code base, and integrating new features in response to
 EPA mission driven decisions and stakeholder needs.
 
-This work is performed under the authority granted by Congress to the
+This project is performed under the authority granted by Congress to the
 EPA within the Safe Drinking Water Act. This work directly supports
 drinking water research activities within ORD and water regulatory
-activities of the Office of Water (OW). This work seeks to help communities
+activities of the Office of Water (OW). This project seeks to help communities
 efficiently direct WDN infrastructure investments by providing utilities
 with modeling tools for planning and design.
 
@@ -106,7 +109,8 @@ Documentation (EPA, 2015). ASC is a Department of Energy (DOE) program
 that is focused on developing advanced modeling and simulation
 capabilities that leverage high-performance computing resources. This
 ASC derivative plan has been successfully used to manage project quality
-in several EPA NHSRC modeling software projects including WST and WNTR.
+in two EPA water distribution system modeling software projects, specifically
+WST and WNTR.
 
 Project Description
 -------------------
@@ -122,7 +126,7 @@ commercially available software technologies, integrating EPANET-MSX, and
 features from the WST and WNTR toolkits and other EPANET-based software
 tools. Features from other toolkits may be modified to adapt them to the
 general planning, design, and daily operational analysis tasks for which
-EPANET is commonly used. We will also work with the broader Water
+EPANET is commonly used. EPA will also work with the broader Water
 Distribution System Analysis (WDSA) research community and our
 stakeholders to encourage the development of innovative new features for
 the EPANET.
@@ -140,10 +144,10 @@ Project Objectives
 ------------------
 
 The primary objective of this project is to perform in house research
-and development on the EPANET UI application and computational engine
+and development on the EPANET UI application and computational engines and their
 features and to work with open-source development communities and other
 stakeholder organizations on integrating their feature contributions.
-The project team will employ software development best practices related
+EPA project team will employ software development best practices related
 to design, development, testing, documentation, delivery, installation,
 and maintenance to ensure cost effectiveness of this project and
 performance of the resulting software applications.
@@ -154,19 +158,18 @@ This research project comprises three major objectives:
     system (GIS) functionality, Python scripting capabilities, and
     support for third party plugins.
 
-2.  To modernize EPANET's computational engine making it a modular and
-    extensible software library that utilizes multi-threading and
-    graphics processing unit (GPU) computing capabilities to accelerate
-    innovative WDN analysis applications by EPA, our stakeholders, and
-    third party commercial developers.
+2.  To modernize and maintain EPANET's computational engines, e.g., 
+    ensuring the use of modular and extensible software library that utilizes 
+    multi-threading and graphics processing unit (GPU) computing capabilities to accelerate
+    innovative WDN analysis applications by EPA, our stakeholders, and third party commercial developers.
 
 3.  To harness EPANET as a technology transfer channel for delivering
-    NHSRC's EPANET-based tools to a wider audience of potential users.
+    EPA's EPANET-based tools to a wide audience of potential users.
 
 Project Schedule
 ----------------
 
-The goal of this project is to establish a development regimen for
+The goal of this project is to establish and coordinate a development regimen for
 EPANET that results in a cyclical schedule of periodic feature releases
 and software patches as needed. Periodic feature releases will integrate
 EPA and community feature development. Software patches will be
@@ -176,7 +179,7 @@ verification as described in this document will be utilized to minimize
 the incidence and severity of software quality issues.
 
 A bi-annual software release schedule is envisioned where EPANET UI and
-engine feature releases will occur every other year. Software patches
+engine feature releases will occur frequently. Software patches
 will be developed and released on demand as the need arises. Separating
 feature release and software patches in this manner will help improve
 software quality since defects are frequently introduced along with new
@@ -209,13 +212,13 @@ Quality Definition and Goals
 Quality is defined as the degree of excellence of something. Software
 quality can be measured in several meaningful ways:
 
-> • develop robust, reliable WDN modeling tools that can be effectively
+> • Develop robust, reliable WDN modeling tools that can be effectively
 > applied to realistic large-scale problems,\
-> • solve real-world water problems as described by our stakeholders,\
-> • satisfy the stated and implied needs, budget, and schedules of the
+> • Solve real-world water problems as described by our stakeholders,\
+> • Satisfy the stated and implied needs, budget, and schedules of the
 > EPA and our stakeholders,\
-> • be technically innovative, cost efficient, and\
-> • ensure continual quality improvement of the ongoing research and
+> • Be technically innovative, cost efficient, and\
+> • Ensure continual quality improvement of the ongoing research and
 > development activities.
 
 The quality assurance/quality control (QA/QC) goals for this software
@@ -242,7 +245,7 @@ Quality Assurance Practices
 ---------------------------
 
 This document adopts the breakdown of QA practices that are similar to
-those adopted in NHSRC project QA/QC documentation and EPA Requirements
+those adopted in WST and WNTR projects QA/QC documentation and EPA Requirements
 for Quality Assurance Project Plans (QAPPs) for Modeling:
 
 > • Project Management\
@@ -312,10 +315,10 @@ will have a medium-high LOF. This same risk based approach will also be
 applied to open source contributions as they are integrated with the
 code base. These applications will include software testing, version
 control, and documentation. Communication on these applications will
-occur during team meetings and on the software repository sites
-(<https://github.com/USEPA/Water-Distribution-Network-Model> and
-<https://github.com/USEPA/SWMM-EPANET_User_Interface>) and will be
-documented in meeting notes.
+occur during team meetings and on various Github.com software repository sites
+managed by U.S. EPA, e.g., <https://github.com/USEPA/EPANET2.2>. and at recognized
+community development sites, e.g., <https://github.com/OpenWaterAnalytics/EPANET>,
+and through documented meetings.
 
 Requirements Analysis
 ---------------------
@@ -331,19 +334,21 @@ Requirements are inputs to other practice areas.
 
 #### PR2. Identify, gather and manage stakeholders' expectations and requirements.
 
-EPA and community members are stakeholders of this project and help to
-define the project requirements. Members of the EPA project team will be
+EPA and community members are important stakeholders of this project and help to
+define and implement the project requirements. Members of the EPA project team will be
 regularly updated through team meetings. These meetings might be open to
 other stakeholders (e.g., open source community members, such as Open
-Water Analytics (OWA), EPA's OW staff or water utility staff) as needed.
+Water Analytics (OWA) at <https://github.com/OpenWaterAnalytics/EPANET/wiki>, 
+EPA's OW staff or water utility staff) as needed.
 
 #### PR3. Derive, negotiate, manage, and trace requirements. 
 
 Project requirements are broadly stated in the Statement of Work for
-project tasks and this QAPP. These requirements will be refined as the
-project continues. Negotiation, management, and tracking of these
-requirements will occur during research group meetings and will be
-documented in meeting notes.
+project tasks, by and in cooperation with the community stakeholders, e.g., OWA, and this QAPP. 
+These requirements will be refined as the project continues. Negotiation, management, 
+and tracking of these requirements will occur during research group meetings, documented in meeting notes,
+and formalized and implemented through the software repositories of the U.S. EPA and the community 
+contributors and stakeholders (e.g., <https://github.com/OpenWaterAnalytics/EPANET>).
 
 Risk Management
 ---------------
@@ -374,11 +379,14 @@ identified and analyzed in meetings and documented as necessary.
 Tasks are included in this project in order to mitigate risks, and these
 include: maintaining the software in a version control repository;
 continuous improvements of test coverage; performing a standard suite of
-tests prior to each public release; routine updates to the GitHub site
-(https://github.com/USEPA/Water-Distribution-Network-Model) and EPA's
+tests prior to each public release; routine updates and maintenance of the 
+U.S. EPA's GitHub archival repository for the project (e.g.,
+<https://github.com/USEPA/EPANET2.2> and EPA's
 EPANET website (<https://www.epa.gov/water-research/epanet>) to
 communicate new features; regular communication on budget and personnel
-issues between EPA project officers and EPA management.
+issues between EPA project officers and EPA management.  Central to this
+project is coordination and collaboration with the community stakeholders for
+EPANET development and maintenance (e.g., <https://github.com/OpenWaterAnalytics/EPANET>).
 
 Project Planning, Tracking, and Oversight
 -----------------------------------------
@@ -401,7 +409,9 @@ and re-negotiating requirements or acceptance criteria.
 
 The "project plan" is the aggregate of the individual tasks in the scope
 of work. The team will review and discuss the project plan during team
-meetings.
+meetings.  Again, central to this project is coordination and collaboration 
+with the community stakeholders for EPANET development and maintenance 
+(e.g., <https://github.com/OpenWaterAnalytics/EPANET>).
 
 #### PR7. Track project performance versus project plan and implement needed (corrective) actions.
 
@@ -441,13 +451,15 @@ being modeled.
 
 Modeling assumptions, related algorithmic formulations, and the
 limitations of these capabilities will be reviewed and critiqued
-internally during team meetings or dedicated peer reviews depending upon
+internally during team meetings, coordination and collaboration activities
+with community stakeholders or dedicated peer reviews depending upon
 the required LOF. Preliminary reviews focus on initial ideas or
 direction for a specific work product. These reviews seek both a "sanity
 check" and consider possible alternatives. Detailed reviews focus on the
 completed work product to ensure its acceptability and typically will
 invite customer participation. Additionally, external reviews are
-conducted through peer-reviewed journal articles and conferences.
+conducted through community software repository collaborations, peer-reviewed 
+journal articles and conferences.
 
 #### PR8. Document designs for models and algorithms
 
@@ -470,7 +482,7 @@ Preliminary software development efforts are targeted at developing
 "proof of concept" demonstrations that modeling and algorithmic
 techniques are effective for research purposes. These efforts typically
 employ small-scale or synthetic data sets to demonstrate the
-capabilities of the software. Furthermore, software design processes are
+capabilities of the software. Software design processes are
 generally minimized in favor of rapidly generating a basic modeling or
 analytic capability. Preliminary software development is done at low LOF
 unless specifically (by task and work breakdown) required to be at
@@ -482,7 +494,9 @@ Preliminary software implementations will be documented in the code
 itself, with command-line help features, and/or simple 'readme' files.
 As the implementations mature, they will be documented in the software
 user manuals. The extent and formality of the software's documentation
-will evolve along with the software itself.
+will evolve along with the software itself.  Software quality is improved
+through the coordination and collaboration with community software developers, e.g.,
+OWA.
 
 Testing Models and Algorithmic Techniques
 -----------------------------------------
@@ -499,7 +513,10 @@ validate models and algorithms in this manner.
 Automated unit tests will be developed to test individual modules of
 software packages against a suite of test problems with known solutions.
 All modeling and algorithmic outputs will be reviewed by the project
-team and external users.
+team and external users.  Community stakeholders and software developers will
+be leveraged to help ensure the highest quality.  Testing, reviews, and associated
+documentation will be conducted via the various Github.com repositories that support
+the project.
 
 Software Engineering
 ====================
@@ -521,16 +538,16 @@ always, software. Generally, software development processes include
 design, implementation, and testing of the software products or reuse of
 existing implementations. The specific instantiation of these practices
 depends on the LOF. Preliminary reviews of work products are done within
-the team. Final reviews invite external participation and are generally
-more formal.
+the team and, often, with the coordination and collaboration of the community
+stakeholders and software developers. Final reviews are generally more formal.
 
 #### PR12. Communicate and review design
 
 Software development design will be discussed during team meetings,
 described in the software documentation, and in white papers when
 appropriate. All changes to the code will be automatically tracked at
-GitHub.com/USEPA website with open access to the public
-(https://github.com/USEPA/Water-Distribution-Network-Model).
+at a GitHub.com/USEPA website with open access to the public
+(e.g., <https://github.com/USEPA/EPANET2.2>).
 
 #### PR13. Create required software and product documentation
 
@@ -538,11 +555,11 @@ As changes to the software are made, documentation will be updated. All
 changes to the code will be recorded by the GitHub websites. Whenever a
 change is made, the GitHub site instantaneously documents all changes to
 the code, the person who made the changes, and the date and time of the
-change. User manuals will be updated on a bi-annual basis to reflect the
+change. User manuals will be updated on as needed basis to reflect the
 latest release. Software and product documentation will be available at
-all times to all users via GitHub
-(https://github.com/USEPA/Water-Distribution-Network-Model) and EPA's
-EPANET (https://www.epa.gov/water-research/epanet) websites.
+all times to all users via a GitHub.com/USEPA website repository
+(e.g., <https://github.com/USEPA/EPANET2.2>) and EPA's
+EPANET (<https://www.epa.gov/water-research/epanet>) websites.
 
 #### PR14. Create and implement software tests
 
@@ -605,9 +622,9 @@ over the project's lifetime.
 
 #### PR16. Perform version control of identified software product artifacts
 
-A software repository has been set up for EPANET using GitHub and can be
-found at https://github.com/USEPA/Water-Distribution-Network-Model and
-at https://github.com/USEPA/SWMM-EPANET\_User\_Interface.
+Multiple Github.com software repositories have been set up and will be used for 
+maintaining, testing, and advancing EPANET, e.g., <https://github.com/USEPA/EPANET2.2> 
+and at <https://github.com/openwateranalytics/EPANET>.
 
 #### PR17. Record and track issues associated with the software product.
 
@@ -642,8 +659,8 @@ satisfactory.
 
 #### PR19. Plan and generate the release package.
 
-Official release versions of EPANET software will be produced at least
-bi-annually. The release includes updated documentation, updated GitHub
+Official release versions of EPANET software will be produced regularly. 
+The release includes updated documentation, updated GitHub
 websites, and testing reports. The most current version of the software
 under active development is continuously available via GitHub. The
 software repository will include instructions for developers interested
@@ -659,7 +676,8 @@ software practices suggest that code coverage tests should evaluate 90%
 of files and 60% of lines of code. EPA will provide a software testing
 report documenting the results tests and testing metrics. Additionally,
 EPA will manually evaluate the software release before public
-distribution and perform cross-platform portability tests. EPA staff
+distribution while also coordinating and collborating with the community to
+other needed tests and reviews, e.g., perform cross-platform portability tests. EPA staff
 will also review all updates to user manuals.
 
 Data Acquisition and Management
@@ -698,7 +716,7 @@ repeatability information is obtained from the source of the data.
 Calibration practices include recording the mismatch in the data as a
 function of different input parameter values. The frequency with which
 model calibration must be conducted is dependent on the data, the model
-and the intended use of the mode; however, any time model parameters are
+and the intended use of the model; however, any time model parameters are
 varied, the calibration process is repeated.
 
 #### PR21. Document objectives and methods of model calibration activities \[acceptance criteria, frequency, method of assessing goodness-of-fit\]
@@ -756,7 +774,7 @@ repositories on EPA computers.
 The research has been carried out on Windows workstations. The primary
 compute engine for this effort is a 64-bit Windows workstation. Support
 for other platforms such as Linux and Mac OS will be developed and
-documented.
+documented, as needed.
 
 Software Verification
 =====================
@@ -781,7 +799,9 @@ changed, retesting and reevaluation of the changes will need to occur.
 In this project, software verification includes: team review of models,
 algorithms, and code; peer review of user manuals, tutorial documents,
 and webinars; automated software tests and documentation (included in
-the software release packages); issue tracking through the GitHub site.
+the software release packages); issue tracking through the GitHub site, both 
+U.S. EPA Github.com site (<https://github.com/USEPA/EPANET2.2> and the community
+development Github.com site (<https://github.com/OpenWaterAnalytics/EPANET>).
 
 #### PR27. Conduct tests to demonstrate that acceptance criteria are met and to ensure that previously tested capabilities continue to perform as expected.
 
@@ -797,13 +817,14 @@ performing as expected.
 
 #### PR28. Conduct independent technical reviews to evaluate adequacy with respect to requirements.
 
-EPA will define the independent technical reviews that are required for
+EPA will define any independent technical reviews that are required for
 software verification, including peer reviews of user manuals and other
-training materials. For this project, technical reviews of documentation
-and training materials are completed by team members and by technical
-peer review. Software is tested by team members and outside users. The
-GitHub sites are used to communicate reviews of the software to the
-development team.
+training materials. For this project, technical reviews are regularly and 
+consistently performed through coordination and collaboration with the community 
+software developers.  Additionally, reviews of documentation and training materials 
+are completed by team members and by technical peer review. Software is tested by team 
+members and community developers and users. Project GitHub.com sites are used to facilitate, document,
+and communicate reviews of the software to the development team as well as the wider user community.
 
 Training
 ========
