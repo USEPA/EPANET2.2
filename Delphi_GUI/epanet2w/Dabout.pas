@@ -45,7 +45,7 @@ implementation
 
 procedure TAboutBoxForm.FormCreate(Sender: TObject);
 begin
-   //Build.Caption := 'Build 2.2.01';
+   //Build.Caption := 'Build 2.2.0';
 end;
 
 end.
