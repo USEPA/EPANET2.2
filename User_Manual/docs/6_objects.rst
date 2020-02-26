@@ -198,7 +198,7 @@ Editing Visual Objects
  
    The junction properties are provided in :numref:`table-junc_prop`. 
 
-.. tabularcolumns:: |p{2.5cm}|p{13cm}|
+.. tabularcolumns:: |p{3.2cm}|p{11.3cm}|
 
 .. _table-junc_prop:
 .. table:: Junction Properties	
@@ -311,7 +311,7 @@ Editing Visual Objects
    
    The reservoir properties are provided in :numref:`table-reservoir_prop`. 
   
-.. tabularcolumns:: |p{2.5cm}|p{13cm}|
+.. tabularcolumns:: |p{3cm}|p{11cm}|
 
 .. _table-reservoir_prop:
 .. table:: Reservoir Properties
@@ -383,7 +383,7 @@ Editing Visual Objects
 
    The tank properties are provided in :numref:`table-tank_prop`.
 
-.. tabularcolumns:: |p{2.5cm}|p{13cm}|   
+.. tabularcolumns:: |p{3cm}|p{11cm}|   
     
 .. _table-tank_prop:
 .. table:: Tank Properties	
@@ -532,7 +532,7 @@ Editing Visual Objects
 
    The pipe properties are provided in :numref:`table-pipe_prop`.
  
-.. tabularcolumns:: |p{2.5cm}|p{13cm}|
+.. tabularcolumns:: |p{3cm}|p{11cm}|
 
 .. _table-pipe_prop:
 .. table:: Pipe Properties	
@@ -634,7 +634,7 @@ Editing Visual Objects
 
    The pump properties are provided in :numref:`table-pump_prop`.
 
-.. tabularcolumns:: |p{2.5cm}|p{13cm}|
+.. tabularcolumns:: |p{3cm}|p{11cm}|
 
 .. _table-pump_prop:
 .. table:: Pump Properties	
@@ -747,7 +747,7 @@ Editing Visual Objects
 
    The valve properties are provided in :numref:`table-valve_prop`.
  
-.. tabularcolumns:: |p{2.5cm}|p{13cm}|
+.. tabularcolumns:: |p{3cm}|p{11cm}|
 
 .. _table-valve_prop:
 .. table:: Valve Properties	
@@ -832,7 +832,7 @@ Editing Visual Objects
 
    The map label properties are provided in :numref:`table-map_label_prop`.
  
-.. tabularcolumns:: |p{2.5cm}|p{13cm}|
+.. tabularcolumns:: |p{3cm}|p{11cm}|
 
 .. _table-map_label_prop:
 .. table:: Map Label Properties	
@@ -911,7 +911,7 @@ Editing Non-Visual Objects
    The Curve Editor is a dialog form as shown in :numref:`fig-curve_ed`. To use the
    Curve Editor, enter values for the following items (:numref:`table-curve_ed_prop`):
 
-.. tabularcolumns:: |p{2.5cm}|p{13cm}|
+.. tabularcolumns:: |p{3cm}|p{11cm}|
 
 .. _table-curve_ed_prop:
 .. table:: Curve Editor Properties	
@@ -952,7 +952,7 @@ Editing Non-Visual Objects
    a time pattern object. To use the Pattern Editor enter values for the
    following items (:numref:`table-pattern_ed_prop`):
 
-.. tabularcolumns:: |p{2.5cm}|p{13cm}|
+.. tabularcolumns:: |p{3cm}|p{11cm}|
 
 .. _table-pattern_ed_prop:
 .. table:: Pattern Editor Properties	
@@ -1052,7 +1052,7 @@ Editing Non-Visual Objects
       Source quality editor.
    ..
 
-.. tabularcolumns:: |p{2.5cm}|p{13cm}|
+.. tabularcolumns:: |p{3cm}|p{11cm}|
 
 .. _table-source_quality_ed:
 .. table:: Source Quality Editor Properties	 

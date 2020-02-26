@@ -190,6 +190,8 @@ Menu Bar
    The Report menu has commands used to report analysis results in
    different formats. The commands for the Report Menu are shown in :numref:`table-Report_Menu_Commands` below.
       
+.. tabularcolumns:: |p{3cm}|p{11cm}|
+
 .. _table-Report_Menu_Commands:
 .. table:: Report Menu Commands     
 
@@ -228,7 +230,9 @@ Menu Bar
 **Window Menu**
 
    The Window Menu contains the following commands shown in :numref:`table-Window_Menu_Commands` below.
-      
+
+ .. tabularcolumns:: |p{3cm}|p{11cm}|
+
 .. _table-Window_Menu_Commands:
 .. table:: Window Menu Commands     
 
@@ -248,7 +252,9 @@ Menu Bar
 
    The Help Menu contains commands for getting help in using EPANET. The Help Menu contains the following commands shown in :numref:`table-Help_Menu_Commands` below. 
    Context-sensitive Help is also available by pressing the F1 key.
-      
+
+.. tabularcolumns:: |p{3cm}|p{11cm}|
+
 .. _table-Help_Menu_Commands:
 .. table:: Help Menu Commands       
 
@@ -520,6 +526,8 @@ Program Preferences
    The following preferences can be set on the General tab of the
    Preferences dialog (as shown below in :numref:`table-General_Preferences`).
    
+.. tabularcolumns:: |p{4cm}|p{10cm}|
+
 .. _table-General_Preferences:
 .. table:: General Preferences  
 
@@ -553,10 +561,10 @@ Program Preferences
     
   Note: The automatic Backup File is placed in the same directory as the input file.  However,
   the backup file (.bak) is only created for .net type input files, not the .inp text files.  The Preferences
-  Menu screen for the General Tab is shown in :numref:`fig-Preferences_General` below.
+  Menu screen for the General Tab is shown in :numref:`fig-Preferences_General_Tab` below.
 	
-   .. _fig-Preferences_General:
-   .. figure:: media/preferences_general_tab.png
+   .. _fig-Preferences_General_Tab:
+   .. figure:: media/image58.png
       :alt: Preferences - General Tab
    
       Preferences - general tab.

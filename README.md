@@ -1,4 +1,4 @@
-﻿# EPANET 2.2
+# EPANET 2.2
 
 # Introduction
 EPANET is used to perform extended-period simulation of the hydraulic and water quality behavior within drinking water distribution systems (e.g., pressurized pipe networks), which consist of pipes, nodes (junctions), pumps, valves, storage tanks, and reservoirs. It can be used to track the flow of water in each pipe, the pressure at each node, the height of the water in each tank, a chemical concentration, the age of the water, and source tracing throughout the network during a simulation period.

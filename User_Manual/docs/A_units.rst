@@ -1,3 +1,8 @@
+.. raw:: latex
+
+    \renewcommand{\thetable}{\Alph{chapter}.\arabic{table}}
+    \renewcommand{\theliteralblock}{\Alph{chapter}.\arabic{literalblock}}
+
 .. _units:
 
 Units of Measurement
@@ -9,11 +14,11 @@ Units of Measurement
 chosen as flow units. SI Metric units apply when flow units are
 expressed using either liters or cubic meters.
 
-.. tabularcolumns:: |p{2.5cm}|p{6cm}|p{7cm}|
+.. tabularcolumns:: |p{4cm}|p{5.5cm}|p{5cm}|
 
 .. _table-units:
 .. table:: EPANET Parameters and Associated Units	
- 
+
   +-----------------------+-----------------------+-----------------------+
   |    *PARAMETER*        | *US CUSTOMARY*        | *SI METRIC*           |
   +=======================+=======================+=======================+
@@ -29,16 +34,20 @@ expressed using either liters or cubic meters.
   +-----------------------+-----------------------+-----------------------+
   |    Elevation          | foot                  | meter                 |
   +-----------------------+-----------------------+-----------------------+
-  |    Emitter            | flow unit /           | flow unit  /          |
-  |    Coefficient        | (psi) :sup:`1/2`      | (meter ) :sup:`1/2`   |
+  |    Emitter            | flow unit/            | flow unit/            |
+  |    Coefficient        | (psi)\ :sup:`1/2`     | (meter)\ :sup:`1/2`   |
   +-----------------------+-----------------------+-----------------------+
   |    Energy             | kilowatt - hour       | kilowatt - hour       |
   +-----------------------+-----------------------+-----------------------+
-  |    Flow               | - CFS (cu foot / sec) | - LPS (liter / sec)   |
-  |                       | - GPM (gal / min)     | - LPM (liter / min)   |
-  |                       | - MGD (M gal / day)   | - MLD (M liter / day) |
-  |                       | - IMGD (Imperial MGD) | - CMH (cu meter / hr) |
-  |                       | - AFD (ac-foot / day) | - CMD (cu meter / day)|
+  |    Flow               |  CFS (cu foot/sec)    |  LPS (liter/sec)      |
+  |                       |                       |                       |
+  |                       |  GPM (gal/min)        |  LPM (liter/min)      |
+  |                       |                       |                       |
+  |                       |  MGD (M gal/day)      |  MLD (M liter/day)    |
+  |                       |                       |                       |
+  |                       |  IMGD (Imperial MGD)  |  CMH (cu meter/hr)    |
+  |                       |                       |                       |
+  |                       |  AFD (ac-foot/day)    |  CMD (cu meter/day)   |
   +-----------------------+-----------------------+-----------------------+
   |    Friction Factor    | unitless              | unitless              |
   +-----------------------+-----------------------+-----------------------+
@@ -53,23 +62,22 @@ expressed using either liters or cubic meters.
   |    Pressure           | pounds per square     | meter                 |
   |                       | inch                  |                       |
   +-----------------------+-----------------------+-----------------------+
-  |    Reaction Coeff.    | 1st-order             | 1st-order             |
-  |    (Bulk)             |   1 / day             |   1 / day             |
+  |    Reaction Coeff.    | 1st-order   1/day     | 1st-order    1/day    |
+  |    (Bulk)             |                       |                       |
   +-----------------------+-----------------------+-----------------------+
-  |    Reaction Coeff.    | 0-order               | 0-order               |
-  |    (Wall)             |   mass / L / day      |   mass / L / day      |
-  |                       | 1st-order             | 1st-order             |
-  |                       |   ft / day            |   meter / day         |
+  | Reaction Coeff. (Wall)| 0-order  mass/L/day   | 0-order  mass/L/day   |
+  |                       |                       |                       |
+  |                       | 1st-order  ft/day     | 1st-order  meter/day  |
   +-----------------------+-----------------------+-----------------------+
-  |    Roughness          | Darcy-Weisbach        | Darcy-Weisbach        |
-  |    Coefficient        |   10\ :sup:`-3` foot  |   millimeter          |
-  |                       | Otherwise             | Otherwise             |
-  |                       |   unitless            |   unitless            |
+  | Roughness Coefficiient| Darcy-Weisbach        | Darcy-Weisbach        |
+  |                       | 10\ :sup:`-3`\ foot   | millimeter            |
+  |                       |                       |                       |
+  |                       | Otherwise  unitless   | Otherwise  unitless   |
   +-----------------------+-----------------------+-----------------------+
-  |    Source Mass        | mass / minute         | mass / minute         |
+  |    Source Mass        | mass/minute           | mass/minute           |
   |    Injection          |                       |                       |
   +-----------------------+-----------------------+-----------------------+
-  |    Velocity           | foot / second         | meter  / second       |
+  |    Velocity           | foot/second           | meter/second          |
   +-----------------------+-----------------------+-----------------------+
   |    Volume             | cubic foot            | cubic meter           |
   +-----------------------+-----------------------+-----------------------+

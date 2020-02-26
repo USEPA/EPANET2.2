@@ -284,6 +284,7 @@ Physical Components
     +-----------------+------------------+------------------------+-----------------+
     |    *Material*   | *Hazen-Williams* | *Darcy-Weisbach*       | *Manning's*     |
     |                 | :math:`C`        | :math:`\epsilon`       | :math:`n`       |
+    |                 |                  |                        |                 |
     |                 | *(unitless)*     | (ft x :math:`10^{-3}`) | *(unitless)*    |
     +=================+==================+========================+=================+
     |    Cast Iron    |    130 -- 140    |     0.85               |  0.012 -- 0.015 |
@@ -552,6 +553,7 @@ Non-Physical Components
    .. _fig-single_pt_pump_curve:
    .. figure:: media/image29.png
       :alt: Example of Single-Point Pump Curve
+      :scale: 60%
    
       Single-point pump curve.
    ..
@@ -573,6 +575,7 @@ Non-Physical Components
    .. _fig-three_pt_pump_curve:
    .. figure:: media/image29-2.png
       :alt: Example of Three-Point Pump Curve
+      :scale: 50%
    
       Three-point pump curve.
    ..
@@ -586,6 +589,7 @@ Non-Physical Components
    .. _fig-multi_pt_pump_curve:
    .. figure:: media/image30-2.png
       :alt: Example of Multi-Point Pump Curve
+      :scale: 50%
    
       Multi-point pump curve.
    ..
@@ -606,6 +610,7 @@ Non-Physical Components
    .. _fig-variable_speed_pump_curve:
    .. figure:: media/image30.png
       :alt: Example of Variable-Speed Pump Curve
+      :scale: 50%
    
       Variable-speed pump curve.
    ..  
@@ -627,7 +632,7 @@ Non-Physical Components
       Pump efficiency curve.
    ..  
   
-**Volume Curve**
+*Volume Curve*
 
    A Volume Curve determines how storage tank volume (Y in cubic feet or
    cubic meters) varies as a function of water level (X in feet or
@@ -644,7 +649,7 @@ Non-Physical Components
       Tank volume curve.
    ..  
  
-**Headloss Curve**
+*Headloss Curve*
 
    A Headloss Curve is used to described the headloss (Y in feet or
    meters) through a General Purpose Valve (GPV) as a function of flow
@@ -654,7 +659,7 @@ Non-Physical Components
    draw-down behavior.
 
 
-*Time Patterns*
+**Time Patterns**
 
    A Time Pattern is a collection of multipliers that can be applied to
    a quantity to allow it to vary over time. Nodal demands, reservoir
@@ -696,7 +701,7 @@ Non-Physical Components
     +--------+--------+-----+------+-------+-------+-------+-------+
    ..
 
-*Controls*
+**Controls**
 
    Controls are statements that determine how the network is operated
    over time. They specify the status of selected links as a function of
@@ -708,7 +713,7 @@ Non-Physical Components
     -  Rule-Based Controls Simple Controls
 
 
-**Simple Controls**
+*Simple Controls*
 	
     Simple controls change the status or setting of a link based on:
 	
@@ -758,9 +763,9 @@ Non-Physical Components
      |                                      | pump 12 to 1.5 at 16 hours      |
      |                                      | into the simulation)            |
      +--------------------------------------+---------------------------------+
-     | | LINK 12 CLOSED AT CLOCKTIME 10 AM  | (Link 12 is repeatedly closed   |
-     | | LINK 12 OPEN AT CLOCKTIME 8 PM     | at 10 AM and opened at 8 PM     |
-     |                                      | throughout the simulation)      |
+     | LINK 12 CLOSED AT CLOCKTIME 10 AM    | (Link 12 is repeatedly closed   |
+     |                                      | at 10 AM and opened at 8 PM     |                      
+     | LINK 12 OPEN AT CLOCKTIME 8 PM       | throughout the simulation)      |
      +--------------------------------------+---------------------------------+
     ..
 	
@@ -777,7 +782,7 @@ Non-Physical Components
     controls might provide more stability.
    
 
-**Rule-Based Controls**
+*Rule-Based Controls*
 
     Rule-Based Controls allow link status and settings to be based on a
     combination of conditions that might exist in the network after an
