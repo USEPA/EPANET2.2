@@ -123,9 +123,6 @@ html_context = {
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'EPANETdoc'
 
-latex_logo = 'media/logo.png'
-latex_logo = 'media/epanetlogo.png'
-
 # -- Options for LaTeX output ------------------------------------------------
 latex_engine = 'pdflatex'
 latex_elements = {
@@ -150,7 +147,7 @@ latex_elements = {
 
             \vspace{0mm}
             \begin{figure}[htbp]
-                  \includegraphics[scale=0.8]{logo.png}
+                  \includegraphics[scale=0.8]{../../docs/media/logo.png}
             \end{figure}
 
             \vspace*{35mm}
@@ -178,7 +175,7 @@ latex_elements = {
            \vspace{30mm}
             \begin{figure}[htbp]
                   \centering
-                  \includegraphics[scale=0.75]{epanetlogo.png}
+                  \includegraphics[scale=0.75]{../../docs/media/epanetlogo.png}
             \end{figure}
 
         \end{titlepage}
