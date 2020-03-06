@@ -13,18 +13,18 @@ This repository is being set up to bring together the EPANET engine contribution
 This repository is for archiving the source code and document files associated with the EPA/OWA EPANET 2.2.0 release.  Anyone interested in examining these files can peruse the appropriate folder in this repository.
 
 # Intended Audience
-The intended audience for this repository is anyone working on water distribution system modeling and also interested in knowing more about the source code and documentation associated with the official release of EPANET 2.2.0.
+The intended audience for this repository is anyone working on water distribution system modeling and interested in knowing more about the source code and documentation associated with the official release of EPANET 2.2.0.
 
 # License
 EPANET is released under the MIT license. See the LICENSE.txt file.
 
 # Contributing
-EPANET has an active open source software community including consulting engineers, students, researchers, software companies, professional organizations, other interested members of the public, and EPA partners. An Open Source EPANET Initiative is at <http://community.wateranalytics.org>.  Anyone wanting to contribute to the open source, collaborative project for EPANET should go to <https://github.com/OpenWaterAnalytics/EPANET>.  Everyone is welcome to participate in the EPANET project. Whether you are helping others to resolve issues, reporting a new issue that hasn't yet been discovered, suggesting a new feature that would benefit your workflow, or writing code, we value and appreciate your time and effort. The path for contribution starts with entering an issue at https://github.com/OpenWaterAnalytics/EPANET/issues. Examine the open issues at this link and the conversation around them, and then get engaged!  
+EPANET has an active open source software community including consulting engineers, students, researchers, software companies, professional organizations, other interested members of the public, and EPA partners. An Open Source EPANET Initiative is at <http://community.wateranalytics.org>.  Anyone wanting to contribute to the open source, collaborative project for EPANET should go to <https://github.com/OpenWaterAnalytics/EPANET>.  Everyone is welcome to participate in the EPANET project. Whether you are helping others to resolve issues, reporting a new unknown issue, suggesting a new feature that would benefit your workflow, or writing code, we value and appreciate your time and effort. The path for contribution starts with entering an issue at https://github.com/OpenWaterAnalytics/EPANET/issues. Examine the open issues at this link and the conversation around them, and then get engaged!  
 
 Finally, the issues identified and resolved here were the result of U.S. EPA's efforts to coordinate beta testing of the EPA/OWA EPANET version 2.2.0.  
 
 # Documentation
-The Read the Docs version of the EPANET User's Manual is available here at https://epanet22.readthedocs.io/en/latest/.  Alternatively, an Acrobat PDF version is available for download within the User Manual folder https://github.com/USEPA/EPANET2.2/tree/master/User_Manual. 
+The "Read-the-Docs" version of the EPANET User's Manual is available here at https://epanet22.readthedocs.io/en/latest/.  Alternatively, an Acrobat PDF version is available for download within the User Manual folder https://github.com/USEPA/EPANET2.2/tree/master/User_Manual. 
 
 # Contact
 epanet@epa.gov
