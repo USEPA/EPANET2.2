@@ -92,6 +92,8 @@ begin
   Uutils.GetExtended(URXEdit.Text,MapDimensions.UpperRight.X);
   Uutils.GetExtended(URYEdit.Text,MapDimensions.UpperRight.Y);
   MapDimensions.Units := TMapUnits(MapUnits.ItemIndex);
+  if MapDimensions.Units = muDegrees then MapDimensions.Digits := MAXDEGDIGITS //(2.2.0)
+  else MapDimensions.Digits := DefMapDimensions.Digits;                        //(2.2.0)
   Uinput.UpdateMapUnits;
 end;
 
@@ -102,7 +104,7 @@ begin
   Dimensions := DefMapDimensions;
   Dimensions.Units := TMapUnits(MapUnits.ItemIndex);
   if Dimensions.Units = muDegrees then Dimensions.Digits := MAXDEGDIGITS
-  else Dimensions.Digits := 2;
+  else Dimensions.Digits := DefMapDimensions.Digits;                           //(2.2.0)
   Uimport.SetMapDimensions(Dimensions);
   with Dimensions do
   begin
