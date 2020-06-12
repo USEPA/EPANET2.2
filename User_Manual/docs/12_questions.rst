@@ -95,7 +95,7 @@ node?**
   .. figure:: media/image95.png
      :alt: Example of Tank Inlet Discharging Above Water Surface
    
-     Example of tank inlet discharging above water surface.
+     Example of Tank Inlet Discharging above Water Surface.
   ..
 
   The tank's inlet consists of a Pressure Sustaining Valve followed by

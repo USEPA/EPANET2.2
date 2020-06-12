@@ -10,9 +10,6 @@ Units of Measurement
 
 :numref:`table-units` list EPANET parameters and their associated US and SI units.
 
-**Note**: US Customary units apply when CFS, GPM, AFD, or MGD is
-chosen as flow units. SI Metric units apply when flow units are
-expressed using either liters or cubic meters.
 
 .. tabularcolumns:: |p{4cm}|p{5.5cm}|p{5cm}|
 
@@ -43,11 +40,11 @@ expressed using either liters or cubic meters.
   |                       |                       |                       |
   |                       |  GPM (gal/min)        |  LPM (liter/min)      |
   |                       |                       |                       |
-  |                       |  MGD (M gal/day)      |  MLD (M liter/day)    |
+  |                       |  MGD (Million gal/day)|  MLD (Megaliter/day)  |
   |                       |                       |                       |
-  |                       |  IMGD (Imperial MGD)  |  CMH (cu meter/hr)    |
+  |                       |  IMGD (Imperial MGD)  |  CMH (cubic meter/hr) |
   |                       |                       |                       |
-  |                       |  AFD (ac-foot/day)    |  CMD (cu meter/day)   |
+  |                       |  AFD (ac-foot/day)    |  CMD (cubic meter/day)|
   +-----------------------+-----------------------+-----------------------+
   |    Friction Factor    | unitless              | unitless              |
   +-----------------------+-----------------------+-----------------------+
@@ -85,3 +82,7 @@ expressed using either liters or cubic meters.
   +-----------------------+-----------------------+-----------------------+
 
 ..
+
+  **Note**: US Customary units apply when CFS, GPM, AFD, or MGD is
+  chosen as flow units. SI Metric units apply when flow units are
+  expressed using either liters or cubic meters.

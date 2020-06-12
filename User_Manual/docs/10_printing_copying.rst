@@ -41,7 +41,7 @@ Selecting a Printer
    .. figure:: media/image91.png
       :alt: Page Setup in EPANET
    
-      Page setup dialog.
+      Page Setup Dialog.
    ..
 
 .. _sec-set_page:
@@ -131,7 +131,7 @@ Copying to the Clipboard or to a File
    .. figure:: media/image92.png
       :alt: Copy Network Map Dialog in EPANET
 
-      Copy network map dialog
+      Copy Network Map Dialog
 
    ..   
    

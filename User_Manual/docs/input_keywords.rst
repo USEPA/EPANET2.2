@@ -24,23 +24,18 @@
 
 **Definitions:**
 
-  DIMENSIONS
-    Provides the X and Y coordinates of the lower-left and
-    upper-right corners of the map’s bounding rectangle. Defaults are the
-    extents of the nodal coordinates supplied in the [COORDINATES]
-    section.
+  **DIMENSIONS** provides the X and Y coordinates of the lower-left and
+  upper-right corners of the map’s bounding rectangle. Defaults are the
+  extents of the nodal coordinates supplied in the [COORDINATES] section.
 
-  UNITS
-    Specifies the units that the map’s dimensions are given in.
-    Default is NONE.
+  **UNITS** specifies the units that the map’s dimensions are given in.
+  Default is NONE.
 
-  FILE
-    Is the name of the file that contains the backdrop image.
+  **FILE** is the name of the file that contains the backdrop image.
 
-  OFFSET
-    Lists the X and Y distance that the upper-left corner of
-    the backdrop image is offset from the upper-left corner of the map’s
-    bounding rectangle. Default is zero offset.
+  **OFFSET** lists the X and Y distance that the upper-left corner of
+  the backdrop image is offset from the upper-left corner of the map’s
+  bounding rectangle. Default is zero offset.
 
 
 **Remarks:**
@@ -51,9 +46,15 @@
   b. Only Windows Enhanced Metafiles and bitmap files can be used as
      backdrops.
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
 
 ---------------------
 
+..
 
 [CONTROLS]
 ----------
@@ -116,8 +117,15 @@
   LINK 12 OPEN AT CLOCKTIME 8 PM
 
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
 ---------------------
 
+..
 
 [COORDINATES]
 -------------
@@ -162,8 +170,15 @@
     1       10023        128
     2       10056        95
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
 
 ---------------------
+
+..
 
 
 [CURVES]
@@ -187,10 +202,10 @@
 
   a. Curves can be used to represent the following relations:
 
-      | Head v. Flow for pumps
-      | Efficiency v. Flow for pumps
-      | Volume v. Depth for tanks
-      | Headloss v. Flow for General Purpose Valves
+     - Head v. Flow for pumps
+     - Efficiency v. Flow for pumps
+     - Volume v. Depth for tanks
+     - Headloss v. Flow for General Purpose Valves
 
   b. The points of a curve must be entered in order of increasing X-values
      (lower to higher).
@@ -220,8 +235,15 @@
   E1    2000    75
   E1    3000    65
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
 
 ---------------------
+
+..
 
 
 [DEMANDS]
@@ -270,7 +292,15 @@
   J256   50       101       ;Domestic
 
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
 ---------------------
+
+..
 
 
 [EMITTERS]
@@ -306,9 +336,15 @@
 
   e. An [EMITTERS] section is optional.
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
 
 ---------------------
 
+..
 
 [ENERGY]
 --------
@@ -336,12 +372,12 @@
 
   c. Parameters are defined as follows:
 
-     | **PRICE** = average cost per kW-hour,
-     | **PATTERN** = ID label of time pattern describing how energy price
+     - **PRICE** = average cost per kW-hour,
+     - **PATTERN** = ID label of time pattern describing how energy price
        varies with time,
-     | **EFFIC** = either a single percent efficiency for global setting
+     - **EFFIC** = either a single percent efficiency for global setting
        or the ID label of an efficiency curve for a specific pump,
-     | **DEMAND CHARGE** = added cost per maximum kW usage during the
+     - **DEMAND CHARGE** = added cost per maximum kW usage during the
        simulation period.
 
   d. The default global pump efficiency is 75% and the default global
@@ -362,8 +398,15 @@
   PUMP    23 EFFIC   E23    ;Assigns effic. curve to Pump 23
 
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
 ---------------------
 
+..
 
 [JUNCTIONS]
 -----------
@@ -408,7 +451,15 @@
   J3     115                     ;No demand at this junction
 
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
 ---------------------
+
+..
 
 
 [LABELS]
@@ -453,8 +504,15 @@
   34.57        12.75       “North Tank”     T22
 
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
 ---------------------
 
+..
 
 [MIXING]
 --------
@@ -472,23 +530,20 @@
     -  Compartment volume (fraction)
 
 
- **Remarks:**
+**Remarks:**
 
-  a. Mixing models include:
+ a. Mixing models include:
 
-     | Completely Mixed (MIXED)
-     | Two-Compartment Mixing (2COMP)
-     | Plug Flow (FIFO)
-     | Stacked Plug Flow (LIFO)
+    - Completely Mixed (MIXED)
+    - Two-Compartment Mixing (2COMP)
+    - Plug Flow (FIFO)
+    - Stacked Plug Flow (LIFO)
 
-  b. The compartment volume parameter only applies to the two-compartment
-     model and represents the fraction of the total tank volume devoted to
-     the inlet/outlet compartment.
+ b. The compartment volume parameter only applies to the two-compartment
+ model and represents the fraction of the total tank volume devoted to the inlet/outlet compartment.
 
-  c. The [MIXING] section is optional. Tanks not described in this section
-     are assumed to be completely mixed.
-
-
+ c. The [MIXING] section is optional. Tanks not described in this section 
+ are assumed to be completely mixed.
 
 **Example:**
 
@@ -501,8 +556,15 @@
   T23         2COMP    0.2
 
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
 ---------------------
 
+..
 
 [OPTIONS]
 ---------
@@ -543,8 +605,7 @@
 
 **Definitions:**
 
-  UNITS
-    Sets the units in which flow rates are expressed where:
+  **UNITS** sets the units in which flow rates are expressed where:
 
     | **CFS** = cubic feet per second
     | **GPM** = gallons per minute
@@ -557,145 +618,97 @@
     | **CMH** = cubic meters per hour
     | **CMD** = cubic meters per day
 
-    For **CFS, GPM, MGD, IMGD**, and **AFD** other input quantities are
-    expressed in US Customary Units. If flow units are in liters or cubic
-    meters then Metric Units must be used for all other input quantities
-    as well. (See Appendix A. Units of Measurement). The default flow units
-    are **GPM**.
+  For **CFS, GPM, MGD, IMGD**, and **AFD** other input quantities are
+  expressed in US Customary Units. If flow units are in liters or cubic
+  meters then Metric Units must be used for all other input quantities
+  as well. (See Appendix A. Units of Measurement). The default flow units are **GPM**.
 
-  HEADLOSS
-    Selects a formula to use for computing head loss for
-    flow through a pipe. The choices are the Hazen-Williams (**H-W**),
-    Darcy-Weisbach (**D-W**), or Chezy-Manning (**C-M**) formulas. The
-    default is **H-W**.
+  **HEADLOSS* selects a formula to use for computing head loss for
+  flow through a pipe. The choices are the Hazen-Williams (**H-W**),
+  Darcy-Weisbach (**D-W**), or Chezy-Manning (**C-M**) formulas. The
+  default is **H-W**.
 
-    The **HYDRAULICS** option allows you to either **SAVE** the current
-    hydraulics solution to a file or **USE** a previously saved
-    hydraulics solution. This is useful when studying factors that only
-    affect water quality behavior.
+  **HYDRAULICS** option allows you to either **SAVE** the current
+  hydraulics solution to a file or **USE** a previously saved
+  hydraulics solution. This is useful when studying factors that only
+  affect water quality behavior.
 
-  QUALITY
-    Selects the type of water quality analysis to perform.
-    The choices are **NONE, CHEMICAL, AGE**, and **TRACE**. In place of
-    **CHEMICAL** the actual name of the chemical can be used followed by
-    its concentration units (e.g., **CHLORINE mg/L**). If **TRACE** is
-    selected it must be followed by the ID label of the node being
-    traced. The default selection is **NONE** (no water quality
-    analysis).
+  **QUALITY** selects the type of water quality analysis to perform.
+  The choices are **NONE, CHEMICAL, AGE**, and **TRACE**. In place of
+  **CHEMICAL** the actual name of the chemical can be used followed by
+  its concentration units (e.g., **CHLORINE mg/L**). If **TRACE** is
+  selected it must be followed by the ID label of the node being
+  traced. The default selection is **NONE** (no water quality analysis).
 
-  VISCOSITY
-    Is the kinematic viscosity of the fluid being modeled
-    relative to that of water at 20 deg. C (1.0 centistoke). The default
-    value is 1.0.
+  **VISCOSITY** is the kinematic viscosity of the fluid being modeled
+  relative to that of water at 20 deg. C (1.0 centistoke). The default value is 1.0.
 
-  DIFFUSIVITY
-    Is the molecular diffusivity of the chemical being
-    analyzed relative to that of chlorine in water. The default value is
-    1.0. Diffusivity is only used when mass transfer limitations are
-    considered in pipe wall reactions. A value of 0 will cause EPANET to
-    ignore mass transfer limitations.
+  **DIFFUSIVITY** is the molecular diffusivity of the chemical being
+  analyzed relative to that of chlorine in water. The default value is
+  1.0. Diffusivity is only used when mass transfer limitations are
+  considered in pipe wall reactions. A value of 0 will cause EPANET to ignore mass transfer limitations.
 
-  SPECIFIC GRAVITY
-    Is the ratio of the density of the fluid being
-    modeled to that of water at 4 deg. C (unitless).
+  **SPECIFIC GRAVITY** is the ratio of the density of the fluid being modeled to that of water at 4 deg. C (unitless).
 
-  TRIALS
-    Are the maximum number of trials used to solve network
-    hydraulics at each hydraulic time step of a simulation. The default
-    is 40.
+  **TRIALS** are the maximum number of trials used to solve network hydraulics at each hydraulic time step of a simulation. The default
+  is 200.
 
-  ACCURACY
-    Prescribes the convergence criterion that determines
-    when a hydraulic solution has been reached. The trials end when the
-    sum of all flow changes from the previous solution divided by the
-    total flow in all links is less than this number. The default is
-    0.001.
+  **ACCURACY** prescribes the convergence criterion that determines when a hydraulic solution has been reached. The trials end when the
+  sum of all flow changes from the previous solution divided by the total flow in all links is less than this number. The default is 0.001.
 
-  HEADERROR
-    Augments **ACCURACY** option. Sets the maximum head loss error
-    that any network link can have for hydraulic convergence to occur.
-    A link's head loss error is the difference between the head loss
-    found as a function of computed flow in the link (such as by the
-    Hazen-Williams equation for a pipe) and the difference in computed
-    heads for the link's end nodes. The units of this parameter are
-    feet (US) or meters (SI). The default value of 0 indicates that no
-    head error limit applies.
+  **HEADERROR** augments **ACCURACY** option. Sets the maximum head loss error that any network link can have for hydraulic convergence to occur.
+  A link's head loss error is the difference between the head loss found as a function of computed flow in the link (such as by the Hazen-Williams equation for a pipe) and the difference in computed
+  heads for the link's end nodes. The units of this parameter are feet (US) or meters (SI). The default value of 0 indicates that no
+  head error limit applies.
 
-  FLOWCHANGE
-    Augments the **ACCURACY** option. Sets the largest change in flow
-    that any network element (link, emitter, or pressure driven
-    demand) can have for hydraulic convergence to occur. It is specified
-    in whatever flow units the project is using. The default value of 0
-    indicates that no flow change limit applies.
+  **FLOWCHANGE** augments the **ACCURACY** option. Sets the largest change in flow that any network 
+  element (link, emitter, or pressure driven demand) can have for hydraulic convergence to occur. It
+  is specified in whatever flow units the project is using. The default value of 0 indicates that no flow change limit applies.
 
-  UNBALANCED
-    Determines what happens if a hydraulic solution cannot
-    be reached within the prescribed number of **TRIALS** at some
-    hydraulic time step into the simulation. **"STOP"** will halt the
-    entire analysis at that point. **"CONTINUE"** will continue the
-    analysis with a warning message issued. **"CONTINUE n"** will
-    continue the search for a solution for another "n" trials with the
-    status of all links held fixed at their current settings. The
-    simulation will be continued at this point with a message issued
-    about whether convergence was achieved or not. The default choice is
-    **"STOP"**.
+  **UNBALANCED** determines what happens if a hydraulic solution cannot be reached within the prescribed 
+  number of **TRIALS** at some hydraulic time step into the simulation. **"STOP"** will halt the
+  entire analysis at that point. **"CONTINUE"** will continue the analysis with a warning message 
+  issued. **"CONTINUE n"** will continue the search for a solution for another "n" trials with the
+  status of all links held fixed at their current settings. The simulation will be continued at this 
+  point with a message issued about whether convergence was achieved or not. The default choice is **"STOP"**.
 
-  PATTERN
-    Provides the ID label of a default demand pattern to be
-    applied to all junctions where no demand pattern was specified. If no
-    such pattern exists in the [PATTERNS] section then by default the
-    pattern consists of a single multiplier equal to 1.0. If this option
-    is not used, then the global default demand pattern has a label of
-    "1".
+  **PATTERN** provides the ID label of a default demand pattern to be applied to all junctions where no 
+  demand pattern was specified. If no such pattern exists in the [PATTERNS] section then by default 
+  the pattern consists of a single multiplier equal to 1.0. If this option is not used, then the 
+  global default demand pattern has a label of "1".
 
-  DEMAND MULTIPLIER
-    Is used to adjust the values of baseline demands for all junctions
-    and all demand categories. For example, a value of 2 doubles all
-    baseline demands, while a value of 0.5 would halve them. The default
-    value is 1.0.
+  **DEMAND MULTIPLIER** is used to adjust the values of baseline demands for all junctions and all 
+  demand categories. For example, a value of 2 doubles all baseline demands, while a value of 0.5 
+  would halve them. The default value is 1.0.
 
-  DEMAND MODEL
-    Determines nodal demand model -- Demand Driven Analysis (**DDA**) or
-    Pressure Driven Analysis (**PDA**). DDA assumes a nodal demand at a given
-    point in time is a fixed value :math:`D`. This sometimes results in
-    hydraulic solutions with negative pressures (a physical impossibility).
-    PDA assumes the demand delivered, :math:`d`, is a function of nodal
-    pressure, :math:`p`, as follows:
+  **DEMAND MODEL** determines nodal demand model -- Demand Driven Analysis (**DDA**) or Pressure Driven 
+  Analysis (**PDA**). DDA assumes a nodal demand at a given point in time is a fixed value :math:`D`. 
+  This sometimes results in hydraulic solutions with negative pressures (a physical impossibility).
+  PDA assumes the demand delivered, :math:`d`, is a function of nodal pressure, :math:`p`, as follows:
 
     .. math::
        d = D \left[ \frac{p - P_{min}}{P_{req} - P_{min}} \right]^{Pexp}
 
-    where :math:`D` is the full demand required, :math:`Pmin` is the pressure
-    below which demand is zero, :math:`Preq` is the pressure required to
-    deliver the full required demand and :math:`Pexp` is an exponent. When
-    :math:`p < Pmin` demand is 0 and when :math:`p > Preq` demand equals
-    :math:`D`. The default value is **DDA**.
+  where :math:`D` is the full demand required, :math:`Pmin` is the pressure below which demand is zero, 
+  :math:`Preq` is the pressure required to deliver the full required demand and :math:`Pexp` is an 
+  exponent. The units of the pressures are psi (US) or meters (SI). When :math:`p < Pmin` demand is 0 
+  and when :math:`p > Preq` demand equals :math:`D`. The default value is **DDA**.
 
-  MINIMUM PRESSURE
-    Value for :math:`Pmin`. Default value is 0.0.
+  **MINIMUM PRESSURE** specifies the value for :math:`Pmin`. Default value is 0.0.
 
-  REQUIRED PRESSURE
-    Value for :math:`Preq`. Default value is 0.0.
+  **REQUIRED PRESSURE** specifies the value for :math:`Preq`. Default value is 0.1.
 
-  PRESSURE EXPONENT
-    Value for :math:`Pexp`. Default value is 0.5.
+  **PRESSURE EXPONENT** specifies the value for :math:`Pexp`. Default value is 0.5.
 
-  EMITTER EXPONENT
-    Specifies the power to which the pressure at a
-    junction is raised when computing the flow issuing from an emitter.
-    The default is 0.5.
+  **EMITTER EXPONENT** specifies the power to which the pressure at a junction is raised when computing 
+  the flow issuing from an emitter. The default is 0.5.
 
-  MAP
-    Is used to supply the name of a file containing coordinates
-    of the network's nodes so that a map of the network can be drawn. It
-    is not used for any hydraulic or water quality computations.
+  **MAP** is used to supply the name of a file containing coordinates of the network's nodes so that a 
+  map of the network can be drawn. It is not used for any hydraulic or water quality computations.
 
-  TOLERANCE
-    Is the difference in water quality level below which
-    one can say that one parcel of water is essentially the same as
-    another. The default is 0.01 for all types of quality analyses
-    (chemical, age (measured in hours), or source tracing (measured in
-    percent)).
+  **TOLERANCE** is the difference in water quality level below which one can say that one parcel of 
+  water is essentially the same as another. The default is 0.01 for all types of quality analyses
+  (chemical, age (measured in hours), or source tracing (measured in percent)).
 
 **Remarks:**
 
@@ -716,8 +729,15 @@
   UNBALANCED   CONTINUE   10
 
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
 ---------------------
 
+..
 
 [PATTERNS]
 ----------
@@ -764,8 +784,15 @@
   P2    0      0      1
 
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
 ---------------------
 
+..
 
 [PIPES]
 -------
@@ -814,7 +841,15 @@
    P3    J1     J10    1000      12       120
 
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
 ---------------------
+
+..
 
 
 [PUMPS]
@@ -859,7 +894,15 @@
   Pump3   N22      N23     POWER 100
 
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
 ---------------------
+
+..
 
 
 [QUALITY]
@@ -887,7 +930,15 @@
   c. The [QUALITY] section is optional.
 
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
 ---------------------
+
+..
 
 
 [REACTIONS]
@@ -900,37 +951,31 @@
 
 **Format:**
 
-  ========================= ====== =====
-  **ORDER BULK/WALL/TANK**  value
-  **GLOBAL BULK/WALL**      value
-  **BULK/WALL/TANK**        pipeID value
+  ========================= ======================= =====
+  **ORDER**                 **BULK/WALL/TANK**      value
+  **GLOBAL**                **BULK/WALL**           value
+  **BULK/WALL/TANK**        pipeID                  value
   **LIMITING POTENTIAL**    value
   **ROUGHNESS CORRELATION** value
-  ========================= ====== =====
+  ========================= ======================= =====
 
 **Definitions:**
 
-  ORDER
-    Is used to set the order of reactions occurring in the bulk
-    fluid, at the pipe wall, or in tanks, respectively. Values for wall
-    reactions must be either 0 or 1. If not supplied the default reaction
-    order is 1.0.
+  **ORDER** is used to set the order of reactions occurring in the bulk
+  fluid, at the pipe wall, or in tanks, respectively. Values for wall
+  reactions must be either 0 or 1. If not supplied the default reaction order is 1.0.
 
-  GLOBAL
-    Is used to set a global value for all bulk reaction coefficients (pipes
-    and tanks) or for all pipe wall coefficients. The default value is zero.
+  **GLOBAL** is used to set a global value for all bulk reaction coefficients (pipes
+  and tanks) or for all pipe wall coefficients. The default value is zero.
 
-  BULK, WALL, and TANK
-    Are used to override the global reaction coefficients for specific pipes
-    and tanks.
+  **BULK**, **WALL**, and **TANK** are used to override the global reaction coefficients for specific pipes
+  and tanks.
 
-  LIMITING POTENTIAL
-    Specifies that reaction rates are proportional to the difference between
-    the current concentration and some limiting potential value.
+  **LIMITING POTENTIAL** specifies that reaction rates are proportional to the difference between
+  the current concentration and some limiting potential value.
 
-  ROUGHNESS CORRELATION
-    Will make all default pipe wall reaction coefficients be related to pipe
-    roughness in the following manner:
+  **ROUGHNESS CORRELATION** will make all default pipe wall reaction coefficients be related to pipe
+  roughness in the following manner:
 
     ==================  =====================
     Head Loss Equation  Roughness Correlation
@@ -940,11 +985,11 @@
     Chezy-Manning       :math:`F*n`
     ==================  =====================
 
-    where :math:`F` = roughness correlation, :math:`C` = Hazen-Williams C-factor,
-    :math:`e` = Darcy-Weisbach roughness, :math:`D` = pipe diameter, and
-    :math:`n` = Chezy-Manning roughness coefficient. The default value computed
-    this way can be overridden for any pipe by using the **WALL** format to
-    supply a specific value for the pipe.
+  where :math:`F` = roughness correlation, :math:`C` = Hazen-Williams C-factor,
+  :math:`e` = Darcy-Weisbach roughness, :math:`D` = pipe diameter, and
+  :math:`n` = Chezy-Manning roughness coefficient. The default value computed
+  this way can be overridden for any pipe by using the **WALL** format to
+  supply a specific value for the pipe.
 
 **Remarks:**
 
@@ -970,7 +1015,15 @@
   WALL   P244  -0.7
 
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
 ---------------------
+
+..
 
 
 [REPORT]
@@ -978,64 +1031,52 @@
 
 **Purpose:**
 
-  Describes the contents of the output report produced from a
-  simulation.
+  Describes the contents of the output report produced from a simulation.
 
 **Format:**
 
-  ============ ========================= ===============
+  ============ ============================== ===============
   **PAGESIZE** value
   **FILE**     filename
   **STATUS**   **YES/NO/FULL**
   **SUMMARY**  **YES/NO**
   **ENERGY**   **YES/NO**
-  **NODES**    **NONE/ALL/**             node1 node2 ...
-  **LINKS**    **NONE/ALL/**             link1 link2 ...
+  **NODES**    **NONE/ALL/**/node1 node2 ...
+  **LINKS**    **NONE/ALL/**/link1 link2 ...
   parameter    **YES/NO**
-  parameter    **BELOW/ABOVE/PRECISION** value
-  ============ ========================= ===============
+  parameter    **BELOW/ABOVE/PRECISION**      value
+  ============ ============================== ===============
 
 
 **Definitions:**
 
-  PAGESIZE
-    Sets the number of lines written per page of the output
-    report. The default is 0, meaning that no line limit per page is in
-    effect.
+  **PAGESIZE** sets the number of lines written per page of the output report. The default is 0, meaning that no line limit 
+  per page is in effect.
 
-  FILE
-    Supplies the name of a file to which the output report will
-    be written (ignored by the Windows version of EPANET).
+  **FILE** supplies the name of a file to which the output report will 
+  be written (ignored by the Windows version of EPANET).
 
-  STATUS
-    Determines whether a hydraulic status report should be
-    generated. If **YES** is selected the report will identify all
-    network components that change status during each time step of the
-    simulation. If **FULL** is selected, then the status report will also
-    include information from each trial of each hydraulic analysis. This
-    level of detail is only useful for de-bugging networks that become
-    hydraulically unbalanced. The default is **NO**.
+  **STATUS** determines whether a hydraulic status report should be
+  generated. If **YES** is selected the report will identify all
+  network components that change status during each time step of the
+  simulation. If **FULL** is selected, then the status report will also
+  include information from each trial of each hydraulic analysis. This
+  level of detail is only useful for de-bugging networks that become
+  hydraulically unbalanced. The default is **NO**.
 
-  SUMMARY
-    Determines whether a summary table of number of network
-    components and key analysis options is generated. The default is
-    **YES**.
+  **SUMMARY** determines whether a summary table of number of network
+  components and key analysis options is generated. The default is **YES**.
 
-  ENERGY
-    Determines if a table reporting average energy usage and
-    cost for each pump is provided. The default is NO.
+  **ENERGY** determines if a table reporting average energy usage and cost for each pump 
+  is provided. The default is NO.
 
-  NODES
-    Identifies which nodes will be reported on. You can either
-    list individual node ID labels or use the keywords **NONE** or
-    **ALL**. Additional **NODES** lines can be used to continue the list.
-    The default is **NONE**.
+  **NODES** identifies which nodes will be reported on. You can either
+  list individual node ID labels or use the keywords **NONE** or
+  **ALL**. Additional **NODES** lines can be used to continue the list. The default is **NONE**.
 
-  LINKS
-    Identifies which links will be reported on. You can either
-    list individual link ID labels or use the keywords **NONE** or
-    **ALL**. Additional **LINKS** lines can be used to continue the list.
-    The default is **NONE**.
+  **LINKS** identifies which links will be reported on. You can either list individual link ID 
+  labels or use the keywords **NONE** or **ALL**. Additional **LINKS** lines can be used to continue 
+  the list. The default is **NONE**.
 
   The “parameter” reporting option is used to identify which quantities
   are reported on, how many decimal places are displayed, and what kind
@@ -1098,7 +1139,15 @@
   VELOCITY ABOVE 3.0
 
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
 ---------------------
+
+..
 
 
 [RESERVOIRS]
@@ -1138,7 +1187,15 @@
   R2     120     Pat1      ;Head varies with time
 
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
 ---------------------
+
+..
 
 
 [RULES]
@@ -1233,8 +1290,7 @@ These attributes can be used with Link-Type objects:
 The **SYSTEM** object can use the following attributes:
 
   - **DEMAND** (total system demand)
-  - **TIME** (hours from the start of the simulation expressed either as
-    a decimal number or in hours:minutes format)
+  - **TIME** (hours from the start of the simulation expressed either as a decimal number or in hours:minutes format)
   - **CLOCKTIME** (24-hour clock time with **AM** or **PM** appended)
 
 Relation operators consist of the following:
@@ -1335,7 +1391,15 @@ Relation operators consist of the following:
   THEN PUMP 335 STATUS IS OPEN
 
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
 ---------------------
+
+..
 
 
 [SOURCES]
@@ -1366,44 +1430,26 @@ Relation operators consist of the following:
 
   c. A **CONCEN** source:
 
-     | - Represents the concentration of any external source inflow to the node
-     | - Applies only when the node has a net negative demand (water enters
-       the network at the node)
-     | - If the node is a junction, reported concentration is the result of
-       mixing the source flow and inflow from the rest of the network
-     | - If the node is a reservoir, the reported concentration is the
-       source concentration
-     | - If the node is a tank, the reported concentration is the internal
-       concentration of the tank
-     | - Is best used for nodes that represent source water supplies or
-       treatment works (e.g., reservoirs or nodes assigned a negative demand)
-     | - Should not be used at storage tanks with simultaneous
-       inflow/outflow.
+       - represents the concentration of any external source inflow to the node
+       - applies only when the node has a net negative demand (water enters the network at the node)
+       - if the node is a junction, reported concentration is the result of mixing the source flow and inflow from the rest of the network
+       - if the node is a reservoir, the reported concentration is the source concentration
+       - if the node is a tank, the reported concentration is the internal concentration of the tank
+       - is best used for nodes that represent source water supplies or treatment works (e.g., reservoirs or nodes assigned a negative demand)
+       - should not be used at storage tanks with simultaneous inflow/outflow.
 
   d. A **MASS, FLOWPACED**, or **SETPOINT** source:
 
-     | - Represents a booster source, where the substance is injected
-       directly into the network irregardless of what the demand at the node is
-     | - Affects water leaving the node to the rest of the network in the
-       following way:
+       - represents a booster source, where the substance is injected directly into the network irregardless of what the demand at the node is
+       - affects water leaving the node to the rest of the network in the following way:
+     
+         - A **MASS** booster adds a fixed mass flow to that resulting from inflow to the node
+         - A **FLOWPACED** booster adds a fixed concentration to the resultant inflow concentration at the node
+         - A **SETPOINT** booster fixes the concentration of any flow leaving the node (as long as the concentration resulting from the inflows is below the setpoint)
+       - the reported concentration at a junction or reservoir booster source is the concentration that results after the boosting is applied; the reported concentration for a tank with a booster source is the internal concentration of the tank
+       - is best used to model direct injection of a tracer or disinfectant into the network or to model a contaminant intrusion.
 
-        | - A **MASS** booster adds a fixed mass flow to that resulting
-          from inflow to the node
-        | - A **FLOWPACED** booster adds a fixed concentration to the
-          resultant inflow concentration at the node
-        | - A **SETPOINT** booster fixes the concentration of any flow
-          leaving the node (as long as the concentration resulting from
-          the inflows is below the setpoint)
-
-     | - The reported concentration at a junction or reservoir booster
-       source is the concentration that results after the boosting is
-       applied; the reported concentration for a tank with a booster
-       source is the internal concentration of the tank
-     | - Is best used to model direct injection of a tracer or disinfectant
-       into the network or to model a contaminant intrusion.
-
-  e. A [SOURCES] section is not needed for simulating water age or source
-     tracing.
+  e. A [SOURCES] section is not needed for simulating water age or source tracing.
 
 
 **Example:**
@@ -1417,7 +1463,15 @@ Relation operators consist of the following:
     N44     MASS     12               ;Constant mass injection
 
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
 ---------------------
+
+..
 
 
 [STATUS]
@@ -1472,7 +1526,15 @@ Relation operators consist of the following:
                            ;(overrides normal operation)
 
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
 ---------------------
+
+..
 
 
 [TAGS]
@@ -1518,7 +1580,15 @@ Relation operators consist of the following:
    LINK    202      PVC-1985
 
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
 ---------------------
+
+..
 
 
 [TANKS]
@@ -1571,7 +1641,15 @@ Relation operators consist of the following:
   T2    100     15       5       25      1     0      VC1
 
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
 ---------------------
+
+..
 
 
 [TIMES]
@@ -1583,7 +1661,7 @@ Relation operators consist of the following:
 
 **Format:**
 
-  ====================== ====================
+  ====================== =======================================
   **DURATION**           Value (units)
   **HYDRAULIC TIMESTEP** Value (units)
   **QUALITY TIMESTEP**   Value (units)
@@ -1592,75 +1670,49 @@ Relation operators consist of the following:
   **PATTERN START**      Value (units)
   **REPORT TIMESTEP**    Value (units)
   **REPORT START**       Value (units)
-  **START CLOCKTIME**    Value (AM/PM)
-  **STATISTIC**          **NONE/AVERAGED/**
-                         **MINIMUM/MAXIMUM/**
-                         **RANGE**
-  ====================== ====================
+  **START CLOCKTIME**    Value (**AM/PM**)
+  ---------------------- ---------------------------------------
+  **STATISTIC**          **NONE/AVERAGED/MINIMUM/MAXIMUM/RANGE**
+  ====================== =======================================
 
 **Definitions:**
 
-  DURATION
-    Is the duration of the simulation. Use 0 to run a single
-    period snapshot analysis. The default is 0.
+  **DURATION** is the duration of the simulation. Use 0 to run a single
+  period snapshot analysis. The default is 0.
 
-  HYDRAULIC TIMESTEP
-    Determines how often a new hydraulic state of
-    the network is computed. If greater than either the **PATTERN** or
-    **REPORT** time step it will be automatically reduced. The default is
-    1 hour.
+  **HYDRAULIC TIMESTEP** determines how often a new hydraulic state of
+  the network is computed. If greater than either the **PATTERN** or
+  **REPORT** time step it will be automatically reduced. The default is 1 hour.
 
-  QUALITY TIMESTEP
-    Is the time step used to track changes in water
-    quality throughout the network. The default is 1/10 of the hydraulic
-    time step.
+  **QUALITY TIMESTEP** is the time step used to track changes in water
+  quality throughout the network. The default is 1/10 of the hydraulic time step.
 
-  RULE TIMESTEP
-    Is the time step used to check for changes in
-    system status due to activation of rule-based controls between
-    hydraulic time steps. The default is 1/10 of the hydraulic time step.
+  **RULE TIMESTEP** is the time step used to check for changes in system status due 
+  to activation of rule-based controls between hydraulic time steps. The default is 1/10 of the hydraulic time step.
 
-  PATTERN TIMESTEP
-    Is the interval between time periods in all time
-    patterns. The default is 1 hour.
+  **PATTERN TIMESTEP** is the interval between time periods in all time patterns. The default is 1 hour.
 
-  PATTERN START
-    Is the time offset at which all patterns will
-    start. For example, a value of 6 hours would start the simulation
-    with each pattern in the time period that corresponds to hour 6. The
-    default is 0.
+  **PATTERN START** is the time offset at which all patterns will start. For example, a value of 6 hours
+  would start the simulation with each pattern in the time period that corresponds to hour 6. The default is 0.
 
-  REPORT TIMESTEP
-    Sets the time interval between which output
-    results are reported. The default is 1 hour.
+  **REPORT TIMESTEP** sets the time interval between which output results are reported. The default is 1 hour.
 
-  REPORT START
-    Is the length of time into the simulation at which
-    output results begin to be reported. The default is 0.
+  **REPORT START** is the length of time into the simulation at which output results begin to be reported. The default is 0.
 
-  START CLOCKTIME
-    Is the time of day (e.g., 3:00 PM) at which the
-    simulation begins. The default is 12:00 AM midnight.
+  **START CLOCKTIME** is the time of day (e.g., 3:00 PM) at which the simulation begins. The default is 12:00 AM midnight.
 
-  STATISTIC
-    Determines what kind of statistical post-processing should be done on the
-    time series of simulation results generated. **AVERAGED** reports a set
-    of time-averaged results, **MINIMUM** reports only the minimum values,
-    **MAXIMUM** the maximum values, and **RANGE** reports the difference
-    between the minimum and maximum values. **NONE** reports the full time
-    series for all quantities for all nodes and links and is the default.
+  **STATISTIC** determines what kind of statistical post-processing should be done on the time series of
+  simulation results generated. **AVERAGED** reports a set of time-averaged results, **MINIMUM** reports
+  only the minimum values, **MAXIMUM** the maximum values, and **RANGE** reports the difference between
+  the minimum and maximum values. **NONE** reports the full time series for all quantities for all nodes and links and is the default.
 
 **Remarks:**
 
-  a. Units can be **SECONDS (SEC), MINUTES (MIN), HOURS**, or **DAYS**.
-     The default is hours.
+  a. Units can be **SECONDS (SEC), MINUTES (MIN), HOURS**, or **DAYS**. The default is hours.
 
-  b. If units are not supplied, then time values can be entered as decimal
-     hours or in hours:minutes notation.
+  b. If units are not supplied, then time values can be entered as decimal hours or in hours:minutes notation.
 
-  c. All entries in the [TIMES] section are optional. Items offset by
-     slashes (/) indicate allowable choices.
-
+  c. All entries in the [TIMES] section are optional. Items offset by slashes (/) indicate allowable choices.
 
 
 **Example:**
@@ -1675,7 +1727,15 @@ Relation operators consist of the following:
   START CLOCKTIME    6:00 AM
 
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
 ---------------------
+
+..
 
 
 [TITLE]
@@ -1694,8 +1754,15 @@ Relation operators consist of the following:
   The [TITLE] section is optional.
 
 
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
 ---------------------
 
+..
 
 [VALVES]
 --------
@@ -1721,18 +1788,29 @@ Relation operators consist of the following:
 
   a. Valve types and settings include:
 
-    | Valve Type Setting PRV (pressure reducing valve) Pressure, psi (m)
-    | PSV (pressure sustaining valve) Pressure, psi (m)
-    | PBV (pressure breaker valve) Pressure, psi (m)
-    | FCV (flow control valve) Flow (flow units)
-    | TCV (throttle control valve) Loss Coefficient
-    | GPV (general purpose valve) ID of head loss curve
+    ================================== =========================
+    Valve Type                         Setting
+    PRV (pressure reducing valve)      Pressure, psi (m)
+    PSV (pressure sustaining valve)    Pressure, psi (m)
+    PBV (pressure breaker valve)       Pressure, psi (m)
+    FCV (flow control valve)           Flow (flow units)
+    TCV (throttle control valve)       Loss Coefficient
+    GPV (general purpose valve)        ID of head loss curve
+    ================================== =========================
 
   b. Shutoff valves and check valves are considered to be part of a pipe,
-     not a separate control valve component (see [PIPES])
+     not a separate control valve component (see [PIPES]).
 
+
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
 
 ---------------------
+
+..
 
 
 [VERTICES]
@@ -1773,3 +1851,13 @@ Relation operators consist of the following:
   ;-------------------------------
    1          10023       128
    2          10056       95
+
+.. raw:: latex
+
+    \newpage
+
+.. only:: html
+
+---------------------
+
+..

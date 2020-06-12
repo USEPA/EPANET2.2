@@ -225,7 +225,7 @@ Binary Output File Format
   the file to be divided conveniently into 4-byte records. The file
   consists of four sections listed in :numref:`table-binary`.
 
-.. tabularcolumns:: |p{4cm}|p{11cm}|
+.. tabularcolumns:: |p{3cm}|p{9cm}|
 
 .. _table-binary:
 .. table:: EPANET Binary Output File Sections and Sizes	
@@ -264,133 +264,133 @@ Prolog Section
   The prolog section of the binary output file contains the following
   data listed in :numref:`table-prolog`.
 
-.. tabularcolumns:: |p{6cm}|p{3cm}|p{3cm}|
+.. tabularcolumns:: |p{6cm}|p{2.5cm}|p{3.5cm}|
 .. _table-prolog:
 .. table:: EPANET Binary Output File Prolog Section Data	
  
-  +-----------------------+----------------+-----------------------+
-  | *ITEM*                |    *TYPE*      |  *NUMBER of BYTES*    |
-  +=======================+================+=======================+
-  | Magic Number ( =      |    Integer     |    4                  |
-  | 516114521)            |                |                       |
-  +-----------------------+----------------+-----------------------+
-  | Version (= 200)       |    Integer     |    4                  |
-  +-----------------------+----------------+-----------------------+
-  | Number of Nodes       |    Integer     |    4                  |
-  | (Junctions +          |                |                       |
-  | Reservoirs + Tanks)   |                |                       |
-  +-----------------------+----------------+-----------------------+
-  | Number of Reservoirs  |    Integer     |    4                  |
-  | & Tanks               |                |                       |
-  +-----------------------+----------------+-----------------------+
-  | Number of Links       |    Integer     |    4                  |
-  | (Pipes + Pumps +      |                |                       |
-  | Valves)               |                |                       |
-  +-----------------------+----------------+-----------------------+
-  | Number of Pumps       |    Integer     |    4                  |
-  +-----------------------+----------------+-----------------------+
-  | Number of Valves      |    Integer     |    4                  |
-  +-----------------------+----------------+-----------------------+
-  | Water Quality Option  |    Integer     |    4                  |
-  |                       |                |                       |
-  |   - 0 = none          |                |                       |
-  |   - 1 = chemical      |                |                       |
-  |   - 2 = age           |                |                       |
-  |   - 3 = source trace  |                |                       |
-  +-----------------------+----------------+-----------------------+
-  | Index of Node for     |    Integer     |    4                  |
-  | Source Tracing        |                |                       |
-  +-----------------------+----------------+-----------------------+
-  |  Flow Units Option    |    Integer     |    4                  |
-  |                       |                |                       |
-  |   - 0 = cfs           |                |                       |
-  |   - 1 = gpm           |                |                       |
-  |   - 2 = mgd           |                |                       |
-  |   - 3 = Imperial mgd  |                |                       |
-  |   - 4 = acre-ft/day   |                |                       |
-  |   - 5 = liter/sec     |                |                       |
-  |   - 6 = liter/min     |                |                       |
-  |   - 7 = megaliter/day |                |                       |
-  |   - 8 = cu meter / hr |                |                       |
-  |   - 9 = cu meter/day  |                |                       |
-  +-----------------------+----------------+-----------------------+
-  | Pressure Units Option |    Integer     |    4                  |
-  |                       |                |                       |
-  |   - 0 = psi           |                |                       |
-  |   - 1 = meters        |                |                       |
-  |   - 2 = kPa           |                |                       |
-  +-----------------------+----------------+-----------------------+
-  | Statistics Flag       |    Integer     |    4                  |
-  |                       |                |                       |
-  |   - 0 = no statistics |                |                       |
-  |   - 1 = time-averaged |                |                       |
-  |   - 2 = minimums      |                |                       |
-  |   - 3 = maximums      |                |                       |
-  |   - 4 = ranges        |                |                       |
-  +-----------------------+----------------+-----------------------+
-  | Reporting Start Time  |    Integer     |    4                  |
-  | (seconds)             |                |                       |
-  +-----------------------+----------------+-----------------------+
-  | Reporting Time Step   |    Integer     |    4                  |
-  | (seconds)             |                |                       |
-  +-----------------------+----------------+-----------------------+
-  | Simulation Duration   |    Integer     |    4                  |
-  | (seconds)             |                |                       |
-  +-----------------------+----------------+-----------------------+
-  | Problem Title (1st    |    Char        |    80                 |
-  | line)                 |                |                       |
-  +-----------------------+----------------+-----------------------+
-  | Problem Title (2nd    |    Char        |    80                 |
-  | line)                 |                |                       |
-  +-----------------------+----------------+-----------------------+
-  | Problem Title (3rd    |    Char        |    80                 |
-  | line)                 |                |                       |
-  +-----------------------+----------------+-----------------------+
-  | Name of Input File    |    Char        |    260                |
-  +-----------------------+----------------+-----------------------+
-  | Name of Report File   |    Char        |    260                |
-  +-----------------------+----------------+-----------------------+
-  | Name of Chemical      |    Char        |    16                 |
-  +-----------------------+----------------+-----------------------+
-  | Chemical              |    Char        |    16                 |
-  | Concentration Units   |                |                       |
-  +-----------------------+----------------+-----------------------+
-  | ID Label of Each Node |    Char        |    16                 |
-  +-----------------------+----------------+-----------------------+
-  | ID Label of Each Link |    Char        |    16                 |
-  +-----------------------+----------------+-----------------------+
-  | Index of Start Node   |    Integer     |    4*Nlinks           |
-  | of Each Link          |                |                       |
-  +-----------------------+----------------+-----------------------+
-  | Index of End Node of  |    Integer     |    4*Nlinks           |
-  | Each Link             |                |                       |
-  +-----------------------+----------------+-----------------------+
-  | Type Code of Each     |    Integer     |    4*Nlinks           |
-  |    Link               |                |                       |
-  |                       |                |                       |
-  |   - 0 = Pipe with CV  |                |                       |
-  |   - 1 = Pipe          |                |                       |
-  |   - 2 = Pump          |                |                       |
-  |   - 3 = PRV           |                |                       |
-  |   - 4 = PSV           |                |                       |
-  |   - 5 = PBV           |                |                       |
-  |   - 6 = FCV           |                |                       |
-  |   - 7 = TCV           |                |                       |
-  |   - 8 = GPV           |                |                       |
-  +-----------------------+----------------+-----------------------+
-  | Node Index of Each    |    Integer     |    4*Ntanks           |
-  | Tank                  |                |                       |
-  +-----------------------+----------------+-----------------------+
-  | Cross-Sectional Area  |    Float       |    4*Ntanks           |
-  | of Each Tank          |                |                       |
-  +-----------------------+----------------+-----------------------+
-  | Elevation of Each     |    Float       |    4*Nnodes           |
-  | Node                  |                |                       |
-  +-----------------------+----------------+-----------------------+
-  | Length of Each Link   |    Float       |    4*Nlinks           |
-  +-----------------------+----------------+-----------------------+
-  | Diameter of Each Link |    Float       |    4*Nlinks           |
-  +-----------------------+----------------+-----------------------+
+  +-------------------------+----------------+-----------------------+
+  | *ITEM*                  |    *TYPE*      |  *NUMBER of BYTES*    |
+  +=========================+================+=======================+
+  | Magic Number ( =        |    Integer     |    4                  |
+  | 516114521)              |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | Version (= 200)         |    Integer     |    4                  |
+  +-------------------------+----------------+-----------------------+
+  | Number of Nodes         |    Integer     |    4                  |
+  | (Junctions +            |                |                       |
+  | Reservoirs + Tanks)     |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | Number of Reservoirs    |    Integer     |    4                  |
+  | & Tanks                 |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | Number of Links         |    Integer     |    4                  |
+  | (Pipes + Pumps +        |                |                       |
+  | Valves)                 |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | Number of Pumps         |    Integer     |    4                  |
+  +-------------------------+----------------+-----------------------+
+  | Number of Valves        |    Integer     |    4                  |
+  +-------------------------+----------------+-----------------------+
+  | Water Quality Option    |    Integer     |    4                  |
+  |                         |                |                       |
+  |   - 0 = none            |                |                       |
+  |   - 1 = chemical        |                |                       |
+  |   - 2 = age             |                |                       |
+  |   - 3 = source trace    |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | Index of Node for       |    Integer     |    4                  |
+  | Source Tracing          |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | Flow Units Optio n      |    Integer     |    4                  |
+  |                         |                |                       |
+  |  - 0 = cfs              |                |                       |
+  |  - 1 = gpm              |                |                       |
+  |  - 2 = mgd              |                |                       |
+  |  - 3 = Imperial mgd     |                |                       |
+  |  - 4 = acre-ft/day      |                |                       |
+  |  - 5 = liter/sec        |                |                       |
+  |  - 6 = liter/min        |                |                       |
+  |  - 7 = megaliter/day    |                |                       |
+  |  - 8 = cubic meter/hr   |                |                       |
+  |  - 9 = cubic meter/day  |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | Pressure Units Option   |    Integer     |    4                  |
+  |                         |                |                       |
+  |   - 0 = psi             |                |                       |
+  |   - 1 = meters          |                |                       |
+  |   - 2 = kPa             |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | Statistics Flag         |    Integer     |    4                  |
+  |                         |                |                       |
+  |   - 0 = no statistics   |                |                       |
+  |   - 1 = time-averaged   |                |                       |
+  |   - 2 = minimums        |                |                       |
+  |   - 3 = maximums        |                |                       |
+  |   - 4 = ranges          |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | Reporting Start Time    |    Integer     |    4                  |
+  | (seconds)               |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | Reporting Time Step     |    Integer     |    4                  |
+  | (seconds)               |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | Simulation Duration     |    Integer     |    4                  |
+  | (seconds)               |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | Problem Title (1st      |    Char        |    80                 |
+  | line)                   |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | Problem Title (2nd      |    Char        |    80                 |
+  | line)                   |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | Problem Title (3rd      |    Char        |    80                 |
+  | line)                   |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | Name of Input File      |    Char        |    260                |
+  +-------------------------+----------------+-----------------------+
+  | Name of Report File     |    Char        |    260                |
+  +-------------------------+----------------+-----------------------+
+  | Name of Chemical        |    Char        |    16                 |
+  +-------------------------+----------------+-----------------------+
+  | Chemical                |    Char        |    16                 |
+  | Concentration Units     |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | ID Label of Each Node   |    Char        |    16                 |
+  +-------------------------+----------------+-----------------------+
+  | ID Label of Each Link   |    Char        |    16                 |
+  +-------------------------+----------------+-----------------------+
+  | Index of Start Node     |    Integer     |    4*Nlinks           |
+  | of Each Link            |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | Index of End Node of    |    Integer     |    4*Nlinks           |
+  | Each Link               |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | Type Code of Each       |    Integer     |    4*Nlinks           |
+  | Link                    |                |                       |
+  |                         |                |                       |
+  |   - 0 = Pipe with CV    |                |                       |
+  |   - 1 = Pipe            |                |                       |
+  |   - 2 = Pump            |                |                       |
+  |   - 3 = PRV             |                |                       |
+  |   - 4 = PSV             |                |                       |
+  |   - 5 = PBV             |                |                       |
+  |   - 6 = FCV             |                |                       |
+  |   - 7 = TCV             |                |                       |
+  |   - 8 = GPV             |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | Node Index of Each      |    Integer     |    4*Ntanks           |
+  | Tank                    |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | Cross-Sectional Area    |    Float       |    4*Ntanks           |
+  | of Each Tank            |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | Elevation of Each       |    Float       |    4*Nnodes           |
+  | Node                    |                |                       |
+  +-------------------------+----------------+-----------------------+
+  | Length of Each Link     |    Float       |    4*Nlinks           |
+  +-------------------------+----------------+-----------------------+
+  | Diameter of Each Link   |    Float       |    4*Nlinks           |
+  +-------------------------+----------------+-----------------------+
 
 ..
 
@@ -405,24 +405,24 @@ Energy Use Section
   The energy use section of the binary output file immediately follows
   the prolog section. It contains the data listed in :numref:`table-energy_use`.
 
+.. tabularcolumns:: |p{6.3cm}|p{2.2cm}|p{3.5cm}|
 .. _table-energy_use:
 .. table:: EPANET Binary Output File Energy Use Section Data	
 
-  ========================================= ======== ===================
-  *ITEM*                                     *TYPE*  *NUMBER of BYTES*
-  ========================================= ======== ===================
-   Repeated for each pump:
 
-    - Pump Index in List of Links            Float     4
-    - Pump Utilization (%)                   Float     4
-    - Average Efficiency (%)                 Float     4
-    - Average Kwatts/MGal (/meter :sup:`3`)
-    - Average Kwatts                         Float     4
-    - Peak Kwatts                            Float     4
-    - Average Cost Per Day                   Float     4
-
-   Overall Peak Energy Usage                 Float     4
-  ========================================= ======== ===================
+  +----------------------------------------------+----------------+-----------------------+
+  | *ITEM*                                       |    *TYPE*      |  *NUMBER of BYTES*    |
+  +==============================================+================+=======================+
+  | Repeated for each pump:                      |                |                       |
+  |  |  Pump Index in List of Links              ||      Float    ||        4             |                       
+  |  |  Pump Utilization (%)                     ||      Float    ||        4             |
+  |  |  Average Efficiency (%)                   ||      Float    ||        4             |
+  |  |  Average Kwatts/MGal (/meter :sup:`3`)    ||      Float    ||        4             |
+  |  |  Average Kwatts                           ||      Float    ||        4             |
+  |  |  Average Cost Per Day                     ||      Float    ||        4             |
+  +----------------------------------------------+----------------+-----------------------+
+  | Overall Peak Energy Usage                    |       Float    |          4            |
+  +----------------------------------------------+----------------+-----------------------+
 
 ..
   
@@ -440,7 +440,7 @@ Extended Period Section
   section). For each reporting period :numref:`table-extend_period` lists the values that are written
   to the file.
   
- .. tabularcolumns:: |p{5cm}|p{3cm}|p{4cm}|
+.. tabularcolumns:: |p{6cm}|p{2.5cm}|p{3.5cm}|
 
 .. _table-extend_period:
 .. table:: EPANET Binary Output File Extended Period Section Data	
@@ -502,7 +502,7 @@ Epilogue Section
   data listed in :numref:`table-epilogue`.
 
 
-.. tabularcolumns:: |p{6cm}|p{3cm}|p{3cm}|
+.. tabularcolumns:: |p{6cm}|p{2.5cm}|p{3.5cm}|
 
 .. _table-epilogue:
 .. table:: EPANET Binary Output File Epilogue Section Data	
