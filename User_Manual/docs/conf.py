@@ -12,16 +12,16 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+#import os
+#import sys
+#sys.path.insert(0, os.path.abspath('.'))
 
 
 # -- Project information -----------------------------------------------------
 
 project = 'EPANET'
 copyright = '2020'
-author = u'Lewis Rossman \\and Hyoungmin Woo \\and Michael Tryby \\and Feng Shang \\and Terranna Haxton'
+author = u'Lewis A. Rossman \\and Hyoungmin Woo \\and Michael Tryby \\and Feng Shang \\and Terranna Haxton'
 
 # The short X.Y version
 version = ''
@@ -89,6 +89,8 @@ pygments_style = 'sphinx'
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
+latex_logo = './media/logo.png'
+
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -148,7 +150,7 @@ latex_elements = {
             \vspace{0mm}  
             \begin{minipage}{0.5\textwidth}                                      
             \begin{figure}[H]             
-                  \includegraphics[scale=0.8]{../../docs/media/logo.png}   
+                  \includegraphics[scale=0.8]{logo.png}   
             \end{figure}
             \end{minipage} \hfill
             \begin{minipage}{0.45\textwidth}
@@ -180,7 +182,7 @@ latex_elements = {
             \vspace*{1mm} %%% * is used to give space from top
             \textbf{\normalsize {Terranna Haxton}}
 
-            \vspace{30mm}
+            \vspace{40mm}
             \textbf{\Large {Water Infrastructure Division}}
            
             \vspace*{1mm}
@@ -190,14 +192,8 @@ latex_elements = {
             \textbf{\Large{U.S. Environmental Protection Agency}}
            
             \vspace*{1mm}
-            \textbf{\Large{Cincinnati. Ohio 45268}}
+            \textbf{\Large{Cincinnati, Ohio 45268}}
            
-            \vspace*{1mm} 
-            \begin{figure}[htbp]
-                  \centering
-                  \includegraphics[scale=0.75]{../../docs/media/epanetlogo.png}
-            \end{figure}
-
         \end{titlepage}
         \setcounter{page}{1}
         \pagenumbering{roman}
