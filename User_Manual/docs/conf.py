@@ -21,7 +21,7 @@
 
 project = 'EPANET'
 copyright = '2020'
-author = u'Lewis Rossman \\and Hyoungmin Woo \\and Michael Tryby \\and Feng Shang \\and Terranna Haxton'
+author = u'Lewis A. Rossman \\and Hyoungmin Woo \\and Michael Tryby \\and Feng Shang \\and Terranna Haxton'
 
 # The short X.Y version
 version = ''
