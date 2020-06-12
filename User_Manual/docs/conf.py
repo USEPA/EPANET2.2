@@ -163,7 +163,7 @@ latex_elements = {
             \textbf{\Huge {EPANET 2.2 User Manual}}
             
             \vspace*{20mm} %%% * is used to give space from top
-            \textbf{\normalsize {Lew A. Rossman}}
+            \textbf{\normalsize {Lewis A. Rossman}}
             
             \vspace*{1mm} %%% * is used to give space from top
             \textbf{\normalsize {Hyoungmin Woo}}
@@ -184,7 +184,7 @@ latex_elements = {
             \textbf{\Large {Water Infrastructure Division}}
            
             \vspace*{1mm}
-            \textbf{\Large{Cenetr for Environmental Solutions and Emergency Response}}
+            \textbf{\Large{Center for Environmental Solutions and Emergency Response}}
            
             \vspace*{1mm}
             \textbf{\Large{U.S. Environmental Protection Agency}}
