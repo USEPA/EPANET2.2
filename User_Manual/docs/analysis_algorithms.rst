@@ -27,7 +27,7 @@ Hydraulics
   after a new trial solution for nodal heads has been found. Because Todini's
   approach is simpler, it was chosen for use in EPANET.
 
-  Todini (2003) describes mamethatically how the iterative formulation of the Gradient Method could be 
+  Todini (2003) describes mathematically how the iterative formulation of the Gradient Method could be 
   extended to simulate pressure driven demands (PDD). The latest version of EPANET hydraulic engine 
   has been updated to include PDD modeling capability. A water distribution pipe network
   can now be analyzed two ways, 1) assuming demand, and 2) assuming
@@ -378,7 +378,7 @@ Hydraulics
      For open valves with minor loss, the value of :math:`r` is assumed to be zero. When the valve flow is smaller than a threshold value,
      low resistance factor and linear head loss relationship are assumed: :math:`g = RQtol` and :math:`y = Q`; otherwise
      quadratic head loss relationship is used: :math:`g = 2.0mQ` and :math:`y = Q/2`. The low flow resistance tolerance :math:`RQtol`
-     defines the flow threshold value for using linear or quadratic headloss relationsip. As mentioned above, the default value of :math:`RQtol` is :math:`10^{-7}`.
+     defines the flow threshold value for using linear or quadratic headloss relationship. As mentioned above, the default value of :math:`RQtol` is :math:`10^{-7}`.
      Closed links are assumed to obey a linear headloss relation with
      a large resistance factor: :math:`h = 10^{8} Q`, meaning :math:`g =
      10^{8}` and :math:`y = Q`. 
@@ -497,7 +497,7 @@ Hydraulics
   #. Initial convergence is checked at every iteration and after initial convergence is achieved 
      (no change in status for PRVs and PSVs plus flow convergence based 
      on total flow change, optional maximum head error and maximum flow change, and the check of unexpected 
-     negative demad and negative pressure when PDD is used in analysis), another status check on pumps,
+     negative demand and negative pressure when PDD is used in analysis), another status check on pumps,
      CVs, FCVs, and links to tanks is made. Also, the status of links
      controlled by pressure switches (e.g., a pump controlled by the
      pressure at a junction node) is checked. If any status change

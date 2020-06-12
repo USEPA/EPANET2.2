@@ -301,7 +301,7 @@ Prolog Section
   | Index of Node for       |    Integer     |    4                  |
   | Source Tracing          |                |                       |
   +-------------------------+----------------+-----------------------+
-  | Flow Units Optio n      |    Integer     |    4                  |
+  | Flow Units Option       |    Integer     |    4                  |
   |                         |                |                       |
   |  - 0 = cfs              |                |                       |
   |  - 1 = gpm              |                |                       |
