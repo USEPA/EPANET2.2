@@ -69,7 +69,7 @@ Exporting a Scenario
    .. figure:: media/image93.png
       :alt: Export Data Dialog in EPANET
      
-      Export data dialog.
+      Export Data Dialog.
    ..
 
    The exported scenario can be imported back into the project at a
@@ -198,7 +198,7 @@ Exporting the Network Map
    .. figure:: media/image94.png
       :alt: Map Export Dialog in EPANET
    
-      Map export dialog.
+      Map Export Dialog.
    ..
 
 .. _sec-export_text_file:

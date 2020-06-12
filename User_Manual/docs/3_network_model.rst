@@ -34,7 +34,7 @@ Physical Components
    .. figure:: media/image28.png
       :alt: Physical Components in a Water Distribution System
    
-      Physical components in a water distribution system.
+      Physical Components in a Water Distribution System.
    ..
 
     
@@ -252,9 +252,9 @@ Physical Components
    Consult Chapter :ref:`analysis_algorithms` for the actual equations
    used.
 
+   .. tabularcolumns:: |c|c|c|
    .. _table-pipe_headloss_formulas:
-   .. table:: Pipe Headloss Formulas for Full Flow (for headloss in
-    feet and flow rate in cfs)	
+   .. table:: Pipe Headloss Formulas for Full Flow (for headloss in feet and flow rate in cfs)	
 		
     +-------------------+--------------------------------------------+-----------------------+
     |    *Formula*      |    *Resistance  Coefficient*               |    *Flow Exponent*    |
@@ -278,13 +278,13 @@ Physical Components
         | :math:`L` = pipe length (ft)
         | :math:`q` = flow rate (cfs)
    
+   .. tabularcolumns:: |m{4.0cm}|m{2.5cm}|m{3.0cm}|m{2.5cm}|  
    .. _table-roughness_coeff:
    .. table:: Roughness Coefficients for New Pipe	
 		
     +-----------------+------------------+------------------------+-----------------+
     |    *Material*   | *Hazen-Williams* | *Darcy-Weisbach*       | *Manning's*     |
     |                 | :math:`C`        | :math:`\epsilon`       | :math:`n`       |
-    |                 |                  |                        |                 |
     |                 | *(unitless)*     | (ft x :math:`10^{-3}`) | *(unitless)*    |
     +=================+==================+========================+=================+
     |    Cast Iron    |    130 -- 140    |     0.85               |  0.012 -- 0.015 |
@@ -310,7 +310,7 @@ Physical Components
    Pipes can be set open or closed at preset times or when specific
    conditions exist, such as when tank levels fall below or above
    certain set points, or when nodal pressures fall below or above
-   certain values. See the discussion of Controls in Section 3.2.
+   certain values. See the discussion of Controls in :numref:`sec-non_physical_comps`.
 
 
 **Minor Losses**
@@ -330,6 +330,7 @@ Physical Components
    (Length/Time :sup:`2`). :numref:`table-minor_loss_coeff` provides minor loss coefficients for
    several types of fittings.
 
+   .. tabularcolumns:: |l|c|
    .. _table-minor_loss_coeff:
    .. table:: Minor Loss Coefficients for Selected Fittings	
   	
@@ -555,7 +556,7 @@ Non-Physical Components
       :alt: Example of Single-Point Pump Curve
       :scale: 60%
    
-      Single-point pump curve.
+      Single-point Pump Curve.
    ..
 
    *Three-Point Curve* -- A three-point pump curve is defined by three
@@ -577,7 +578,7 @@ Non-Physical Components
       :alt: Example of Three-Point Pump Curve
       :scale: 50%
    
-      Three-point pump curve.
+      Three-point Pump Curve.
    ..
    
    *Multi-Point Curve* -- A multi-point pump curve is defined by
@@ -591,7 +592,7 @@ Non-Physical Components
       :alt: Example of Multi-Point Pump Curve
       :scale: 50%
    
-      Multi-point pump curve.
+      Multi-point Pump Curve.
    ..
 
    For variable speed pumps, the pump curve shifts as the speed changes.
@@ -612,7 +613,7 @@ Non-Physical Components
       :alt: Example of Variable-Speed Pump Curve
       :scale: 50%
    
-      Variable-speed pump curve.
+      Variable-speed Pump Curve.
    ..  
    
 *Efficiency Curve*
@@ -629,7 +630,7 @@ Non-Physical Components
    .. figure:: media/image31.png
       :alt: Example of Pump Efficiency Curve
    
-      Pump efficiency curve.
+      Pump Efficiency Curve.
    ..  
   
 *Volume Curve*
@@ -646,7 +647,7 @@ Non-Physical Components
    .. figure:: media/image32.png
       :alt: Example of Tank Volume Curve
    
-      Tank volume curve.
+      Tank Volume Curve.
    ..  
  
 *Headloss Curve*
@@ -676,31 +677,24 @@ Non-Physical Components
    As an example of how time patterns work consider a junction node with
    an average demand of 10 GPM. Assume that the time pattern interval
    has been set to 4 hours and a pattern with the following multipliers
-   has been specified for demand at this node (:numref:`table-time_pat_multiplier`):
- 
-   .. _table-time_pat_multiplier:
-   .. table:: Example Time Pattern Multipliers	
-		
+   has been specified for demand at this node:
+ 			
     +------------+-----+-----+-----+-----+-----+-----+
     | Period     | 1   | 2   | 3   | 4   | 5   | 6   |
     +============+=====+=====+=====+=====+=====+=====+
     | Multiplier | 0.5 | 0.8 | 1.0 | 1.2 | 0.9 | 0.7 |
     +------------+-----+-----+-----+-----+-----+-----+
-   ..
+   
 
    Then during the simulation the actual demand exerted at this node
-   will be as follows (:numref:`table-actual_demands`):
- 
-   .. _table-actual_demands:
-   .. table:: Actual Demands at Node	
-		
+   will be as follows:
+ 		
     +--------+--------+-----+------+-------+-------+-------+-------+
     | Hours  |    0-4 | 4-8 | 8-12 | 12-16 | 16-20 | 20-24 | 24-28 |
     +========+========+=====+======+=======+=======+=======+=======+
     | Demand |    5   | 8   | 10   | 12    | 9     | 7     | 5     |
     +--------+--------+-----+------+-------+-------+-------+-------+
-   ..
-
+ 
 **Controls**
 
    Controls are statements that determine how the network is operated
@@ -726,25 +720,25 @@ Non-Physical Components
     -  The time of day
  
 
-    They are statements expressed in one of the following three formats:
+    They are statements expressed in one of the following three formats::
 	
-    ==== = ====== == ========= = =========== =
-    LINK x status IF NODE      y ABOVE/BELOW z
-    LINK x status AT TIME      t
-    LINK x status AT CLOCKTIME c AM/PM
-    ==== = ====== == ========= = =========== =
+       LINK x status IF NODE y ABOVE/BELOW z
+       LINK x status AT TIME t
+       LINK x status AT CLOCKTIME c AM/PM
 
     where:
-    | x = a link ID label,
-    | status = OPEN or CLOSED, a pump speed setting, or a control valve setting,
-    | y = a node ID label,
-    | z = a pressure for a junction or a water level for a tank,
-    | t = a time since the start of the simulation (decimal hours or hours:minutes),
-    | c = a 24-hour clock time.
+    
+     | x = a link ID label,
+     | status = OPEN or CLOSED, a pump speed setting, or a control valve setting,
+     | y = a node ID label,
+     | z = a pressure for a junction or a water level for a tank,
+     | t = a time since the start of the simulation (decimal hours or hours:minutes),
+     | c = a 24-hour clock time.
 
 	
     Some examples of simple controls are (:numref:`table-sim_controls`): 
-    
+       
+    .. tabularcolumns:: |p{6.5cm}|p{6.5cm}|
     .. _table-sim_controls:
     .. table:: Examples of Simple Controls	
      
@@ -757,7 +751,6 @@ Non-Physical Components
      +--------------------------------------+---------------------------------+
      | LINK 12 OPEN IF NODE 130 BELOW 30    | (Open Link 12 if the pressure   |
      |                                      | at Node 130 drops below 30 psi) |
-     |                                      | drops below 30 psi)             |
      +--------------------------------------+---------------------------------+
      | LINK 12 1.5 AT TIME 16               | (Set the relative speed of      |
      |                                      | pump 12 to 1.5 at 16 hours      |
@@ -927,7 +920,7 @@ Water Quality Simulation Model
    .. figure:: media/image33.png
       :alt: Example of Complete Mixing Model
    
-      Complete mixing.
+      Complete Mixing.
    ..
    
    The Two-Compartment Mixing model (:numref:`fig-two_comp_mix`) divides the
@@ -948,7 +941,7 @@ Water Quality Simulation Model
    .. figure:: media/image34.png
       :alt: Example of Two-Compartment Mixing Model
    
-      Two-compartment mixing.
+      Two-compartment Mixing.
    ..
  
    The FIFO Plug Flow model (:numref:`fig-FIFO_plug`) assumes that there is no
@@ -963,7 +956,7 @@ Water Quality Simulation Model
    .. figure:: media/image35.png
       :alt: Example of Plug Flow - FIFO Model
    
-      Plug flow - FIFO.
+      Plug Flow - FIFO.
    ..
 
    The LIFO Plug Flow model (:numref:`fig-LIFO_plug`) also assumes that there is
@@ -978,7 +971,7 @@ Water Quality Simulation Model
    .. figure:: media/image36.png
       :alt: Example of Plug Flow - LIFO Model
    
-      Plug flow - LIFO.
+      Plug Flow - LIFO.
    ..
 
 
@@ -1015,7 +1008,7 @@ Water Quality Simulation Model
 
    Here :math:`K_{b}` = a bulk reaction rate coefficient, :math:`C` = reactant
    concentration (mass/volume), and :math:`n` = a reaction order. :math:`K_b`
-   has units of concentration raised to the :math:`(1 - n)`` power divided by
+   has units of concentration raised to the :math:`(1 - n)` power divided by
    time. It is positive for growth reactions and negative for decay reactions.
 
    EPANET can also consider reactions where a limiting concentration
@@ -1024,14 +1017,12 @@ Water Quality Simulation Model
 
    .. math::
       \begin{gathered}
-        R = K_{b} (C_{L} - C) \times C^{(n - 1)} \\
-        for\ n > 0, K_{b} > 0
+        R = K_{b} (C_{L} - C) \times C^{(n - 1)} :  n > 0, K_{b} > 0
       \end{gathered}
 
    .. math::
       \begin{gathered}
-        R = K_{b} (C - C_{L} ) \times C^{(n - 1)} \\
-        for\ n > 0, K_{b} < 0
+        R = K_{b} (C - C_{L} ) \times C^{(n - 1)} :  n > 0, K_{b} < 0
       \end{gathered}
 
 

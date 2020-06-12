@@ -145,34 +145,54 @@ latex_elements = {
         \pagenumbering{Roman}
         \begin{titlepage}
 
-            \vspace{0mm}
-            \begin{figure}[htbp]
-                  \includegraphics[scale=0.8]{../../docs/media/logo.png}
+            \vspace{0mm}  
+            \begin{minipage}{0.5\textwidth}                                      
+            \begin{figure}[H]             
+                  \includegraphics[scale=0.8]{../../docs/media/logo.png}   
             \end{figure}
-
-            \vspace*{35mm}
+            \end{minipage} \hfill
+            \begin{minipage}{0.45\textwidth}
+            \begin{flushright}
+            \Large{EPA/600/R-20/133}
+            \end{flushright}
+            \end{minipage}
+            
+            
+            \vspace*{30mm}
             \centering
             \textbf{\Huge {EPANET 2.2 User Manual}}
             
             \vspace*{20mm} %%% * is used to give space from top
-            \textbf{\large {Lew Rossman}}
+            \textbf{\normalsize {Lew A. Rossman}}
             
             \vspace*{1mm} %%% * is used to give space from top
-            \textbf{\large {Hyoungmin Woo}}
+            \textbf{\normalsize {Hyoungmin Woo}}
             
             \vspace*{1mm} %%% * is used to give space from top
-            \textbf{\large {Michael Tryby}}
+            \textbf{\normalsize {Michael Tryby}}
             
             \vspace*{1mm} %%% * is used to give space from top
-            \textbf{\large {Feng Shang}}
+            \textbf{\normalsize {Feng Shang}}
 
             \vspace*{1mm} %%% * is used to give space from top
-            \textbf{\large {Robert Janke}}            
+            \textbf{\normalsize {Robert Janke}}            
 
             \vspace*{1mm} %%% * is used to give space from top
-            \textbf{\large {Terranna Haxton}}
+            \textbf{\normalsize {Terranna Haxton}}
 
-           \vspace{30mm}
+            \vspace{30mm}
+            \textbf{\Large {Water Infrastructure Division}}
+           
+            \vspace*{1mm}
+            \textbf{\Large{Cenetr for Environmental Solutions and Emergency Response}}
+           
+            \vspace*{1mm}
+            \textbf{\Large{U.S. Environmental Protection Agency}}
+           
+            \vspace*{1mm}
+            \textbf{\Large{Cincinnati. Ohio 45268}}
+           
+            \vspace*{1mm} 
             \begin{figure}[htbp]
                   \centering
                   \includegraphics[scale=0.75]{../../docs/media/epanetlogo.png}

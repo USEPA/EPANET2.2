@@ -27,9 +27,9 @@ Hydraulics
   after a new trial solution for nodal heads has been found. Because Todini's
   approach is simpler, it was chosen for use in EPANET.
 
-  Todini (2003) describes how the Gradient Method can be extended to simulate
-  pressure driven demands (PDD). The latest version of EPANET has been
-  updated to include these capabilities. A water distribution pipe network
+  Todini (2003) describes mamethatically how the iterative formulation of the Gradient Method could be 
+  extended to simulate pressure driven demands (PDD). The latest version of EPANET hydraulic engine 
+  has been updated to include PDD modeling capability. A water distribution pipe network
   can now be analyzed two ways, 1) assuming demand, and 2) assuming
   pressure driven demands. The subsections that follow provide a technical
   description for these two demand models.
@@ -54,7 +54,7 @@ Hydraulics
   power law of the form
 
   .. math::
-     {h}_{ij} = {-\omega}^{2} ( {h}_{0} - r { ( {Q}_{ij}/{\omega} )}^{2 } )
+     {h}_{ij} = {-\omega}^{2} ( {h}_{0} - r { ( {Q}_{ij}/{\omega} )}^{n} )
 
   where :math:`h_{0}` is the shutoff head for the pump, :math:`\omega` is a
   relative speed setting, and :math:`r` and :math:`n` are the pump curve
@@ -82,8 +82,8 @@ Hydraulics
 
      \boldsymbol{AH} = \boldsymbol{F}
 
-  where :math:`A` = an :math:`(NxN)` Jacobian matrix, :math:`H` = an
-  :math:`(Nx1)` vector of unknown nodal heads, and :math:`F` = an :math:`(Nx1)`
+  where :math:`A` = an :math:`(N \times N)` Jacobian matrix, :math:`H` = an
+  :math:`(N \times 1)` vector of unknown nodal heads, and :math:`F` = an :math:`(N \times 1)`
   vector of right hand side terms.
 
   The diagonal elements of the Jacobian matrix are:
@@ -104,8 +104,8 @@ Hydraulics
   .. math::
      {g}_{ij} = nr {{ | Q_{ij} | }^{n - 1}} + 2m | Q_{ij} |
 
-  when resistance coefficient is a function of flow rate, specifically as
-  in Darcy-Weisbach head loss equation and when flow is turbulent,
+  when resistance coefficient is a function of the flow rate, specifically as
+  in Darcy-Weisbach head loss equation with turbulent flow condition,
 
   .. math::
      {g}_{ij} = nr {{ | Q_{ij} | }^{n - 1}} + \frac{\partial r}{\partial Q_{ij}}|Q_{ij}|^n + 2m | Q_{ij} |
@@ -113,9 +113,9 @@ Hydraulics
   Zero flows can cause numerical instability in the GGA solver (Gorev et al., 2013; Elhay and Simpson, 2011).
   When flow approaches zero, a linear relationship is assumed between head loss and
   flow to prevent :math:`{g}_{ij}` from reaching zero. The value of :math:`{g}_{ij}`
-  is capped at a specific value when the flow is smaller than what is defined by the specific :math:`{g}`.
+  is capped at a specific value when the flow is smaller than what is defined by the specified minimum :math:`{g}`.
 
-  while for pumps
+  For pumps, the deribative is:
 
   .. math::
      {g}_{ij} = n \omega^{2} r ({Q}_{ij}/{\omega} )^{n-1}
@@ -127,19 +127,19 @@ Hydraulics
   .. math::
      :label: eq:matrix_rhs
 
-     {F}_{i} = \sum_{{j}} \left( Q_{ij} + \frac{y_{ij}}{g_{ij}} \right) - {D}_{i} + \sum_{f} \frac{H_{f}}{g_{ij}}
+     {F}_{i} = \sum_{{j}} \left( Q_{ij} + y_{ij} \right) - {D}_{i} + \sum_{f} \frac{H_{f}}{g_{ij}}
 
   where the last term applies to any links connecting node :math:`i` to a fixed
   grade node :math:`f` and the flow correction factor :math:`y_{ij}` is:
 
   .. math::
-     y_{ij} = ( r{ | {Q}_{ij} | }^{n} + m { | {Q}_{ij} | }^{2} )sgn ( {Q}_{ij} )
+     y_{ij} = \frac{( r{ | {Q}_{ij} | }^{n} + m { | {Q}_{ij} | }^{2} )sgn ( {Q}_{ij} )}{g_{ij}}
 
 
   for pipes and
 
   .. math::
-     y_{ij} =  - {\omega}^{2} ( {h}_{0} - r { ( { Q}_{ij }/{\omega} ) }^{n} )
+     y_{ij} =  \frac{- {\omega}^{2} ( {h}_{0} - r { ( { Q}_{ij }/{\omega} ) }^{n} )}{g_{ij}}
 
   for pumps, where :math:`sgn(x)` is :math:`1` if :math:`x > 0` and :math:`-1`
   otherwise (:math:`Q_{ij}` is always positive for pumps).
@@ -150,7 +150,7 @@ Hydraulics
   .. math::
      :label: eq:flow_update
 
-     {Q}_{ij} = {Q}_{ij} - \frac{1}{g_{ij}} ( y_{ij} - {H}_{i} - {H}_{j} )
+     {Q}_{ij} = {Q}_{ij} - \left( y_{ij}-\frac{({H}_{i} - {H}_{j})}{g_{ij}} \right)
 
   The flow update formula always results in flow continuity around each
   node after the first iteration.
@@ -221,14 +221,22 @@ Hydraulics
 
      .. math::
         \begin{gathered}
-          h_{d} = R_{d} D^{e} + R_{\text{HIGH}}(d - D) \\
-          g_{d} = R_{\text{HIGH}}
+          g_{d} = R_{\text{HIGH}} \\
+          h_{d} = R_{d} D^{e} + R_{\text{HIGH}}(d - D)
         \end{gathered}
 
      where :math:`R_{\text{HIGH}}` is a large resistance factor
      (e.g. 10\ :sup:`9`).
 
-  2. Otherwise Eq. :eq:`eq:inv_wagner` is used to evaluate the head loss and
+  2. If the current demand flow :math:`d` is less than zero:
+
+      .. math::
+        \begin{gathered}
+          g_{d} = R_{\text{HIGH}} \\
+          h_{d} = R_{\text{HIGH}}d 
+        \end{gathered}
+
+  3. Otherwise Eq. :eq:`eq:inv_wagner` is used to evaluate the head loss and
      gradient:
 
      .. math::
@@ -237,20 +245,15 @@ Hydraulics
           h_{d} = g_{d} d / e
         \end{gathered}
 
-     and a one-sided barrier function :math:`h_{b}(d)` and its derivative
-     :math:`g_{b}(d)` is added onto :math:`h_{d}` and :math:`g_{d}`,
-     respectively, to prevent :math:`d` from going negative.
+     when the calculated gradient :math:`g_d` is smaller than the low flow resistance threshold :math:`RQtol` (with default value :math:`10^{-7}`, the gradient is fixed and 
+     linear relationship between the gradient and head loss is used:
 
-  The aforementioned barrier function has the form:
+     .. math::
+        \begin{gathered}
+          g_{d} = RQtol \\
+          h_{d} = g_{d} d
+        \end{gathered}
 
-  .. math::
-     \begin{gathered}
-       h_{b} = \ \left( a - \sqrt{a^{2} + \epsilon^{2}} \right)/2 \\
-       g_{b} = \left( R_{\text{HIGH}}/2 \right)\left( 1 - a/\sqrt{a^{2} + \epsilon^{2}} \right)
-     \end{gathered}
-
-  where :math:`a = R_{\text{HIGH}}d` and :math:`\epsilon` is a small
-  tolerance (e.g., 10\ :sup:`-3`).
 
   These head loss and gradient values are then incorporated into the normal
   set of GGA matrix equations as follows:
@@ -303,8 +306,8 @@ Hydraulics
 
   #. For the very first iteration, the flow in a pipe is chosen equal to
      the flow corresponding to a velocity of 1 ft/sec, while the flow
-     through a pump equals the design flow specified for the pump. (All
-     computations are made with head in feet and flow in cfs).
+     through a pump equals the design flow specified for the pump. For closed links, the flow is 
+     set to be :math:`{10}^{-6}` cfs. (All computations are made with head in feet and flow in cfs).
 
   #. The resistance coefficient for a pipe (:math:`r`) is computed as described
      in Table 3.1. For the Darcy-Weisbach headloss equation, the friction
@@ -321,7 +324,7 @@ Hydraulics
      Re > 4,000 (Bhave, 1991):
 
      .. math::
-        f = \frac{0.25}{{ \left[ \ln \left( \frac{\epsilon}{3.7d} + \frac{5.74}{{Re}^{0.9} } \right) \right] }^{2}}
+        f = \frac{0.25}{{ \left[ \log_{10} \left( \frac{\epsilon}{3.7d} + \frac{5.74}{{Re}^{0.9} } \right) \right] }^{2}}
 
 
      Cubic Interpolation From Moody Diagram for :math:`2,000 < Re < 4,000`
@@ -341,7 +344,7 @@ Hydraulics
            X4 = R ( 0.032 - 3 FA + 0.5 FB ) \\
            FA = { ( Y3 )}^{-2} \\
            FB = FA ( 2 - \frac{0.00514215}  {( Y2 )  ( Y3 ) } ) \\
-           Y2 = \frac{\epsilon} {3.7d} + \frac{5.74}{{Re}^{0.9}} \\
+           Y2 = \frac{\epsilon} {3.7d} + \frac{5.74}{{4000}^{0.9}} \\
            Y3 = -0.86859 \ln \left( \frac{\epsilon}{3.7d} + \frac{5.74}{{4000}^{0.9}} \right)
         \end{gathered}
 
@@ -370,18 +373,20 @@ Hydraulics
      the junction. The computed flow through the fictitious pipe becomes the
      flow associated with the emitter.
 
-  #. Open valves are assigned an :math:`r`- value by assuming the open valve acts
-     as a smooth pipe (:math:`f = 0.02`) whose length is twice the valve
-     diameter. Closed links are assumed to obey a linear headloss relation with
-     a large resistance factor, i.e., :math:`h = 10^{8} Q`, so that :math:`p =
-     10^{-8}` and :math:`y = Q`. For links where :math:`(r + m)Q <
-     10^{-7}`, :math:`p = 10^{7}` and :math:`y = Q/n`.
+  #. Open valves with no minor loss are assigned a low resistance factor and linear headloss relationship,
+     i.e., :math:`h = 10^{-6} Q`, so that the gradient :math:`g = 10^{-6}` and the flow correction factor :math:`y=Q`.
+     For open valves with minor loss, the value of :math:`r` is assumed to be zero. When the valve flow is smaller than a threshold value,
+     low resistance factor and linear head loss relationship are assumed: :math:`g = RQtol` and :math:`y = Q`; otherwise
+     quadratic head loss relationship is used: :math:`g = 2.0mQ` and :math:`y = Q/2`. The low flow resistance tolerance :math:`RQtol`
+     defines the flow threshold value for using linear or quadratic headloss relationsip. As mentioned above, the default value of :math:`RQtol` is :math:`10^{-7}`.
+     Closed links are assumed to obey a linear headloss relation with
+     a large resistance factor: :math:`h = 10^{8} Q`, meaning :math:`g =
+     10^{8}` and :math:`y = Q`. 
 
-  #. Status checks on pumps, check valves (CVs), flow control valves, and
-     pipes connected to full/empty tanks are made after every other
-     iteration, up until the 10th iteration. After this, status checks are
-     made only after convergence is achieved. Status checks on pressure
-     control valves (PRVs and PSVs) are made after each iteration.
+  #. Status checks on pressure control valves (PRVs and PSVs) are made after each iteration; while
+     status checks on pumps, check valves (CVs), flow control valves, and
+     pipes connected to full/empty tanks by default are made after every other
+     iteration up until the 10th iteration. After this, status checks are made only after initial convergence is achieved.
 
   #. During status checks, pumps are closed if the head gain is greater
      than the shutoff head (to prevent reverse flow). Similarly, check
@@ -389,8 +394,8 @@ Hydraulics
      below). When these conditions are not present, the link is re-opened.
      A similar status check is made for links connected to empty/full
      tanks. Such links are closed if the difference in head across the
-     link would cause an empty tank to drain or a full tank to fill. They
-     are re- opened at the next status check if such conditions no longer
+     link would cause an empty tank to drain or a full tank to fill. If the tank allows overflow, the links filling the
+     full tank are not closed. The closed links are re-opened at the next status check if such conditions no longer
      hold.
 
   #. Simply checking if :math:`h < 0` to determine if a check valve should be
@@ -407,22 +412,22 @@ Hydraulics
           else                  status = OPEN
 
         else
-          if *Q* < -Qtol then   status = CLOSED
+          if Q < -Qtol then   status = CLOSED
           else                  status = unchanged
 
-     where Htol = 0.0005 ft and Qtol = 0.001 cfs.
+     where by default Htol = 0.0005 ft and Qtol = 0.0001 cfs.
 
-  #. If the status check closes an open pump, pipe, or CV, its flow is
-     set to :math:`10^{-6}` cfs. If a pump is re-opened, its flow is
+  #. If the status check closes an open pump, pipe, or CV, large resistance factor and linear head loss relationship are applied: 
+     :math:`g = 10^{8}` and :math:`y=Q`. If a pump is re-opened, its flow is
      computed by applying the current head gain to its characteristic
      curve. If a pipe or CV is re- opened, its flow is determined by
      solving Eq. :eq:`eq:pipe_headloss` for :math:`Q` under the current
-     headloss :math:`h`, ignoring any minor losses.
+     headloss :math:`h`.
 
   #. Matrix coefficients for pressure breaker valves (PBVs) are set to
-     the following: :math:`p = 10^{8}` and :math:`y = 10^{8} Hset`,
+     the following: :math:`g = 10^{-8}` and :math:`y = 10^{8} Hset`,
      where :math:`Hset` is the pressure drop setting for the valve (in feet).
-     Throttle control valves (TCVs) are treated as pipes with :math:`r` as
+     Throttle control valves (TCVs) are treated as valves with :math:`g` and :math:`y` as
      described in item 6 above and :math:`m` taken as the converted value of
      the valve setting (see item 4 above).
 
@@ -438,26 +443,26 @@ Hydraulics
         ::
 
           If current status = ACTIVE then
-            if Q < -Qtol then              new status = CLOSED
+            if Q < -Qtol              then new status = CLOSED
             if Hi < Hset + Hml – Htol then new status = OPEN
                                       else new status = ACTIVE
 
           If curent status = OPEN then
-            if Q < -Qtol then              new status = CLOSED
-            if Hi > Hset + Hml + Htol then new status = ACTIVE
+            if Q < -Qtol              then new status = CLOSED
+            if Hj >= Hset + Htol      then new status = ACTIVE
                                       else new status = OPEN
 
           If current status = CLOSED then
-            if  Hi > Hj + Htol
-            and Hi < Hset – Htol      then new status = OPEN
+            if  Hi >= Hset + Htol
+            and Hj <  Hset – Htol     then new status = Active
 
-            if  Hi > Hj + Htol
-            and Hj < Hset - Htol      then new status = ACTIVE
+            if  Hi < Hset - Htol
+            and Hi > Hj + Htol        then new status = OPEN
                                       else new status = CLOSED
 
         where Q is the current flow through the valve, Hi is its upstream
         head, Hj is its downstream head, Hset is its pressure setting
-        converted to head, Hml is the minor loss when the valve is open (=
+        converted to head, Hml is the minor loss when the valve is fully opened (=
         mQ\ :sup:`2`), and Htol and Qtol are the same values used for check
         valves in item 9 above. A similar set of tests is used for PSVs, except that
         when testing against Hset, the i and j subscripts are switched as are
@@ -477,10 +482,11 @@ Hydraulics
         {A}_{jj} = {A}_{jj} + {10}^{8}
 
      This forces the head at the downstream node to be at the valve
-     setting Hset. An equivalent assignment of coefficients is made for an
-     active PSV except the subscript for F and A is the upstream node i.
-     Coefficients for open/closed PRVs and PSVs are handled in the same
-     way as for pipes.
+     setting Hset. Flow balance is foreced at the downtream node.
+     An equivalent assignment of coefficients is made for an
+     active PSV except the subscript for F and A is the upstream node i and the flow balance is forced at 
+     the upstream node. Coefficients for open/closed PRVs and PSVs are handled in the same
+     way as for valves.
 
   #. For an active FCV from node i to j with flow setting Qset, Qset is
      added to the flow leaving node i and entering node j, and is
@@ -488,14 +494,14 @@ Hydraulics
      less than that at node j, then the valve cannot deliver the flow and
      it is treated as an open pipe.
 
-  #. After initial convergence is achieved (flow convergence plus no
-     change in status for PRVs and PSVs), another status check on pumps,
+  #. Initial convergence is checked at every iteration and after initial convergence is achieved 
+     (no change in status for PRVs and PSVs plus flow convergence based 
+     on total flow change, optional maximum head error and maximum flow change, and the check of unexpected 
+     negative demad and negative pressure when PDD is used in analysis), another status check on pumps,
      CVs, FCVs, and links to tanks is made. Also, the status of links
      controlled by pressure switches (e.g., a pump controlled by the
      pressure at a junction node) is checked. If any status change
-     occurs, the iterations must continue for at least two more
-     iterations (i.e., a convergence check is skipped on the very next
-     iteration). Otherwise, a final solution has been obtained.
+     occurs, the iterations continue. Otherwise, a final solution has been obtained.
 
   #. For extended period simulation (EPS), the following procedure is
      implemented:
@@ -574,16 +580,18 @@ Water Quality
   a pipe. Advective transport within a pipe is represented with the
   following equation:
 
+  .. _eq-advec_trans:
   .. math::
      :label: eq:advec_trans
 
      \frac{ \partial {C}_{i}} {\partial t} = - u_{i} \frac{\partial{C}_{i}}{\partial x} + r({C}_{i})
+  ..
 
   where :math:`C_i` = concentration (mass/volume) in pipe :math:`i` as a
   function of distance :math:`x` and time :math:`t`, :math:`u_i` = flow
   velocity (length/time) in pipe :math:`i`, and :math:`r` = rate of reaction
   (mass/volume/time) as a function of concentration.
-
+ 
 
 **Mixing at Pipe Junctions**
 
@@ -610,25 +618,80 @@ Water Quality
 
 **Mixing in Storage Facilities**
 
-  It is convenient to assume that the contents of storage facilities
-  (tanks and reservoirs) are completely mixed. This is a reasonable
-  assumption for many tanks operating under fill-and-draw conditions
-  providing that sufficient momentum flux is imparted to the inflow
-  (Rossman and Grayman, 1999). Under completely mixed conditions the
-  concentration throughout the tank is a blend of the current contents
-  and that of any entering water. At the same time, the internal
-  concentration could be changing due to reactions. The following
-  equation expresses these phenomena:
+   -  Complete Mixing Model
 
-  .. math::
-     :label: eq:tank_mixing
+      It is convenient to assume that the contents of storage facilities
+      (tanks and reservoirs) are completely mixed (:numref:`fig-complete_mix`). This is a reasonable
+      assumption for many tanks operating under fill-and-draw conditions
+      providing that sufficient momentum flux is imparted to the inflow
+      (Rossman and Grayman, 1999). Under completely mixed conditions the
+      concentration throughout the tank is a blend of the current contents
+      and that of any entering water. At the same time, the internal
+      concentration could be changing due to reactions. The following
+      equation expresses these phenomena:
 
-     \frac{\partial ({V}_{s} {C}_{s}) }{\partial t} = \sum_{i \in I_{s}} {Q}_{i}{C}_{i | x={L}_{i}} - \sum_{j \in O_{s}} {Q}_{j}{C}_{s} + r({C}_{s})
+      .. math::
+         :label: eq:tank_mixing
 
-  where :math:`V_s` = volume in storage at time :math:`t`, :math:`C_s` =
-  concentration within the storage facility, :math:`I_s` = set of links
-  providing flow into the facility, and :math:`O_s` = set of links withdrawing
-  flow from the facility.
+         \frac{\partial ({V}_{s} {C}_{s}) }{\partial t} = \sum_{i \in I_{s}} {Q}_{i}{C}_{i | x={L}_{i}} - \sum_{j \in O_{s}} {Q}_{j}{C}_{s} + r({V}_{s}{C}_{s})
+
+      where :math:`V_s` = volume in storage at time :math:`t`, :math:`C_s` =
+      concentration within the storage facility, :math:`I_s` = set of links
+      providing flow into the facility, and :math:`O_s` = set of links withdrawing
+      flow from the facility, and :math:`r` = rate of reaction (mass/time) in storage.
+
+
+   - Two Compartment Mixing Model
+
+     It is assumed that both the inlet-outlet zone (first compartment) and main zone (second compartment) of the storage facility are completely mixed (:numref:`fig-two_comp_mix`)
+     For the inlet-outlet zone concentration :math:`{C}_{s1}`,
+
+     .. math::
+         :label: eq:tank_mixing21
+
+         \frac{\partial ({V}_{s1} {C}_{s1}) }{\partial t} = \sum_{i \in I_{s}} {Q}_{i}{C}_{i | x={L}_{i}} - \sum_{j \in O_{s}} {Q}_{j}{C}_{s1} - {Q}_{12}{C}_{s1} + {Q}_{21}{C}_{s2}+r({V}_{s1}{C}_{s1})
+
+     For the main zone concentration :math:`{C}_{s2}`,
+
+      .. math::
+         :label: eq:tank_mixing22
+
+         \frac{\partial ({V}_{s2} {C}_{s2}) }{\partial t} = {Q}_{12}{C}_{s1} - {Q}_{21}{C}_{s2}+r({V}_{s2}{C}_{s2})
+  
+     where :math:`{V}_{s1}` = the inlet-outlet zone water volume, :math:`{V}_{s2}` = main zone volume, :math:`Q_{12}` = rate of flow from the inlet-outlet zone to the main zone, and :math:`Q_{21}` = rate of flow 
+     from the main zone to the inlet-outlet zone. When the facility is filling, water flows into the inlet-outlet zone and if the inlet-outlet zone is full, water flows from it into the main zone. 
+     So :math:`Q_{21}=0` when the facility is filing. When the facility is emptying, water flows out of the inlet-otlet zone and if the main zone is not empty, water flows from 
+     the main zone into the inlet-outlet zone. :math:`Q_{12}=0` when the storage facility is emptying.
+
+
+   - First-In First-Out Plug Flow Model
+   
+     FIFO storage facility is shown in :numref:`fig-FIFO_plug`. Water enters the last segment of the facility when it fills and water in the first segment leaves the facility when it drains.
+     The stodage facility water quality is represented by the water quality in first segment. 
+     For the first segment concentration :math:`{C}_{sf}`,
+
+     .. math::
+         :label: eq:tank_mixing3f
+
+         \frac{\partial ({V}_{sf} {C}_{sf}) }{\partial t} = -\sum_{j \in O_{s}} {Q}_{j}{C}_{sf}  + r({V}_{sf}{C}_{sf})
+
+     For the last segment concentration :math:`{C}_{sl}`,
+
+      .. math::
+         :label: eq:tank_mixing3l
+
+         \frac{\partial ({V}_{sl} {C}_{sl}) }{\partial t} = \sum_{i \in I_{s}} {Q}_{i}{C}_{i | x={L}_{i}}+ r({V}_{sl}{C}_{sl})
+ 
+
+   - Last-In First-Out Plug Flow Model
+
+     LIFO storage facility is shown in :numref:`fig-LIFO_plug`. Water enters the last segment of the facility when it fills and leaves the last segment when it drains.
+     The storage facility water quality is represented by the water quality in the last segment.   
+     
+     .. math::
+         :label: eq:tank_mixing4
+
+         \frac{\partial ({V}_{sl} {C}_{sl}) }{\partial t} = \sum_{i \in I_{s}} {Q}_{i}{C}_{i | x={L}_{i}} - \sum_{j \in O_{s}} {Q}_{j}{C}_{sl} + r({V}_{sl}{C}_{sl})
 
 
 **Bulk Flow Reactions**
@@ -646,14 +709,12 @@ Water Quality
 
   .. math::
      \begin{gathered}
-       R = {K}_{b} ({C}_{L}-C) {C}^{n-1} \\
-       \mathit{for\ n > 0, K_b > 0}
+       R = {K}_{b} ({C}_{L}-C) {C}^{n-1} \ \ \ \ \ \ \ \ \ \mathit{for\ n > 0, K_b > 0}
      \end{gathered}
 
   .. math::
      \begin{gathered}
-       R = {K}_{b} (C - {C}_{L} ) {C}^{n - 1} \\
-       \mathit{for\ n > 0, K_b < 0}
+       R = {K}_{b} (C - {C}_{L} ) {C}^{n - 1} \ \ \ \ \ \ \ \ \ \mathit{for\ n > 0, K_b < 0}
      \end{gathered}
 
   where :math:`C_L` = the limiting concentration.
@@ -795,7 +856,7 @@ Water Quality
 
 **System of Equations**
 
-  When applied to a network as a whole, Eqs. :eq:`eq:advec_trans` - :eq:`eq:tank_mixing` represent a
+  When applied to a network with complete mixing storage facilities, Eqs. :eq:`eq:advec_trans` - :eq:`eq:tank_mixing` represent a
   coupled set of differential/algebraic equations with time-varying
   coefficients that must be solved for :math:`C_i` in each pipe :math:`i`
   and :math:`C_s` in each storage facility :math:`s`. This solution is
@@ -813,6 +874,8 @@ Water Quality
     storage facility :math:`s` and the flow :math:`Q_i` in each link
     :math:`i` at all times :math:`t`
 
+  For storage facilities that can not be assumed to be complete mixing, :eq:`eq:tank_mixing` needs to be replaced by the equation of the
+  corresponding mixing model.
 
 **Lagrangian Transport Algorithm**
 

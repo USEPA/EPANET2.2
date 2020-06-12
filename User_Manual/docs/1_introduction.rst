@@ -161,4 +161,4 @@ Steps in Using EPANET
 
     5. Run a hydraulic/water quality analysis (see :numref:`sec-run_analysis`).
 
-    6. View the results of the analysis (see Chapter :ref:`viewing_results`).
+    6. View the results of the analysis (see :numref:`viewing_results`).
