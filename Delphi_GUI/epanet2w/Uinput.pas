@@ -409,6 +409,7 @@ procedure EditLabel(const Index: Integer);
 //-------------------------------------------------------
 var
   aMapLabel : TMapLabel;
+  fmt : String;                                                                //(2.2.0)
 begin
 //Load current properties into PropList
   with Network do
@@ -416,8 +417,11 @@ begin
     aMapLabel := MapLabel(Index);
     PropList.Clear;
     PropList.Add(GetID(LABELS,Index));
-    PropList.Add(Format('%f',[aMapLabel.X]));
-    PropList.Add(Format('%f',[aMapLabel.Y]));
+    fmt := '%.' + IntToStr(MapDimensions.Digits) + 'f';                        //(2.2.0)
+    PropList.Add(Format(fmt,[aMapLabel.X]));                                   //(2.2.0)
+    PropList.Add(Format(fmt,[aMapLabel.Y]));                                   //(2.2.0)
+//    PropList.Add(Format('%f',[aMapLabel.X]));
+//    PropList.Add(Format('%f',[aMapLabel.Y]));
     if aMapLabel.Anchor = nil then PropList.Add('')
     else PropList.Add(aMapLabel.Anchor.ID);
     PropList.Add(MeterTypes[aMapLabel.MeterType]);
@@ -483,6 +487,7 @@ var
   i    : Integer;
   v    : Integer;
   aNode: TNode;
+  fmt  : String;                                                               //(2.2.0)
 begin
 //Set caption for Property Editor window
   PropEditForm.Caption := ObjectLabel[Ntype] + ' ' + GetID(Ntype,Index);
@@ -495,10 +500,11 @@ begin
   begin
     PropList.Clear;
     PropList.Add(aNode.ID);
+    fmt := '%.' + IntToStr(MapDimensions.Digits) + 'f';                        //(2.2.0)
     if aNode.X = MISSING then PropList.Add('')
-    else PropList.Add(Format('%f',[aNode.X]));
+    else PropList.Add(Format(fmt,[aNode.X]));                                  //(2.2.0)
     if aNode.Y = MISSING then PropList.Add('')
-    else PropList.Add(Format('%f',[aNode.Y]));
+    else PropList.Add(Format(fmt,[aNode.Y]));                                  //(2.2.0)
     case Ntype of
       JUNCS:
         for i := 0 to JUNC_SRCQUAL_INDEX do PropList.Add(aNode.Data[i]);
@@ -1866,7 +1872,8 @@ begin
       if (Units = muFeet)
       then LengthUCF := METERSperFOOT;
     end;
-    Digits := 2;
+    Digits := DefMapDimensions.Digits;                                         //(2.2.0)
+//    Digits := 2;
     if Units = muDegrees then
     begin
       Digits := MAXDEGDIGITS;

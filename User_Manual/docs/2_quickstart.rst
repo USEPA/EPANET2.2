@@ -77,9 +77,10 @@ Example Network
    .. figure:: media/image1.jpeg
       :alt: Example Pipe Network
    
-      Example pipe network.
+      Example Pipe Network.
    ..
     
+   .. tabularcolumns:: |c|c|c|   
    .. _table-ex_network_node_prop:
    .. table:: Example Network Node Properties	
 		
@@ -106,6 +107,7 @@ Example Network
 
    ..
 
+   .. tabularcolumns:: |c|c|c|c|
    .. _table-ex_network_pipe_prop:
    .. table:: Example Network Pipe Properties
      
@@ -157,7 +159,7 @@ Project Setup
    .. figure:: media/image2.png
       :alt: Project defaults window
    
-      Project defaults dialog.
+      Project Defaults Dialog.
    ..
     
    Next we will select some map display options so that as we add
@@ -178,7 +180,7 @@ Project Setup
    .. figure:: media/image3.png
       :alt: Map options window
    
-      Map options dialog.
+      Map Options Dialog.
    ..
 
 .. _sec-draw_network:
@@ -208,7 +210,7 @@ Drawing the Network
    .. figure:: media/image8.png
       :alt: Network Map after Adding Nodes
    
-      Network map after adding nodes.
+      Network Map after Adding Nodes.
    ..
     
    Next we will add the pipes. Let's begin with pipe 1 connecting node 2
@@ -282,7 +284,7 @@ Setting Object Properties
    .. figure:: media/image15.png
       :alt: Property Editor Window
    
-      Property editor.
+      Property Editor.
    ..
     
    Let us begin editing by selecting Node 2 into the Property Editor as
@@ -315,7 +317,7 @@ Setting Object Properties
    .. figure:: media/image17.png
       :alt: Curve Editor Window
    
-      Curve editor.
+      Curve Editor.
    ..
 
 .. _sec-save_open_prjs:
@@ -378,7 +380,7 @@ Running a Single Period Analysis
    .. figure:: media/image20.png
       :alt: Example of a Table with Link Results
    
-      Example table of link results.
+      Example Table of Link Results.
    ..
 
 .. _sec-run_EPS:
@@ -404,7 +406,7 @@ Running an Extended Period Analysis
    .. figure:: media/image21.png
       :alt: Time Options Window
    
-      Times options.
+      Times Options.
    ..
 
    To create the pattern, select the Patterns category in the Browser
@@ -420,7 +422,7 @@ Running an Extended Period Analysis
    .. figure:: media/image22.png
       :alt: Pattern Editor Window
    
-      Pattern editor.
+      Pattern Editor.
    ..
     
    We now need to assign Pattern 1 to the Demand Pattern property of all
@@ -473,7 +475,7 @@ Running an Extended Period Analysis
    .. figure:: media/image26.png
       :alt: Example of a Time Series Plot
    
-      Example time series plot.
+      Example Time Series Plot.
    ..
  
 .. _sec-run_wq:
@@ -532,7 +534,7 @@ Running a Water Quality Analysis
    .. figure:: media/image27.png
       :alt: Example of a Reaction Report
    
-      Example reaction report.
+      Example Reaction Report.
    ..
    
    We have only touched the surface of the various capabilities offered

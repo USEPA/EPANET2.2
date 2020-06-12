@@ -66,7 +66,7 @@ const
   MAXCOLS      = 15; //Max. columns in a table
   MAXFILTERS   = 10; //Max. filter conditions for table
   MAXQUALPARAMS = 3; //Max. types of WQ analyses
-  MAXDEGDIGITS  = 4; //Max. decimal digits for lat-long degrees
+  MAXDEGDIGITS  = 7; //Max. decimal digits for lat-long degrees                //(2.2.0)
 
 //---------------
 // Custom cursors
@@ -684,7 +684,7 @@ const
      YperDeg   : 111195;
      LengthUCF : 1.0;
      Units     : muNone;
-     Digits    : 2);
+     Digits    : 3);                                                           //(2.2.0)
 
   DefMapBackdrop: TMapBackdrop =
     (Filename: '';
@@ -1180,6 +1180,7 @@ procedure SetFont(aForm: TForm);
 // Sets the font to be used on form aForm
 //---------------------------------------
 begin
+{
   with aForm.Font do
   begin
     Name := FontName;  //'Arial'; //'MS Sans Serif';
@@ -1187,6 +1188,7 @@ begin
     if BoldFonts then Style := [fsBold]
     else Style := [];
   end;
+}
 end;
 
 end.

@@ -147,7 +147,7 @@ Viewing Results with a Graph
   .. figure:: media/image75.png
      :alt: Example of a Time Series Plot in EPANET
    
-     Example of a time series plot.
+     Example Time Series Plot.
   ..
 
   :numref:`fig-profile_plot` is an example of a profile plot that shows the pressure at hour 0 for different distances.
@@ -156,7 +156,7 @@ Viewing Results with a Graph
   .. figure:: media/image76.png
      :alt: Example of a Profile Plot in EPANET
    
-     Example of a profile plot.
+     Example Profile Plot.
   ..
  
   :numref:`fig-contour_plot` is an example of a contour plot that shows the quality contours at hour 16 across the network.
@@ -165,7 +165,7 @@ Viewing Results with a Graph
   .. figure:: media/image79.png
      :alt: Example of a Contour Plot in EPANET
    
-     Example of a contour plot.
+     Example Contour Plot.
   ..
  
   :numref:`fig-frequency_plot` is an example of a frequency plot that shows the frequency of different pressures at hour 0.
@@ -174,7 +174,7 @@ Viewing Results with a Graph
   .. figure:: media/image77.png
      :alt: Example of a Frequency Plot in EPANET
    
-     Example of a frequency plot.
+     Example Frequency Plot.
   ..
 
   :numref:`fig-system_flow_plot` is an example of a system flow plot that shows the amount of water produced and consumed for the simulation duration.
@@ -183,7 +183,7 @@ Viewing Results with a Graph
   .. figure:: media/image78.png
      :alt: Example of a System Flow Plot in EPANET
    
-     Example of a system flow plot.
+     Example System Flow Plot.
   ..
 
   To create a graph:
@@ -203,7 +203,7 @@ Viewing Results with a Graph
   .. figure:: media/image80.png
      :alt: Graph Selection Dialog in EPANET
    
-     Graph selection dialog.
+     Graph Selection Dialog.
   ..
   
   :numref:`table-graph_select_ops` lists the choices available in the Graph Selection dialog.
@@ -306,7 +306,7 @@ Viewing Results with a Graph
   .. figure:: media/image81.png
      :alt: Graph Options Dialog in EPANET
    
-     Graph options dialog.
+     Graph Options Dialog.
   ..
   
   The Graph Options dialog form (:numref:`fig-graph_ops`) is used to customize the
@@ -524,10 +524,10 @@ Viewing Results with a Graph
   .. figure:: media/image82.png
      :alt: Contour Plot Options Dialog in EPANET
    
-     Contour plot options dialog.
+     Contour Plot Options Dialog.
   ..
 
-.. tabularcolumns:: |p{2.5cm}|p{2.5cm}|p{9cm}|
+.. tabularcolumns:: |p{3.5cm}|p{2.5cm}|p{8cm}|
 
 .. _table-contour_plot_ops:
 .. table:: Contour Plot Options Dialog	
@@ -541,10 +541,10 @@ Viewing Results with a Graph
     |                       |    Modify Legend      |    Changes colors and |
     |                       |                       |    contour intervals  |
     +-----------------------+-----------------------+-----------------------+
-    |    *Network*          |                       |                       |
+    |                       |                       |                       |
     +-----------------------+-----------------------+-----------------------+
-    |    *Backdrop*         |    Foreground         |    Color of network   |
-    |                       |                       |    image displayed on |
+    |    *Network*          |    Foreground         |    Color of network   |
+    |    *Backdrop*         |                       |    image displayed on |
     |                       |                       |    plot               |
     +-----------------------+-----------------------+-----------------------+
     |                       |    Background         |    Background color   |
@@ -555,21 +555,29 @@ Viewing Results with a Graph
     |                       |                       |    used to display    |
     |                       |                       |    network            |
     +-----------------------+-----------------------+-----------------------+
+    |                       |                       |                       |
+    +-----------------------+-----------------------+-----------------------+
     |    *Style*            |    Filled Contours    |    Plot uses colored  |
     |                       |                       |    area-filled        |
     |                       |                       |    contours           |
     +-----------------------+-----------------------+-----------------------+
     |                       |    Line Contours      |    Plot uses colored  |
     |                       |                       |    line contours      |
+    |                       |                       |                       |
+    +-----------------------+-----------------------+-----------------------+
+    |                       |                       |                       |
     +-----------------------+-----------------------+-----------------------+
     |    *Contour Lines*    |    Thickness          |    Thickness of lines |
     |                       |                       |    used for contour   |
     |                       |                       |    intervals          |
+    |                       |                       |                       |
     +-----------------------+-----------------------+-----------------------+
     |                       |    Lines per Level    |    Number of          |
     |                       |                       |    sub-contours per   |
     |                       |                       |    major contour      |
     |                       |                       |    level              |
+    +-----------------------+-----------------------+-----------------------+
+    |                       |                       |                       |
     +-----------------------+-----------------------+-----------------------+
     |    *Default*          |                       |    Saves choices as   |
     |                       |                       |    defaults for next  |
@@ -601,7 +609,7 @@ Viewing Results with a Table
   .. figure:: media/image83.png
      :alt: Example Network Table for Nodes in EPANET
    
-     Example network table for nodes.
+     Example Network Table for Nodes.
   ..
 
   To create a table:
@@ -669,7 +677,7 @@ Viewing Results with a Table
   .. figure:: media/image85.png
      :alt: Columns Tab of the Table Selection Dialog in EPANET
    
-     Columns tab of the table selection dialog.
+     Columns Tab of the Table Selection Dialog.
   ..
 
 **Filters Tab**
@@ -688,7 +696,7 @@ Viewing Results with a Table
   .. figure:: media/image86.png
      :alt: Filters Tab of the Table Selection Dialog in EPANET
    
-     Filters tab of the table selection dialog.
+     Filters Tab of the Table Selection Dialog.
   ..
 
    Multiple conditions used to filter the table are connected by AND's.
@@ -743,7 +751,7 @@ Viewing Special Reports
   .. figure:: media/image87.png
      :alt: Excerpt from an Example Status Report in EPANET
    
-     Excerpt from an example status report.
+     Excerpt from an Example Status Report.
   ..
 
 **Energy Report**
@@ -760,7 +768,7 @@ Viewing Special Reports
   .. figure:: media/image88.png
      :alt: Example Energy Report in EPANET
    
-     Example energy report.
+     Example Energy Report.
 
   ..	 
    
@@ -787,7 +795,7 @@ Viewing Special Reports
   .. figure:: media/image89.png
      :alt: Calibration Report Options Dialog in EPANET
    
-     Calibration report options dialog.
+     Calibration Report Options Dialog.
 
   ..	 
     
@@ -804,7 +812,7 @@ Viewing Special Reports
   .. figure:: media/image90.png
      :alt: Example of a Calibration Report in EPANET
    
-     Example of a calibration report.
+     Example Calibration Report.
 
   ..	 
    

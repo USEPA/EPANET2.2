@@ -31,7 +31,7 @@ Overview
    .. figure:: media/image37.png
       :alt: EPANET Workspace
    
-      EPANET workspace.
+      EPANET Workspace.
    ..
 
 .. _sec-menubar:
@@ -422,7 +422,7 @@ Data Browser
    .. figure:: media/image53A.jpeg
       :alt: Data Browser in EPANET
    
-      Data browser.
+      Data Browser.
    .. 
 
 .. _sec-map_browser:
@@ -439,7 +439,7 @@ Map Browser
    .. figure:: media/image54A.jpeg
       :alt: Map Browser in EPANET
    
-      Map browser.
+      Map Browser.
    .. 
  
    The animation control pushbuttons on the Map Browser work as follows:
@@ -468,7 +468,7 @@ Property Editor
    .. figure:: media/image57.png
       :alt: Property Editor in EPANET
    
-      Property editor.
+      Property Editor.
    .. 
 
     -  The Editor is a grid with two columns - one for the property's name
@@ -567,7 +567,7 @@ Program Preferences
    .. figure:: media/image58.png
       :alt: Preferences - General Tab
    
-      Preferences - general tab.
+      Preferences - General Tab.
    ..
 
 **Formatting Preferences**
@@ -585,7 +585,7 @@ Program Preferences
    .. figure:: media/image59.png
       :alt: Preferences - Formats Tab in EPANET
    
-      Preferences - formats tab.
+      Preferences - Formats Tab.
    ..
       
 

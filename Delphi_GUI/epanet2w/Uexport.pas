@@ -156,9 +156,11 @@ var
   aNode  : TNode;
   aVertex: PVertex;
   aMapLabel: TMapLabel;
+  fmt : String;                                                                //(2.2.0)
 begin
+  fmt := '%-18.' + IntToStr(MapDimensions.Digits) + 'f';                       //(2.2.0)
   Writeln(F, '[COORDINATES]');
-  Writeln(F,';Node            '#9'X-Coord         '#9'Y-Coord');
+  Writeln(F,';Node            '#9'X-Coord           '#9'Y-Coord');             //(2.2.0)
   for i := JUNCS to TANKS do
   begin
     slist := Network.Lists[i];
@@ -168,13 +170,15 @@ begin
       aNode := Node(i,j);
       with aNode do
         if (X <> MISSING) and (Y <> MISSING) then
-          Writeln(F, Format(' %-16s'#9'%-16f'#9'%-16f',[slist[j],X,Y]));
+          Writeln(F, Format('%-16s', [slist[j]])+#9+                           //(2.2.0)
+            Format(Fmt, [X])+#9+Format(Fmt, [Y]));                             //(2.2.0)
+//          Writeln(F, Format(' %-16s'#9'%-16.8f'#9'%-16.8f',[slist[j],X,Y]));
     end;
   end;
   Writeln(F);
 
   Writeln(F, '[VERTICES]');
-  Writeln(F,';Link            '#9'X-Coord         '#9'Y-Coord');
+  Writeln(F,';Link            '#9'X-Coord           '#9'Y-Coord');             //(2.2.0)
   for i := PIPES to VALVES do
   begin
     slist := Network.Lists[i];
@@ -183,8 +187,10 @@ begin
       aVertex := Link(i,j).Vlist;
       while aVertex <> nil do
       begin
-        Writeln(F, Format(' %-16s'#9'%-16f'#9'%-16f',
-          [slist[j],aVertex^.X,aVertex^.Y]));
+        Writeln(F, Format('%-16s', [slist[j]])+#9+                             //(2.2.0)
+            Format(Fmt, [aVertex^.X])+#9+Format(Fmt, [aVertex^.Y]));           //(2.2.0)
+//        Writeln(F, Format(' %-16s'#9'%-16f'#9'%-16f',
+//          [slist[j],aVertex^.X,aVertex^.Y]));
         aVertex := aVertex^.Next;
       end;
     end;
@@ -192,7 +198,7 @@ begin
   Writeln(F);
 
   Writeln(F, '[LABELS]');
-  Writeln(F, ';X-Coord           Y-Coord          Label & Anchor Node');
+  Writeln(F, ';X-Coord             Y-Coord             Label & Anchor Node');  //(2.2.0)
 
   slist := Network.Lists[LABELS];
   n := slist.Count - 1;
@@ -204,15 +210,20 @@ begin
       s := '';
       if Anchor <> nil then s := Anchor.ID;
     end;
-    Writeln(F, Format(' %-16f %-16f "%s" %-16s',
-      [aMapLabel.X,aMapLabel.Y,slist[j],s]));
+    Writeln(F, Format(fmt, [aMapLabel.X])+#9+                                  //(2.2.0)
+               Format(fmt, [aMapLabel.Y])+#9+'"'+slist[j]+'"'+#9+s);           //(2.2.0)
+//    Writeln(F, Format(' %-16f %-16f "%s" %-16s',
+//      [aMapLabel.X,aMapLabel.Y,slist[j],s]));
   end;
   Writeln(F);
 
   Writeln(F, '[BACKDROP]');
   with MapDimensions do
-  Writeln(F, Format(' DIMENSIONS     '#9'%-16f'#9'%-16f'#9'%-16f'#9'%-16f',
-    [LowerLeft.X, LowerLeft.Y, UpperRight.X, UpperRight.Y]));
+    Writeln(F, '  DIMENSIONS  '+#9+Format(fmt, [LowerLeft.X])+#9+              //(2.2.0)
+      Format(fmt, [LowerLeft.Y])+#9+Format(fmt, [UpperRight.X])+#9+            //(2.2.0)
+      Format(fmt, [UpperRight.Y]));                                            //(2.2.0)
+//  Writeln(F, Format(' DIMENSIONS     '#9'%-16f'#9'%-16f'#9'%-16f'#9'%-16f',
+//    [LowerLeft.X, LowerLeft.Y, UpperRight.X, UpperRight.Y]));
   Writeln(F, Format(' UNITS          '#9'%s',[MapUnits[Ord(MapDimensions.Units)]]));
   Writeln(F, Format(' FILE           '#9'%s',[MapBackdrop.Filename]));
   Writeln(F, Format(' OFFSET         '#9'%-16f'#9'%-16f',

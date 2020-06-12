@@ -96,7 +96,7 @@ Setting the Map’s Dimensions
    .. figure:: media/image67.png
       :alt: Map Dimensions Dialog in EPANET
    
-      Map dimensions dialog.
+      Map Dimensions Dialog.
    ..
 
    The information provided in the Map Dimensions dialog consists of the
@@ -147,7 +147,7 @@ Utilizing a Backdrop Map
    .. figure:: media/image68.png
       :alt: Example Backdrop
    
-      Example backdrop.
+      Example Backdrop.
    ..
  
    The backdrop map must be a Windows enhanced metafile or bitmap
@@ -298,7 +298,7 @@ Map Legends
    :align: left 
    :figwidth: 4.5cm
 
-   Example map legend.
+   Example Map Legend.
 ..
 
 There are three types of map legends that can be
@@ -348,14 +348,14 @@ parameter on the network map. It works as follows:
    :alt: Legend Editor Dialog in EPANET
    :scale: 100%
 
-   Legend editor dialog.
+   Legend Editor Dialog.
 ..
 
 .. _sec-overview_map:
 
 Overview Map
 ~~~~~~~~~~~~
- 
+
    The Overview Map allows you to see where in terms of the overall
    system the main network map is currently focused. This zoom area is
    depicted by the rectangular boundary displayed on the Overview Map (:numref:`fig-overview_map`).
@@ -369,7 +369,7 @@ Overview Map
    .. figure:: media/image71.png
       :alt: Example Overview Map in EPANET
    
-      Example of overview map.
+      Example of Overview Map.
    ..
 
 .. _sec-map_disp_ops:
@@ -392,7 +392,7 @@ Map Display Options
    .. figure:: media/image72.png
       :alt: Map Options Dialog in EPANET
    
-      Map options dialog.
+      Map Options Dialog.
    ..
 
    The dialog contains a separate page, selected from the panel on the

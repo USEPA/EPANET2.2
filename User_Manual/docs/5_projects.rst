@@ -132,7 +132,7 @@ Project Defaults
    .. figure:: media/image2.png
       :alt: ID Labels Tab of Project Defaults Dialog in EPANET
    
-      ID labels tab of project defaults dialog.
+      ID Labels Tab of the Project Defaults Dialog.
    ..
     
 
@@ -166,7 +166,7 @@ Project Defaults
    .. figure:: media/image60.png
       :alt: Properties Tab of the Project Defaults Dialog in EPANET
    
-      Properties tab of the project defaults dialog.
+      Properties Tab of the Project Defaults Dialog.
    ..
 
 
@@ -268,7 +268,7 @@ Calibration Data
    .. figure:: media/image60.png
       :alt: Calibration Data Dialog in EPANET
    
-      Calibration data dialog.
+      Calibration Data Dialog.
    ..
 
 

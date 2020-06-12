@@ -384,149 +384,147 @@ Editing Visual Objects
    The tank properties are provided in :numref:`table-tank_prop`.
 
 .. tabularcolumns:: |p{3cm}|p{11cm}|   
-    
 .. _table-tank_prop:
 .. table:: Tank Properties	
+    :class: longtable
 		
-    +-----------------------------------+-----------------------------------+
-    | *PROPERTY*                        | *DESCRIPTION*                     |
-    +===================================+===================================+
-    | Tank ID                           | A unique label used to identify   |
-    |                                   | the tank. It can consist of a     |
-    |                                   | combination of up to 15 numerals  |
-    |                                   | or characters. It cannot be the   |
-    |                                   | same as the ID for any other      |
-    |                                   | node. This is a required          |
-    |                                   | property.                         |
-    +-----------------------------------+-----------------------------------+
-    | X-Coordinate                      | The horizontal location of the    |
-    |                                   | tank on the map, measured in the  |
-    |                                   | map's scaling units. If left      |
-    |                                   | blank the tank will not appear on |
-    |                                   | the network map.                  |
-    +-----------------------------------+-----------------------------------+
-    | Y-Coordinate                      | The vertical location of the tank |
-    |                                   | on the map, measured in the map's |
-    |                                   | scaling units. If left blank the  |
-    |                                   | tank will not appear on the       |
-    |                                   | network map.                      |
-    +-----------------------------------+-----------------------------------+
-    | Description                       | Optional text string that         |
-    |                                   | describes other significant       |
-    |                                   | information about the tank.       |
-    +-----------------------------------+-----------------------------------+
-    | Tag                               | Optional text string (with no     |
-    |                                   | spaces) used to assign the tank   |
-    |                                   | to a category, such as a pressure |
-    |                                   | zone                              |
-    +-----------------------------------+-----------------------------------+
-    | Elevation                         | Elevation above a common datum in |
-    |                                   | feet (meters) of the bottom shell |
-    |                                   | of the tank. This is a required   |
-    |                                   | property.                         |
-    +-----------------------------------+-----------------------------------+
-    | Initial Level                     | Height in feet (meters) of the    |
-    |                                   | water surface above the bottom    |
-    |                                   | elevation of the tank at the      |
-    |                                   | start of the simulation. This is  |
-    |                                   | a required property.              |
-    +-----------------------------------+-----------------------------------+
-    | Minimum Level                     | Minimum height in feet (meters)   |
-    |                                   | of the water surface above the    |
-    |                                   | bottom elevation that will be     |
-    |                                   | maintained. The tank will not be  |
-    |                                   | allowed to drop below this level. |
-    |                                   | This is a required property.      |
-    +-----------------------------------+-----------------------------------+
-    | Maximum Level                     | Maximum height in feet (meters)   |
-    |                                   | of the water surface above the    |
-    |                                   | bottom elevation that will be     |
-    |                                   | maintained. The tank will not be  |
-    |                                   | allowed to rise above this level. |
-    |                                   | This is a required property.      |
-    +-----------------------------------+-----------------------------------+
-    | Diameter                          | The diameter of the tank in feet  |
-    |                                   | (meters). For cylindrical tanks   |
-    |                                   | this is the actual diameter. For  |
-    |                                   | square or rectangular tanks it    |
-    |                                   | can be an equivalent diameter     |
-    |                                   | equal to 1.128 times the square   |
-    |                                   | root of the cross-sectional area. |
-    |                                   | For tanks whose geometry will be  |
-    |                                   | described by a curve (see below)  |
-    |                                   | it can be set to any value. This  |
-    |                                   | is a required property.           |
-    +-----------------------------------+-----------------------------------+
-    | Minimum Volume                    | The volume of water in the tank   |
-    |                                   | when it is at its minimum level,  |
-    |                                   | in cubic feet (cubic meters).     |
-    |                                   | This is an optional property,     |
-    |                                   | useful mainly for describing the  |
-    |                                   | bottom geometry of                |
-    |                                   | non-cylindrical tanks where a     |
-    |                                   | full volume versus depth curve    |
-    |                                   | will not be supplied (see below). |
-    +-----------------------------------+-----------------------------------+
-    | Volume Curve                      | The ID label of a curve used to   |
-    |                                   | describe the relation between     |
-    |                                   | tank volume and water level. If   |
-    |                                   | no value is supplied then the     |
-    |                                   | tank is assumed to be             |
-    |                                   | cylindrical.                      |
-    +-----------------------------------+-----------------------------------+
-    | Mixing Model                      | The type of water quality mixing  |
-    |                                   | that occurs within the tank. The  |
-    |                                   | choices include                   |
-    |                                   |                                   |
-    |                                   | • MIXED (fully mixed)             |
-    |                                   |                                   |
-    |                                   | • 2COMP (two-compartment mixing)  |
-    |                                   |                                   |
-    |                                   | • FIFO (first-in first-out plug   |
-    |                                   | flow)                             |
-    |                                   |                                   |
-    |                                   | • LIFO (last-in first-out plug    |
-    |                                   | flow)                             |
-    |                                   |                                   |
-    |                                   | See the Mixing Models topic in    |
-    |                                   | :numref:`sec-wq_sim_model`        |
-    |                                   | for more information.             |
-    +-----------------------------------+-----------------------------------+
-    | Mixing Fraction                   | The fraction of the tank's total  |
-    |                                   | volume that comprises the         |
-    |                                   | inlet-outlet compartment of the   |
-    |                                   | two-compartment (2COMP) mixing    |
-    |                                   | model. Can be left blank if       |
-    |                                   | another type of mixing model is   |
-    |                                   | employed.                         |
-    +-----------------------------------+-----------------------------------+
-    | Reaction Coefficient              | The bulk reaction coefficient for |
-    |                                   | chemical reactions in the tank.   |
-    |                                   | Time units are 1/days. Use a      |
-    |                                   | positive value for growth         |
-    |                                   | reactions and a negative value    |
-    |                                   | for decay. Leave blank if the     |
-    |                                   | Global Bulk reaction coefficient  |
-    |                                   | specified in the project’s        |
-    |                                   | Reactions Options will apply. See |
-    |                                   | Water Quality Reactions in        |
-    |                                   | :numref:`sec-wq_sim_model`        |
-    |                                   | for more information.             |
-    +-----------------------------------+-----------------------------------+
-    | Initial Quality                   | Water quality level in the tank   |
-    |                                   | at the start of the simulation.   |
-    |                                   | Can be left blank if no water     |
-    |                                   | quality analysis is being made or |
-    |                                   | if the level is zero.             |
-    +-----------------------------------+-----------------------------------+
-    | Source Quality                    | Quality of any water entering the |
-    |                                   | network at this location. Click   |
-    |                                   | the ellipsis button (or hit the   |
-    |                                   | Enter key) to bring up the Source |
-    |                                   | Quality Editor (see               |
-    |                                   | :numref:`fig-source_quality_ed`   |
-    |                                   | below).                           |
-    +-----------------------------------+-----------------------------------+
+    +-----------------------------------+----------------------------------------+
+    | *PROPERTY*                        | *DESCRIPTION*                          |
+    +===================================+========================================+
+    | Tank ID                           | A unique label used to identify        |
+    |                                   | the tank. It can consist of a          |
+    |                                   | combination of up to 15 numerals       |
+    |                                   | or characters. It cannot be the        |
+    |                                   | same as the ID for any other           |
+    |                                   | node. This is a required               |
+    |                                   | property.                              |
+    +-----------------------------------+----------------------------------------+
+    | X-Coordinate                      | The horizontal location of the         |
+    |                                   | tank on the map, measured in the       |
+    |                                   | map's scaling units. If left           |
+    |                                   | blank the tank will not appear on      |
+    |                                   | the network map.                       |
+    +-----------------------------------+----------------------------------------+
+    | Y-Coordinate                      | The vertical location of the tank      |
+    |                                   | on the map, measured in the map's      |
+    |                                   | scaling units. If left blank the       |
+    |                                   | tank will not appear on the            |
+    |                                   | network map.                           |
+    +-----------------------------------+----------------------------------------+
+    | Description                       | Optional text string that              |
+    |                                   | describes other significant            |
+    |                                   | information about the tank.            |
+    +-----------------------------------+----------------------------------------+
+    | Tag                               | Optional text string (with no          |
+    |                                   | spaces) used to assign the tank        |
+    |                                   | to a category, such as a pressure      |
+    |                                   | zone                                   |
+    +-----------------------------------+----------------------------------------+
+    | Elevation                         | Elevation above a common datum in      |
+    |                                   | feet (meters) of the bottom shell      |
+    |                                   | of the tank. This is a required        |
+    |                                   | property.                              |
+    +-----------------------------------+----------------------------------------+
+    | Initial Level                     | Height in feet (meters) of the         |
+    |                                   | water surface above the bottom         |
+    |                                   | elevation of the tank at the           |
+    |                                   | start of the simulation. This is       |
+    |                                   | a required property.                   |
+    +-----------------------------------+----------------------------------------+
+    | Minimum Level                     | Minimum height in feet (meters)        |
+    |                                   | of the water surface above the         |
+    |                                   | bottom elevation that will be          |
+    |                                   | maintained. The tank will not be       |
+    |                                   | allowed to drop below this level.      |
+    |                                   | This is a required property.           |
+    +-----------------------------------+----------------------------------------+
+    | Maximum Level                     | Maximum height in feet (meters)        |
+    |                                   | of the water surface above the         |
+    |                                   | bottom elevation that will be          |
+    |                                   | maintained. The tank will not be       |
+    |                                   | allowed to rise above this level.      |
+    |                                   | This is a required property.           |
+    +-----------------------------------+----------------------------------------+
+    | Diameter                          | The diameter of the tank in feet       |
+    |                                   | (meters). For cylindrical tanks        |
+    |                                   | this is the actual diameter. For       |
+    |                                   | square or rectangular tanks it         |
+    |                                   | can be an equivalent diameter          |
+    |                                   | equal to 1.128 times the square        |
+    |                                   | root of the cross-sectional area.      |
+    |                                   | For tanks whose geometry will be       |
+    |                                   | described by a curve (see below)       |
+    |                                   | it can be set to any value. This       |
+    |                                   | is a required property.                |
+    +-----------------------------------+----------------------------------------+
+    | Minimum Volume                    | The volume of water in the tank        |
+    |                                   | when it is at its minimum level,       |
+    |                                   | in cubic feet (cubic meters).          |
+    |                                   | This is an optional property,          |
+    |                                   | useful mainly for describing the       |
+    |                                   | bottom geometry of                     |
+    |                                   | non-cylindrical tanks where a          |
+    |                                   | full volume versus depth curve         |
+    |                                   | will not be supplied (see below).      |
+    +-----------------------------------+----------------------------------------+
+    | Volume Curve                      | The ID label of a curve used to        |
+    |                                   | describe the relation between          |
+    |                                   | tank volume and water level. If        |
+    |                                   | no value is supplied then the          |
+    |                                   | tank is assumed to be                  |
+    |                                   | cylindrical.                           |
+    +-----------------------------------+----------------------------------------+
+    | Mixing Model                      | The type of water quality mixing       |
+    |                                   | that occurs within the tank. The       |
+    |                                   | choices include:                       |
+    |                                   |                                        |
+    |                                   |                                        |
+    |                                   | -  MIXED (fully mixed)                 |
+    |                                   | -  2COMP (two-compartment mixing)      |
+    |                                   | -  FIFO (first-in first-out plug flow) |
+    |                                   | -  LIFO (last-in first-out plug flow)  |
+    |                                   |                                        |
+    |                                   |                                        |
+    |                                   | See the Mixing Models topic in         |
+    |                                   | :numref:`sec-wq_sim_model`             |
+    |                                   | for more information.                  |
+    |                                   |                                        |
+    +-----------------------------------+----------------------------------------+
+    | Mixing Fraction                   | The fraction of the tank's total       |
+    |                                   | volume that comprises the              |
+    |                                   | inlet-outlet compartment of the        |
+    |                                   | two-compartment (2COMP) mixing         |
+    |                                   | model. Can be left blank if            |
+    |                                   | another type of mixing model is        |
+    |                                   | employed.                              |
+    +-----------------------------------+----------------------------------------+
+    | Reaction Coefficient              | The bulk reaction coefficient for      |
+    |                                   | chemical reactions in the tank.        |
+    |                                   | Time units are 1/days. Use a           |
+    |                                   | positive value for growth              |
+    |                                   | reactions and a negative value         |
+    |                                   | for decay. Leave blank if the          |
+    |                                   | Global Bulk reaction coefficient       |
+    |                                   | specified in the project’s             |
+    |                                   | Reactions Options will apply. See      |
+    |                                   | Water Quality Reactions in             |
+    |                                   | :numref:`sec-wq_sim_model`             |
+    |                                   | for more information.                  |
+    +-----------------------------------+----------------------------------------+
+    | Initial Quality                   | Water quality level in the tank        |
+    |                                   | at the start of the simulation.        |
+    |                                   | Can be left blank if no water          |
+    |                                   | quality analysis is being made or      |
+    |                                   | if the level is zero.                  |
+    +-----------------------------------+----------------------------------------+
+    | Source Quality                    | Quality of any water entering the      |
+    |                                   | network at this location. Click        |
+    |                                   | the ellipsis button (or hit the        |
+    |                                   | Enter key) to bring up the Source      |
+    |                                   | Quality Editor (see                    |
+    |                                   | :numref:`fig-source_quality_ed`        |
+    |                                   | below).                                |
+    +-----------------------------------+----------------------------------------+
 
 ..
 
@@ -943,7 +941,7 @@ Editing Non-Visual Objects
    .. figure:: media/image17.png
       :alt: Curve Editor in EPANET
    
-      Curve editor.
+      Curve Editor.
    ..
    
 **Pattern Editor**
@@ -985,9 +983,10 @@ Editing Non-Visual Objects
    .. figure:: media/image22.png
       :alt: Pattern Editor in EPANET
    
-      Pattern editor.
+      Pattern Editor.
    ..
  
+
 **Controls Editor**
 
    The Controls Editor, shown in :numref:`fig-controls_ed`, is a text editor window
@@ -1000,7 +999,7 @@ Editing Non-Visual Objects
    .. figure:: media/image62.png
       :alt: Controls Editor in EPANET
    
-      Controls editor.
+      Controls Editor.
    ..
  
 **Demand Editor**
@@ -1025,7 +1024,7 @@ Editing Non-Visual Objects
    .. figure:: media/image63.png
       :alt: Demand Editor in EPANET
    
-      Demand editor.
+      Demand Editor.
    ..
  
    The table initially is sized for 10 rows. If additional rows are
@@ -1049,7 +1048,7 @@ Editing Non-Visual Objects
    .. figure:: media/image64.png
       :alt: Source Quality Editor in EPANET
    
-      Source quality editor.
+      Source Quality Editor.
    ..
 
 .. tabularcolumns:: |p{3cm}|p{11cm}|
@@ -1168,7 +1167,7 @@ Shaping and Reversing Links
    .. figure:: media/image65.png
       :alt: Reshaping a Link in EPANET
    
-      Reshaping a link.
+      Reshaping a Link.
    ..
 
    A link can also have its direction reversed (i.e., its end nodes
@@ -1281,7 +1280,7 @@ Editing a Group of Objects
    .. figure:: media/image66.png
       :alt: Group Edit Dialog Window in EPANET
    
-      Group edit dialog.
+      Group Edit Dialog.
    ..
  
 
