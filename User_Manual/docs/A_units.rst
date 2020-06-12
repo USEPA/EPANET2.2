@@ -52,21 +52,21 @@ Units of Measurement
   +-----------------------+-----------------------+-----------------------+
   |    Length             | foot                  | meter                 |
   +-----------------------+-----------------------+-----------------------+
-  |    Minor Loss Coeff.  | unitless              | unitless              |
+  | Minor Loss Coefficient| unitless              | unitless              |
   +-----------------------+-----------------------+-----------------------+
   |    Power              | horsepower            | kilowatt              |
   +-----------------------+-----------------------+-----------------------+
   |    Pressure           | pounds per square     | meter                 |
   |                       | inch                  |                       |
   +-----------------------+-----------------------+-----------------------+
-  |    Reaction Coeff.    | 1st-order   1/day     | 1st-order    1/day    |
-  |    (Bulk)             |                       |                       |
+  | Reaction Coefficient  | 1st-order   1/day     | 1st-order    1/day    |
+  | (Bulk)                |                       |                       |
   +-----------------------+-----------------------+-----------------------+
-  | Reaction Coeff. (Wall)| 0-order  mass/L/day   | 0-order  mass/L/day   |
-  |                       |                       |                       |
+  | Reaction Coefficient  | 0-order  mass/L/day   | 0-order  mass/L/day   |
+  | (Wall)                |                       |                       |
   |                       | 1st-order  ft/day     | 1st-order  meter/day  |
   +-----------------------+-----------------------+-----------------------+
-  | Roughness Coefficiient| Darcy-Weisbach        | Darcy-Weisbach        |
+  | Roughness Coefficient | Darcy-Weisbach        | Darcy-Weisbach        |
   |                       | 10\ :sup:`-3`\ foot   | millimeter            |
   |                       |                       |                       |
   |                       | Otherwise  unitless   | Otherwise  unitless   |

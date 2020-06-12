@@ -165,7 +165,7 @@ Menu Bar
    The Project Menu includes commands related to the current project being analyzed.  The commands for the Project Menu are shown in :numref:`table-Project_Menu_Commands` below.
       
 .. _table-Project_Menu_Commands:
-.. table:: Project Menu Commmands     
+.. table:: Project Menu Commands     
 
   +-----------------------------------+-----------------------------------+
   | *COMMAND*                         | *DESCRIPTION*                     |
