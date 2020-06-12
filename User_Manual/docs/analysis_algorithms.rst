@@ -115,7 +115,7 @@ Hydraulics
   flow to prevent :math:`{g}_{ij}` from reaching zero. The value of :math:`{g}_{ij}`
   is capped at a specific value when the flow is smaller than what is defined by the specified minimum :math:`{g}`.
 
-  For pumps, the deribative is:
+  For pumps, the derivative is:
 
   .. math::
      {g}_{ij} = n \omega^{2} r ({Q}_{ij}/{\omega} )^{n-1}
