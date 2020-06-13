@@ -89,7 +89,7 @@ pygments_style = 'sphinx'
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
-latex_logo = './media/logo.png'
+#latex_logo = './media/logo.png'
 
 
 # Theme options are theme-specific and customize the look and feel of a theme
@@ -127,6 +127,7 @@ htmlhelp_basename = 'EPANETdoc'
 
 # -- Options for LaTeX output ------------------------------------------------
 latex_engine = 'pdflatex'
+latex_additional_files = ["media/logo.png", "media/epanetlogo.png"]
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
@@ -182,7 +183,7 @@ latex_elements = {
             \vspace*{1mm} %%% * is used to give space from top
             \textbf{\normalsize {Terranna Haxton}}
 
-            \vspace{40mm}
+            \vspace{30mm}
             \textbf{\Large {Water Infrastructure Division}}
            
             \vspace*{1mm}
@@ -193,6 +194,14 @@ latex_elements = {
            
             \vspace*{1mm}
             \textbf{\Large{Cincinnati, Ohio 45268}}
+
+            \vspace*{1mm}
+            \begin{figure}[htbp]
+                \centering
+                \includegraphics[scale=0.75]{epanetlogo.png}
+            \end{figure}
+
+
            
         \end{titlepage}
         \setcounter{page}{1}
