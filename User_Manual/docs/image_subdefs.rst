@@ -175,3 +175,6 @@
 ..  |image144| image:: media/image93.png
 ..  |image145| image:: media/image94.png
 ..  |image146| image:: media/image95.png
+..  |logo|     image:: media/logo.png
+..  |epanetlogo|  image:: media/epanetlogo.png
+..  |transport|   image:: media/transport.png

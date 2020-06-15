@@ -12,9 +12,9 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+#import os
+#import sys
+#sys.path.insert(0, os.path.abspath('.'))
 
 
 # -- Project information -----------------------------------------------------
@@ -89,6 +89,8 @@ pygments_style = 'sphinx'
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
+#latex_logo = './media/logo.png'
+
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -125,6 +127,7 @@ htmlhelp_basename = 'EPANETdoc'
 
 # -- Options for LaTeX output ------------------------------------------------
 latex_engine = 'pdflatex'
+latex_additional_files = ["media/logo.png", "media/epanetlogo.png"]
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
     #
@@ -148,7 +151,7 @@ latex_elements = {
             \vspace{0mm}  
             \begin{minipage}{0.5\textwidth}                                      
             \begin{figure}[H]             
-                  \includegraphics[scale=0.8]{../../docs/media/logo.png}   
+                  \includegraphics[scale=0.8]{logo.png}   
             \end{figure}
             \end{minipage} \hfill
             \begin{minipage}{0.45\textwidth}
@@ -190,14 +193,16 @@ latex_elements = {
             \textbf{\Large{U.S. Environmental Protection Agency}}
            
             \vspace*{1mm}
-            \textbf{\Large{Cincinnati. Ohio 45268}}
-           
-            \vspace*{1mm} 
+            \textbf{\Large{Cincinnati, Ohio 45268}}
+
+            \vspace*{1mm}
             \begin{figure}[htbp]
-                  \centering
-                  \includegraphics[scale=0.75]{../../docs/media/epanetlogo.png}
+                \centering
+                \includegraphics[scale=0.75]{epanetlogo.png}
             \end{figure}
 
+
+           
         \end{titlepage}
         \setcounter{page}{1}
         \pagenumbering{roman}
