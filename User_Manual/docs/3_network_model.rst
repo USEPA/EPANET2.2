@@ -833,16 +833,18 @@ Non-Physical Components
 Hydraulic Simulation Model
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-   EPANET's hydraulic simulation model computes hydraulic heads at junctions and flow rates 
-   through links for a fixed set of reservoir levels, tank levels, and water demands over a 
-   succession of points in time. From one time step to the next reservoir levels and junction 
-   demands are updated according to their prescribed time patterns while tank levels are updated 
-   using the current flow solution. The solution for heads and flows at a particular point in 
-   time involves solving simultaneously the conservation of flow equation for each junction 
-   and the head loss relationship across each link in the network. This process, known as 
-   hydraulically balancing the network, requires using an iterative technique to solve the 
-   nonlinear equations involved. EPANET employs the Global Gradient Algorithm for this purpose. 
-   EPANET employs the “Gradient Algorithm” for this purpose. Consult Chapter :ref:`analysis_algorithms`
+   EPANET’s hydraulic simulation model computes junction heads and link
+   flows for a fixed set of reservoir levels, tank levels, and water
+   demands over a succession of points in time. From one time step to
+   the next reservoir levels and junction demands are updated according
+   to their prescribed time patterns while tank levels are updated using
+   the current flow solution. The solution for heads and flows at a
+   particular point in time involves solving simultaneously the
+   conservation of flow equation for each junction and the headloss
+   relationship across each link in the network. This process, known as
+   “hydraulically balancing” the network, requires using an
+   iterative technique to solve the nonlinear equations involved. EPANET
+   employs the “Gradient Algorithm” for this purpose. Consult Chapter :ref:`analysis_algorithms`
    for details.
 
    The hydraulic time step used for extended period simulation (EPS) can
@@ -854,19 +856,6 @@ Hydraulic Simulation Model
     -  The next time pattern period occurs
     -  A tank becomes empty or full
     -  A simple control or rule-based control is activated
-	
-	EPANET's hydraulic analysis allows for two different ways of modeling water demands (i.e., consumption) 
-	at network junction nodes. Demand Driven Analysis (DDA) requires that demands at each point in time are 
-	fixed values that must be delivered no matter what nodal pressures and link flows are produced by a 
-	hydraulic solution. This has been the classical approach used to model demands, but it can result in 
-	situations where required demands are satisfied at nodes with negative pressures - a physical impossibility. 
-	An alternative approach, known as Pressure Driven Analysis (PDA), allows the actual demand delivered at a 
-	node to depend on the node's pressure. Below some minimum pressure demand is zero, above some service pressure 
-	the full required demand is supplied and in between demand varies as a power law function of pressure. Using 
-	PDA is one way to avoid having positive demands at nodes with negative pressures.  
-	
-	EPANET's Hydraulic Analysis Options are used to select a choice of demand model and to supply the parameters used by PDA.
-
 
 .. _sec-wq_sim_model:
 
@@ -905,32 +894,7 @@ Water Quality Simulation Model
    quality equals the initial quality assigned to the upstream node.
    Whenever there is a flow reversal in a pipe, the pipe’s parcels are
    re-ordered from front to back.
-   
-**Water Quality Sources**
-	Water quality sources are nodes where the quality of external flow entering 
-	the network is specified. They can represent the main treatment works, a 
-	well-head or satellite treatment facility, or an unwanted contaminant intrusion. 
-	Source quality can be made to vary over time by assigning it a time pattern. 
-	EPANET can model the following types of sources:
 
-	-	A concentration source fixes the concentration of any external inflow entering the 
-		network at a node, such as flow from a reservoir or from a negative demand placed 
-		at a junction.
-
-	-	A mass booster source adds a fixed mass flow to that entering the node from other 
-		points in the network.
-
-	-	A set point booster source fixes the concentration of any flow leaving the node 
-		(as long as the concentration resulting from all inflow to the node is below the setpoint).
-
-	-	A flow paced booster source adds a fixed concentration to that resulting from the 
-		mixing of all inflow to the node from other points in the network
-
-	The concentration-type source is best used for nodes that represent source water 
-	supplies or treatment works (e.g., reservoirs or nodes assigned a negative demand). 
-	The booster-type source is best used to model direct injection of a tracer or additional 
-	disinfectant into the network or to model a contaminant intrusion.
-   
 
 **Mixing in Storage Tanks**
 
