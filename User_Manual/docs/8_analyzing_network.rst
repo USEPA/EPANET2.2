@@ -144,34 +144,43 @@ Setting Analysis Options
   |                                   | report after an analysis is made. |
   |                                   | Choices are:                      |
   |                                   |                                   |
-  |                                   | - NONE (no reporting)             |
-  |                                   | - YES  (link status changes)      |
-  |                                   | - FULL (normal plus convergence)  |
+  |                                   | - NONE (no status report)         |
+  |                                   | - YES  (normal status reporting   |  
+  |                                   |         - lists all changes in    |
+  |                                   |         link status throughout    |
+  |									  |			the simulation and if     |
+  |									  |			water quality is analyzed,| 
+  |									  |			a final mass balance      |
+  |									  |			accounting)               |
+  |                                   | - FULL  (full reporting - normal  | 
+  |                                   |         reporting plus the        |
+  |									  |		    convergence error from    |
+  |									  |		    each trial of the         | 
+  |									  |		    hydraulic analysis made   |
+  |									  |		    in each timeperiod)       |
   |                                   |                                   |
   |                                   | Full status reporting is only     |
   |                                   | useful for debugging purposes.    |
   +-----------------------------------+-----------------------------------+
-  | Max. Head Error                   | Augments the ACCURACY option.     |
-  |                                   | Specifies the maximum head loss   |
-  |                                   | error any network link can have   |
-  |                                   | for hydraulic convergence to      |
-  |                                   | occur. The default value          |
-  |                                   | of 0 indicates that no head       |
-  |                                   | error limit applies. Units of     |
-  |                                   | this parameter are feet (US) or   |
-  |                                   | meters (SI).                      |
+  | Max. Head Error                   | Another convergence criterion     |
+  |                                   | requiring that the head loss      |
+  |                                   | computed by the head loss         |
+  |                                   | formula compared to the           |
+  |                                   | difference in nodal heads         |
+  |                                   | across each link be less than     |
+  |                                   | the specified value (in ft or m). |
+  |                                   | A value of 0 indicates that this  |
+  |                                   | criterion will not be used.       |
   +-----------------------------------+-----------------------------------+
-  | Max. Flow Change                  | Augments the ACCURACY option.     |
-  |                                   | Specifies the largest change in   |
-  |                                   | flow that any network element     |
-  |                                   | (link, emitter, or pressure-      |
-  |                                   | dependent demand) can have for    |
-  |                                   | hydraulic convergence to occur.   |
-  |                                   | The default value of 0 indicates  |
-  |                                   | that no flow change limit         |
-  |                                   | applies. It is specified based    |
-  |                                   | on the current project flow unit  |
-  |                                   | setting.                          |
+  | Max. Flow Change                  | A third convergence criterion     |
+  |                                   | requiring that the largest        |
+  |                                   | absolute flow change between      |
+  |                                   | the current and previous          |
+  |                                   | solutions be less than the        |
+  |                                   | specified value (in flow          |
+  |                                   | units). A value of 0              |
+  |                                   | indicates that this criterion     |
+  |                                   | will not be used.                 |
   +-----------------------------------+-----------------------------------+
   | Demand Model                      | Selects between demand or         |
   |                                   | pressure driven analysis -- DDA   |
