@@ -152,7 +152,7 @@ Physical Components
     .. note::
        The pressure-flow relation at a junction defined by an emitter
        should not be confused with the pressure-demand relation when
-       performing a pressure driven analysis (PDA). See :ref:`Pressure Driven Demand<press_driven_analysis>`
+       performing a pressure driven analysis (PDA). See :ref:`Hydraulic Simulation Model<sec-hyd_sim_model>`
        for more information.
 
 **Pipes**
@@ -850,23 +850,25 @@ Hydraulic Simulation Model
    than normal will occur automatically whenever one of the following
    events occurs:
 
-    -  The next output reporting time period occurs
-    -  The next time pattern period occurs
-    -  A tank becomes empty or full
-    -  A simple control or rule-based control is activated
-	
-	EPANET's hydraulic analysis allows for two different ways of modeling water demands (i.e., consumption) 
-	at network junction nodes. Demand Driven Analysis (DDA) requires that demands at each point in time are 
-	fixed values that must be delivered no matter what nodal pressures and link flows are produced by a 
-	hydraulic solution. This has been the classical approach used to model demands, but it can result in 
-	situations where required demands are satisfied at nodes with negative pressures - a physical impossibility. 
-	An alternative approach, known as Pressure Driven Analysis (PDA), allows the actual demand delivered at a 
-	node to depend on the node's pressure. Below some minimum pressure demand is zero, above some service pressure 
-	the full required demand is supplied and in between demand varies as a power law function of pressure. Using 
-	PDA is one way to avoid having positive demands at nodes with negative pressures.  
-	
-	EPANET's Hydraulic Analysis Options are used to select a choice of demand model and to supply the parameters used by PDA.
+     -  The next output reporting time period occurs
 
+     -  The next time pattern period occurs
+
+     -  A tank becomes empty or full 
+
+     -  A simple control or rule-based control is activated
+
+   EPANET's hydraulic analysis allows for two different ways of modeling water demands (i.e., consumption) at network junction nodes. 
+   Demand Driven Analysis (DDA) requires that demands at each point in time are fixed values that must 
+   be delivered no matter what nodal pressures and link flows are produced by a hydraulic solution. This 
+   has been the classical approach used to model demands, but it can result in situations where required
+   demands are satisfied at nodes with negative pressures - a physical impossibility. An alternative 
+   approach, known as Pressure Driven Analysis (PDA), allows the actual demand delivered at a node to 
+   depend on the node's pressure. Below some minimum pressure demand is zero, above some service pressure 
+   the full required demand is supplied and in between demand varies as a power law function of pressure. Using 
+   PDA is one way to avoid having positive demands at nodes with negative pressures.  
+   
+   EPANET's :ref:`Hydraulic Analysis Options<table-hyd_ops>` are used to select a choice of demand model and to supply the parameters used by PDA.
 
 .. _sec-wq_sim_model:
 
@@ -907,6 +909,7 @@ Water Quality Simulation Model
    re-ordered from front to back.
    
 **Water Quality Sources**
+
 	Water quality sources are nodes where the quality of external flow entering 
 	the network is specified. They can represent the main treatment works, a 
 	well-head or satellite treatment facility, or an unwanted contaminant intrusion. 

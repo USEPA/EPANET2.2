@@ -18,7 +18,7 @@ Bhave, P. R. 1991. *Analysis of Flow in Water Distribution Networks*.
 Technomic Publishing. Lancaster, PA.
 
 Clark, R. M. 1998. “Chlorine demand and Trihalomethane formation
-kinetics: a second-order model”, *Jour. Env. Eng*., Vol. 124, No. 1,
+kinetics: a second-order model”, *J. Environ. Eng*., Vol. 124, No. 1,
 pp. 16-24.
 
 Davis, M. J., Janke, R., and Taxon, T. N. 2018. "Mass imbalances in 
@@ -43,23 +43,23 @@ algorithm by multiple elimination". *ACM Transactions on Mathematical
 Software*, 11(2), 141-153
 
 Notter, R. H. and Sleicher, C. A. 1971. “The eddy diffusivity in the
-turbulent boundary layer near a wall”, *Chem. Eng. Sci.,* Vol. 26,
+turbulent boundary layer near a wall”, *Chem. Eng. Sci*., Vol. 26,
 pp. 161-171.
 
 Rossman, L. A., Boulos, P. F., and Altman, T. (1993). “Discrete
 volume-element method for network water-quality models”, *J. Water
-Resour. Plng. and Mgmt*, Vol. 119, No. 5, 505-517.
+Resour. Plan. and Manage*., Vol. 119, No. 5, 505-517.
 
 Rossman, L. A., Clark, R. M., and Grayman, W. M. (1994). “Modeling
-chlorine residuals in drinking-water distribution systems”, *Jour.
-Env. Eng*., Vol. 120, No. 4, 803-820.
+chlorine residuals in drinking-water distribution systems”, *J.
+Environ. Eng*., Vol. 120, No. 4, 803-820.
 
 Rossman, L. A. and Boulos, P. F. (1996). “Numerical methods for
 modeling water quality in distribution systems: A comparison”, *J.
-Water Resour. Plng. and Mgmt*, Vol. 122, No. 2, 137-146.
+Water Resour. Plan. and Manage*., Vol. 122, No. 2, 137-146.
 
 Rossman, L. A. and Grayman, W. M. 1999. “Scale-model studies of mixing
-in drinking water storage tanks”, *Jour. Env. Eng*., Vol. 125, No. 8,
+in drinking water storage tanks”, *J. Environ. Eng*., Vol. 125, No. 8,
 pp. 755-761.
 
 Todini E. and Pilati S. (1988). “A gradient method for the solution 
@@ -69,8 +69,8 @@ and Simulation, John Wiley & Sons, pp. 1-20.
 
 Todini E. and Rossman L.A. (2013). “Unified Framework for Deriving 
 Simultaneous Equation Algorithms for Water Distribution Networks.” 
-J. Hydraul. Eng., 139(5), 511-526.
+*J. Hydraul. Eng*., 139(5), 511-526.
 
 Wagner, J. M., Shamir, U., and Marks, D. H. 1988. "Water distribution
-reliability: Simulation methods." *Jour. Water Resour. Plan. Manage*.,
+reliability: Simulation methods." *J. Water Resour. Plan. Manage*.,
 Vol. 114, No. 3, 253-275.
