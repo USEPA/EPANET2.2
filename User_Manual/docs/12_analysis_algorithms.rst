@@ -26,10 +26,7 @@ Hydraulics
   opposite direction. The relation between the frictional head loss and the flow
   in the pipe can be expressed as
 
-  .. math::
-     \begin{align}
-      h_{Lij} = r \: q_{ij} \: |q_{ij}|^{n-1} + m \: q_{ij} \: |q_{ij}|
-     \end{align}
+  .. math:: h_{Lij} = r \: q_{ij} \: |q_{ij}|^{n-1} + m \: q_{ij} \: |q_{ij}|
      :label: eq_headloss
 
   where :math:`h_{Lij}` is head loss, :math:`r` is a resistance coefficient, :math:`n` 
@@ -40,9 +37,9 @@ Hydraulics
   can be represented by a power law of the form
 
   .. math::
-     \begin{align}
+     \begin{aligned}
      h_{Lij} = {-\omega}^{2} \: ( {h}_{0} - r  \: { ( {q_{ij}} \: / \: {\omega} )}^{n} \: )
-     \end{align}
+     \end{aligned}
      :label: eq_headloss_pumps
 
   where :math:`h_{0}` is the shutoff head for the pump, :math:`\omega` is a
@@ -53,9 +50,9 @@ Hydraulics
   requires that
 
   .. math::
-     \begin{align}
+     \begin{aligned}
      h_{i} - h_{j} = h_{Lij} (q_{ij})
-     \end{align}
+     \end{aligned}
      :label: eq_link_energy
 
   where :math:`h_i` and :math:`h_j` are the hydraulic heads at each node, respectively.
@@ -63,9 +60,9 @@ Hydraulics
   Conservation of mass at a node :math:`i` requires that total inflow equal total outflow:
 
   .. math::
-     \begin{align}
+     \begin{aligned}
      {\sum_{j}}\: {q_{ij}} - {D}_{i} = 0
-     \end{align}
+     \end{aligned}
      :label: eq_node_continuity
 
   where the summation is made over all nodes :math:`j` connected to node :math:`i`, and
@@ -88,9 +85,9 @@ Hydraulics
   a set of linear equations for :math:`\boldsymbol{h}`:
 
   .. math::
-     \begin{align}
+     \begin{aligned}
      \boldsymbol{Ah} = \boldsymbol{F}
-     \end{align}
+     \end{aligned}
      :label: eq_matrix_form
 
   where :math:`\boldsymbol{A}` is an :math:`(N \times N)` square symmetric coefficient matrix,
@@ -100,9 +97,9 @@ Hydraulics
   The diagonal elements of the coefficient matrix are:
 
   .. math::
-     \begin{align}
+     \begin{aligned}
      {A}_{ii}= \sum_{j} \: \frac{1}{g_{ij}}
-     \end{align}
+     \end{aligned}
      :label: eq_diag_coeffs
 
   while the non-zero, off-diagonal terms are:
@@ -116,26 +113,26 @@ Hydraulics
   between nodes :math:`i` and :math:`j` with respect to flow. For pipes:
 
   .. math::
-     \begin{align}
+     \begin{aligned}
      {g}_{ij} = n \: r \: {{| q_{ij} | }^{n - 1}} + \frac{\partial r}{\partial q_{ij}} \: |q_{ij}|^n + 2m \: | q_{ij} |
-     \end{align}
+     \end{aligned}
      :label: eq_grad_headloss
 
   while for pumps:
 
   .. math::
-     \begin{align}
+     \begin{aligned}
      {g}_{ij} = n  \: \omega^{2} \: r \: ({q}_{ij} \:/ \: {\omega} )^{n-1}
-     \end{align}
+     \end{aligned}
      :label: eq_grad_headloss_pumps
 
   Each right hand side term :math:`F_{i}` consists of the net flow imbalance at 
   node :math:`i` plus a flow correction factor:
 
   .. math::
-    \begin{align}
+    \begin{aligned}
     {F}_{i} = \sum_{{j}} \: \left( q_{ij} + {h}_{Lij} \: / \: {g_{ij}} \right) - {D}_{i} + \sum_{f} \: {H_{f}} \:/ \: {g_{if}}
-    \end{align}     
+    \end{aligned}     
     :label: eq_matrix_rhs
 
   where the last term applies to any links connecting node :math:`i` to a fixed
@@ -145,17 +142,17 @@ Hydraulics
   new flows in each link between nodes :math:`i` and :math:`j` are found from:
 
   .. math::
-    \begin{align}
+    \begin{aligned}
      {q}_{ij} = {q}_{ij} - {\Delta} \: {q}_{ij}
-    \end{align}
+    \end{aligned}
     :label: eq_flow_update
 
   where
 
   .. math::
-    \begin{align}
+    \begin{aligned}
      {\Delta} \: {q}_{ij} = \left( {h}_{Lij} - {h}_{i} + {h}_{j}\right) \: {/} \: {g_{ij}}
-    \end{align}
+    \end{aligned}
     :label: eq_delta_q
 
   One interesting feature of the GGA is that the flow updating formula always
@@ -176,21 +173,21 @@ Hydraulics
   proposed. Here we use Wagner’s equation (Wagner et al., 1988):
 
   .. math::
-     \begin{align}
+     \begin{aligned}
      q_{Di} =
        \left\{
          \begin{array}{l l}
            D_{i}                                                            & p_{i} \ge P_{f}     \\
-           D_{i} \left( \frac{p_{i} - P_{0}}{P_{f} - P_{0}} \right) ^{e} \; & P_{0} < p_i < P_{f} \\
+           D_{i} \left( \frac{p_{i} - P_{0}}{P_{f} - P_{0}} \right) ^{\frac{1}{e}} \; & P_{0} < p_i < P_{f} \\
            0                                                                & p_{i} \le P_{0}
          \end{array}
        \right.
-     \end{align}
+     \end{aligned}
      :label: eq_wagners
 
   :math:`D_{i}` is the full normal demand at node :math:`i` when the pressure
   :math:`p_{i}` equals or exceeds :math:`P_{f}`, :math:`P_{0}` is the pressure
-  below which the demand is :math:`0`, and :math:`e` is an exponent usually set equal
+  below which the demand is :math:`0`, and :math:`\frac{1}{e}` is a pressure function exponent usually set equal
   to :math:`0.5` (to mimic flow through an orifice).
 
   The power function portion of Wagner's equation can be inverted to express head
@@ -198,9 +195,9 @@ Hydraulics
   to a virtual reservoir with fixed head :math:`P_{0} + E_{i}`:
 
   .. math::
-     \begin{align}
+     \begin{aligned}
      h_{i} - P_{0} - E_{i} = R_{Di} \: {q_{Di}}^{e}
-     \end{align}
+     \end{aligned}
      :label: eq_inv_wagner
 
   where :math:`R_{Di} = (P_{f} - P_{0})/D_{i}^{e}` is the virtual link’s resistance
@@ -218,29 +215,29 @@ Hydraulics
      :math:`D`:
 
      .. math::
-        \begin{align}
+        \begin{aligned}
           g_{D} &= R_{\text{HIGH}} \\
           h_{LD} &= P_f - P_0 + R_{\text{HIGH}} \: (q_{D} - D)
-        \end{align}
+        \end{aligned}
 
      where :math:`R_{\text{HIGH}}` is a large resistance factor (e.g. :math:`10^8`).
 
   2. If the current demand flow :math:`q_D` is less than zero:
 
       .. math::
-        \begin{align}
+        \begin{aligned}
           g_{D} &= R_{\text{HIGH}} \\
           h_{LD} &= R_{\text{HIGH}} \: q_D 
-        \end{align}
+        \end{aligned}
 
   3. Otherwise the power function portion of the inverted Wagner equation is used to
      evaluate the head loss and gradient:
 
      .. math::
-        \begin{align}
-          g_{D} &= e  \: R_{D} \: {q_{D}} ^{e - 1} \\
-          h_{LD} &= g_{D} \: q_D \: / \: e
-        \end{align}
+        \begin{aligned}
+          g_{D} &= e \: R_{D} \: {q_{D}} ^{e - 1} \\
+          h_{LD} &= g_{D} \: q_D / \: e
+        \end{aligned}
 
   These head loss and gradient values are then incorporated into the normal
   set of GGA matrix equations as follows:
@@ -273,7 +270,7 @@ Hydraulics
 
 **Linear Equation Solver**
 
-  The linear system of equations :math:`\boldsymbol{Ah} = \boldsymbol{F}` is solved using
+  The system of linear equations :math:`\boldsymbol{Ah} = \boldsymbol{F}` is solved using
   Cholesky decomposition applied to a sparse representation of the symmetric coefficient matrix
   :math:`\boldsymbol{A}` (George and Liu, 1981). Cholesky decomposition constructs a
   lower triangular matrix :math:`\boldsymbol{L}` such that:
@@ -285,10 +282,10 @@ Hydraulics
   Nodal heads can then be found by solving:  
 
   .. math ::
-     \begin{align}
+     \begin{aligned}
      \boldsymbol{L} \: \boldsymbol{y} = \boldsymbol{F}  \\
      \boldsymbol{L}^{T} \: \boldsymbol{h} = \boldsymbol{y}
-     \end{align}
+     \end{aligned}
 
   where :math:`\boldsymbol{y}` is an intermediate :math:`(N \times 1)` vector. Because
   of the lower triangular structure of :math:`\boldsymbol{L}` this set of equations can
@@ -366,7 +363,7 @@ Hydraulics
 
     .. math::
 
-      \begin{align}
+      \begin{aligned}
        f  &= X1 + R \: (X2 + R \: (X3 + R \: X4)) \\
        R  &= \frac{Re}{2000} \\
        X1 &= 7\: FA - FB \\
@@ -379,7 +376,7 @@ Hydraulics
        Y3 &= -2 \: log(Y2) \\
        AA &= -1.5634601348517065795 \\
        AB &= 0.00328895476345399058690
-      \end{align}
+      \end{aligned}
 
   The only time the head loss resistance coefficient is a function of flow rate is for the
   Darcy-Weisbach's transitional and fully turbulent flow regimes. The contribution that these cases
@@ -437,10 +434,10 @@ Hydraulics
   head loss become:
 
   .. math::
-    \begin{align}
+    \begin{aligned}
       g_{E} &= C* \: \eta \: {|q_{E}|}^{\eta - 1} \\
       h_{LE} &= \gamma \: g_{E} \: q_{E}
-    \end{align}
+    \end{aligned}
 
   where :math:`\eta = 1/\gamma` and :math:`C* = (1/C)^{\eta}`.
   These expressions can then be used in the GGA solution method in the same manner as
@@ -456,10 +453,10 @@ Hydraulics
   Instead closed links are assigned a linear head loss function with a very high resistance coefficient:
 
   .. math::
-    \begin{align}
+    \begin{aligned}
      h_L &= R_{\text{HIGH}} \: q \\
      g &= R_{\text{HIGH}}
-    \end{align}
+    \end{aligned}
 
   where :math:`R_{\text{HIGH}}` is set at 10\ :sup:`8`. 
 
@@ -472,10 +469,10 @@ Hydraulics
   following low resistance head loss equation is used:
 
   .. math::
-    \begin{align}
+    \begin{aligned}
      h_L &= R_{\text{LOW}} \: q \\
      g &= R_{\text{LOW}}
-    \end{align}
+    \end{aligned}
  
   where :math:`R_{\text{LOW}}` is set at 10\ :sup:`-6`.
 
@@ -491,11 +488,11 @@ Hydraulics
     following equations:
 
     .. math::
-       \begin{align}
+       \begin{aligned}
         m &= { 0.02517 \: K} \: / \: {d}^{4}  \\
         g &= 2 \: m \: |q|  \\
         h_L &= g \: q \: / \: 2
-       \end{align}
+       \end{aligned}
 
     *Pressure Breaker Valve (PBV)*
 
@@ -503,10 +500,10 @@ Hydraulics
     This can be enforced by assigning the following values to the link's :math:`g` and :math:`h_{L}` values:
 
     .. math::
-       \begin{align}
+       \begin{aligned}
         g &= 1 \: / \: R_{\text{HIGH}}   \\
         h_L &= H_{L}*
-       \end{align}
+       \end{aligned}
 
     If the valve's minor loss coefficient happens to produce a head loss greater than the setting at
     the valve's current flow rate then the valve is treated as a TCV.
@@ -518,10 +515,10 @@ Hydraulics
     :math:`h_{0}` of that line segment to compute a head loss and its gradient as follows:
 
     .. math::
-      \begin{align}
+      \begin{aligned}
        g &= r   \\
        h_L &= h_{0} + r \: q
-      \end{align}
+      \end{aligned}
 
     *Flow Control Valve (FCV)*
 
@@ -531,10 +528,10 @@ Hydraulics
     downstream node. The resulting expressions for the valve's gradient and head loss are:
 
     .. math::
-      \begin{align}
+      \begin{aligned}
        g &= R_{\text{HIGH}}   \\
        h_L &= g \: (q - Q*)
-      \end{align}
+      \end{aligned}
 
     The right hand side element :math:`F_i` corresponding to the valve's upstream
     node :math:`i` has :math:`Q*` subtracted from it while the element :math:`F_j`
@@ -553,11 +550,11 @@ Hydraulics
     and right hand side vector :math:`\boldsymbol{F}` are made directly:
 
     .. math::
-      \begin{align}
+      \begin{aligned}
         {A}_{jj} &= {A}_{jj} + R_{\text{HIGH}}  \\
         {F}_{j}  &= {F}_{j} + (P* + {E}_{j}) \: R_{\text{HIGH}}  \\
         {F}_{i}  &= {F}_{i} - \Sigma \: {q}_{jk}
-      \end{align}
+      \end{aligned}
 
     where :math:`\Sigma \: {q}_{jk}` is the net flow out of node :math:`j` to all other nodes except
     node :math:`i` (and will be negative because it is a net outflow). The absolute value 
@@ -577,11 +574,11 @@ Hydraulics
     matrix :math:`\boldsymbol{A}` and right hand side vector :math:`\boldsymbol{F}` are made directly:
 
     .. math::
-      \begin{align}
+      \begin{aligned}
         {A}_{ii} &= {A}_{ii} + R_{\text{HIGH}}  \\
         {F}_{i}  &= {F}_{i} + (P* + {E}_{i}) \: R_{\text{HIGH}}  \\
         {F}_{j}  &= {F}_{j} + \Sigma \: {q}_{ki}
-      \end{align}
+      \end{aligned}
 
     where :math:`\Sigma \: {q}_{ki}` is the net flow into node :math:`i` from all other nodes except
     node :math:`j` (and will be positive because it is a net inflow). This quantity also becomes 
@@ -602,10 +599,10 @@ Hydraulics
   equations are used to compute the link's head loss and gradient:
 
   .. math::
-       \begin{align}
+       \begin{aligned}
         h_L &= G_{\text{LOW}} \: q \\
         g   &= G_{\text{LOW}}
-       \end{align}
+       \end{aligned}
 
   This prevents a gradient value from ever being lower than :math:`G_{\text{LOW}}`.
 
@@ -643,7 +640,7 @@ Hydraulics
 
     *Check Valves*
     
-    The psuedo-code used to check the status of a pipe with a check valve looks as follows:
+    The pseudo-code used to check the status of a pipe with a check valve looks as follows:
 
       ::
 
@@ -740,9 +737,9 @@ Hydraulics
      (both real and virtual) must be less than a stipulated **ACCURACY** value:
 
      .. math::
-       \begin{align}
+       \begin{aligned}
        \frac {\sum_{} \: |{\Delta}q|} { \sum_{} \: |q| } < \text{ACCURACY}
-       \end{align}
+       \end{aligned}
 
   2. The error in satisfying the energy balance equation Eq. :eq:`eq_link_energy` for each
      link (excluding closed links and active PRVs/PSVs) must be less than a specified head
@@ -811,10 +808,10 @@ Hydraulics
   replace :math:`dV_{s}/dt` with its forward difference approximation:
 
   .. math::
-      \begin{align}
+      \begin{aligned}
        {V_s}(t + {\Delta}t) &= {V_s}(t) + {Q_{s,net}(t)} \: {\Delta}t  \\
        {H_s}(t + {\Delta}t) &= E_s + Y({V_s}(t + {\Delta}t))
-      \end{align}
+      \end{aligned}
 
   The tank levels :math:`H(t)` and nodal demands existing at time :math:`t` are used in the GGA
   to solve the static network conservation equations resulting in set of new net flows into each
@@ -902,9 +899,9 @@ Water Quality
 
   .. _eq-advec_trans:
   .. math::
-     \begin{align}
+     \begin{aligned}
      \frac{ \partial {C}_{i}} {\partial t} = - u_{i} \frac{\partial{C}_{i}}{\partial x} + r({C}_{i})
-     \end{align}
+     \end{aligned}
      :label: eq:advec_trans
   ..
 
@@ -923,9 +920,9 @@ Water Quality
   For a specific node :math:`k` one can write:
 
   .. math::
-     \begin{align}
+     \begin{aligned}
      C_{i|x=0} = \frac{\sum_{ j \in I_k} Q_{j} C_{j|x= L_j}+Q_{k,ext} C_{k,ext}} {\sum_{j \in I_k} Q_j + Q_{k,ext}}
-     \end{align}
+     \end{aligned}
      :label: eq:nodal_mixing
 
   where :math:`i` = link with flow leaving node :math:`k`, :math:`I_k` = set
@@ -946,9 +943,9 @@ Water Quality
   :math:`W_{s,IN}` is the rate of mass inflow into tank :math:`s`:
 
   .. math::
-     \begin{align}
+     \begin{aligned}
      W_{s,IN} = \sum_{i \in I_{s}} {Q}_{i}{C}_{i | x={L}_{i}}
-     \end{align}
+     \end{aligned}
      :label: eq_mass_inflow
 
   where :math:`I_s` is the set of links flowing into the facility.
@@ -956,9 +953,9 @@ Water Quality
   :math:`Q_{s,OUT}` is the rate of flow out of tank :math:`s`:
 
   .. math::
-     \begin{align}
+     \begin{aligned}
      Q_{s,OUT} = \sum_{j \in O_{s}} {Q}_{j}
-     \end{align}
+     \end{aligned}
      :label: eq_tank_outflow
 
   where :math:`O_s` is the set of links receiving outflow from the tank.
@@ -977,9 +974,9 @@ Water Quality
       equation expresses these phenomena:
 
       .. math::
-         \begin{align} 
+         \begin{aligned} 
          \frac{\partial ({V}_{s} {C}_{s}) }{\partial t} = W_{s,IN} - Q_{s,OUT} \: {C}_{s} - {V}_{s} \: r({C}_{s})
-         \end{align}
+         \end{aligned}
          :label: eq_mixing1
 
       where :math:`V_s` = volume in storage at time :math:`t`, :math:`C_s` = concentration
@@ -995,20 +992,17 @@ Water Quality
       The mass balance on the first compartment is:
 
       .. math::
-        \begin{equation}
-        \begin{split}
+       :label: eq_tank_mixing21
+
         \frac{\partial ({V}_{s1}{C}_{s1})}{\partial t} & = W_{s,IN} - Q_{s,OUT}\:{C}_{s1} - Q_{s,{1{\to}2}}\: C_{s1} \\
         & + Q_{s,{2{\to}1}} \: C_{s2} - {V}_{s1} \: r({C}_{s1})
-        \end{split} 
-        \end{equation}
-        :label: eq_tank_mixing21
 
       while for the second compartment:
 
       .. math::
-        \begin{align}
+        \begin{aligned}
         \frac{\partial ({V}_{s2}{C}_{s2})}{\partial t} = Q_{s,{1{\to}2}} \: C_{s1} - Q_{s,{2{\to}1}} \: C_{s2} - {V}_{s2} \: r({C}_{s2}) 
-        \end{align}
+        \end{aligned}
         :label: eq_tank_mixing22
   
       In these equations :math:`s1` refers to the first compartment, :math:`s2` to the second
@@ -1027,9 +1021,9 @@ Water Quality
      a pipe. The boundary condition at the tank's entrance (where :math:`x = 0`) is
 
      .. math::
-       \begin{equation}
+       \begin{aligned}
        C_{s|x=0} =  W_{s,IN} \: / \: Q_{s,IN}
-       \end{equation}
+       \end{aligned}
        :label: eq_tank_mixing3
 
      where :math:`Q_{s,IN}` is the total inflow into the tank. The outflow concentration from the
@@ -1058,12 +1052,12 @@ Water Quality
   substance then the rate expression becomes
 
   .. math::
-     \begin{align}
+     \begin{aligned}
        \begin{array}{l l}
        R = {K}_{b} ({C}_{L}-C) \: {C}^{n-1}  & for \; n > 0, K_b < 0 \\
        R = {K}_{b} (C - {C}_{L}) \: {C}^{n - 1}  & for \; n > 0, K_b < 0
        \end{array}
-     \end{align}
+     \end{aligned}
 
   where :math:`C_L` = the limiting concentration.
 
