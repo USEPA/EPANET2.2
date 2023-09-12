@@ -3,7 +3,7 @@
 name: Build and Test EPANET 2.2
 on:
   push:
-    branches: [ master, triplet_build ]
+    branches: [ master ]
   pull_request:
     branches: [ master ]
 
