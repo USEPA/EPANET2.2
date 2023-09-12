@@ -50,7 +50,7 @@ target_link_options(epanet2
 )
 
 target_link_libraries(epanet2
-    PRIVATE:
+    PRIVATE
         m
 )
 
