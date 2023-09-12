@@ -2,6 +2,8 @@
 
 ![image37](https://user-images.githubusercontent.com/2470152/154551849-57d48b9d-2ea6-4a0f-90fd-3132c8c2aa8d.png)
 
+## Build Status
+[![Build and Test](../../actions/workflows/build-and-test.yml/badge.svg)](../../actions/workflows/build-and-test.yml)
 
 # Introduction
 EPANET is used to perform extended-period simulation of the hydraulic and water quality behavior within drinking water distribution systems (e.g., pressurized pipe networks), which consist of pipes, nodes (junctions), pumps, valves, storage tanks, and reservoirs. It can be used to track the flow of water in each pipe, the pressure at each node, the height of the water in each tank, a chemical concentration, the age of the water, and source tracing throughout the network during a simulation period.
