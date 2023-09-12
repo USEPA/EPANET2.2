@@ -49,10 +49,11 @@ target_link_options(epanet2
         ">"
 )
 
-target_link_libraries(epanet2
-    PRIVATE
-        m
-)
+if(UNIX)
+    target_link_libraries(epanet2
+        PRIVATE
+            m
+    )
 
 target_include_directories(epanet2
     PUBLIC
