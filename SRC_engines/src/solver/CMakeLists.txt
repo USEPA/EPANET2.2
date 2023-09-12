@@ -49,12 +49,10 @@ target_link_options(epanet2
         ">"
 )
 
-# target_link_libraries(epanet2
-#     PUBLIC
-#         $<$<NOT:$<BOOL:$<C_COMPILER_ID:MSVC>>>:m>
-#         $<$<BOOL:${OpenMP_C_FOUND}>:OpenMP::OpenMP_C>
-#         $<$<BOOL:${OpenMP_AVAILABLE}>:omp>
-# )
+target_link_libraries(epanet2
+    PRIVATE:
+        m
+)
 
 target_include_directories(epanet2
     PUBLIC
