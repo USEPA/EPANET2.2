@@ -22,12 +22,12 @@
 #define VERSION_MAJOR       2
 #define VERSION_MINOR       2
 #define VERSION_PATCH       0
-#define GIT_HASH            "02473a040844ffa4f92c0b8599f6bc48331f7654"
+#define GIT_HASH            "1dd87ecdf7ea48729610355f7d087da064112ca5"
 
 #define PLATFORM            "Windows"
 #define COMPILER            "MSVC"
 #define COMPILER_VERSION    "19.37.32822.0"
-#define BUILD_ID            "2023-09-12T18:01:41Z"
+#define BUILD_ID            "2023-09-12T18:19:20Z"
 
 
 static inline int get_version_legacy() { \

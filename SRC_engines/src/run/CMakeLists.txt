@@ -14,7 +14,7 @@ add_executable(runepanet
 
 target_include_directories(runepanet
     PUBLIC
-        ../../include
+        ${PROJECT_SOURCE_DIR}/include
 )
 
 target_link_libraries(runepanet

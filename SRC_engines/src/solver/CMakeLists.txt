@@ -1,8 +1,8 @@
 include(../../extern/version.cmake)
 
 set(EPANET_PUBLIC_HEADERS
-    ${PROJECT_SOURCE_DIR}/include/epanet2.h
     ${PROJECT_SOURCE_DIR}/include/epanet2_2.h
+    ${PROJECT_SOURCE_DIR}/include/epanet2.h
 )
 
 file(GLOB
@@ -60,7 +60,7 @@ target_include_directories(epanet2
     PUBLIC
         $<INSTALL_INTERFACE:${INCLUDE_DIST}>
     PRIVATE
-        $<BUILD_INTERFACE:{PROJECT_SOURCE_DIR}/include
+        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
 )
 
 include(GenerateExportHeader)
