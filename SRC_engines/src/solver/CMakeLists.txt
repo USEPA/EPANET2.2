@@ -54,6 +54,7 @@ if(UNIX)
         PRIVATE
             m
     )
+endif()
 
 target_include_directories(epanet2
     PUBLIC
