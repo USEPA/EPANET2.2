@@ -36,8 +36,8 @@ jobs:
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
       run: |
         cd SRC_engines
-        cmake -B .\build ${{ matrix.cmake_generator }} .
-        cmake --build .\build --config Release --target package
+        cmake -B build ${{ matrix.cmake_generator }} .
+        cmake --build build --config Release --target package
 
     - name: Upload artifacts
       if: ${{ always() }}
@@ -45,5 +45,5 @@ jobs:
       with:
         name: build-test-artifacts
         path: |
-          build/*.zip
-          build/*.tar.gz
+          *.zip
+          *.tar.gz
