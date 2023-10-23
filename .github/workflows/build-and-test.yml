@@ -45,5 +45,5 @@ jobs:
       with:
         name: build-test-artifacts
         path: |
-          *.zip
-          *.tar.gz
+          SRC_engines/build/*.zip
+          SRC_engines/build/*.tar.gz
