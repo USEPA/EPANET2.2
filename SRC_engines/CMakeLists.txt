@@ -16,7 +16,6 @@ list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
 # Sets the position independent code property for all targets
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
-
 # Sets default install prefix when cmakecache is initialized for first time
 if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
     set(CMAKE_INSTALL_PREFIX ${CMAKE_BINARY_DIR}/install CACHE PATH "..." FORCE)
@@ -31,7 +30,7 @@ set(CONFIG_DIST  "cmake")
 # option(BUILD_TESTS "Build component tests (requires Boost)" OFF)
 option(BUILD_DEF   "Builds library with def file interface" OFF)
 
-# Added option to statically link libraries to address GitHub Ubuntu 20.04 symbol errors (issue #340)
+# Added option to statically link libraries to address GitHub
 option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
 
 add_subdirectory(src/solver)
