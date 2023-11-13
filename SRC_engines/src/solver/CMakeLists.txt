@@ -1,8 +1,20 @@
+#
+# CMakeLists.txt - CMake configuration file for EPANET solver
+#
+# Created: Nov 13, 2023
+# Modified: Nov 13, 2023
+#
+# Author: Caleb Buahin
+#         US EPA ORD/CESER
+#
+
+
 include(../../extern/version.cmake)
 
 set(EPANET_PUBLIC_HEADERS
-    ${PROJECT_SOURCE_DIR}/include/epanet2_2.h
     ${PROJECT_SOURCE_DIR}/include/epanet2.h
+    ${PROJECT_SOURCE_DIR}/include/epanet2_2.h
+    ${PROJECT_SOURCE_DIR}/include/epanet2_enums.h
 )
 
 file(GLOB
@@ -49,23 +61,16 @@ target_link_options(epanet2
         ">"
 )
 
-if(UNIX)
-    target_link_libraries(epanet2
-        PRIVATE
-            m
-    )
-endif()
+target_link_libraries(swmm5
+    PUBLIC
+        $<$<NOT:$<BOOL:$<C_COMPILER_ID:MSVC>>>:m>
+)
+
 
 target_include_directories(epanet2
     PUBLIC
+        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:${INCLUDE_DIST}>
-    PRIVATE
-        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
-)
-
-include(GenerateExportHeader)
-generate_export_header(epanet2
-    STATIC_DEFINE SHARED_EXPORTS_BUILT_AS_STATIC
 )
 
 if(APPLE)
