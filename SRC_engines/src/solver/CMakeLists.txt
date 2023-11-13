@@ -61,7 +61,7 @@ target_link_options(epanet2
         ">"
 )
 
-target_link_libraries(swmm5
+target_link_libraries(epanet2
     PUBLIC
         $<$<NOT:$<BOOL:$<C_COMPILER_ID:MSVC>>>:m>
 )
@@ -69,7 +69,7 @@ target_link_libraries(swmm5
 
 target_include_directories(epanet2
     PUBLIC
-        $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+        $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:${INCLUDE_DIST}>
 )
 
