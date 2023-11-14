@@ -1,3 +1,14 @@
+#
+# CMakeLists.txt - CMake configuration file for EPANET
+#
+# Created: Nov 13, 2023
+# Modified: Nov 13, 2023
+#
+# Author: Caleb Buahin
+#         US EPA ORD/CESER
+#
+
+
 cmake_minimum_required(VERSION 3.9)
 
 if("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_SOURCE_DIR}")

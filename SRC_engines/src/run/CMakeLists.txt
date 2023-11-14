@@ -1,3 +1,13 @@
+#
+# CMakeLists.txt - CMake configuration file for EPANET Runner
+#
+# Created: Nov 13, 2023
+# Modified: Nov 13, 2023
+#
+# Author: Caleb Buahin
+#         US EPA ORD/CESER
+#
+
 if(APPLE)
     set(RPATH_ROOT "@loader_path")
 else()
@@ -37,9 +47,3 @@ install(TARGETS runepanet
 )
 
 
-# # copy runswmm to build tree for testing
-# add_custom_command(TARGET runepanet POST_BUILD
-#     COMMAND ${CMAKE_COMMAND} -E copy
-#         $<TARGET_FILE:runepanet>
-#         ${CMAKE_BINARY_DIR}/bin/$<CONFIGURATION>/$<TARGET_FILE_NAME:runepanet>
-# )
