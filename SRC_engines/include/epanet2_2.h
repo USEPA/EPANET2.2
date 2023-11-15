@@ -18,24 +18,8 @@
 #ifndef EPANET2_2_H
 #define EPANET2_2_H
 
-#ifdef epanet_py_EXPORTS
-  #define DLLEXPORT
-#else
-  #ifndef DLLEXPORT
-    #ifdef _WIN32
-      #ifdef epanet2_EXPORTS
-        #define DLLEXPORT __declspec(dllexport) __stdcall
-      #else
-        #define DLLEXPORT __declspec(dllimport) __stdcall
-      #endif
-    #elif defined(__CYGWIN__)
-      #define DLLEXPORT __stdcall
-    #else
-      #define DLLEXPORT
-    #endif
-  #endif
-#endif
 
+#include "epanet2_export.h"
 #include "epanet2_enums.h"
 
 // --- Declare the EPANET toolkit functions

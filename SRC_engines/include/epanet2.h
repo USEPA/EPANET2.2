@@ -36,20 +36,18 @@ function in epanet2_2.h.
   #define EN_API_FLOAT_TYPE float
 #endif
 
-#ifndef DLLEXPORT
-  #ifdef _WIN32
-    #ifdef epanet2_EXPORTS
-      #define DLLEXPORT __declspec(dllexport) __stdcall
-    #else
-      #define DLLEXPORT __declspec(dllimport) __stdcall
-    #endif
-  #elif defined(__CYGWIN__)
-    #define DLLEXPORT __stdcall
-  #else
-    #define DLLEXPORT
-  #endif
+
+// --- define WINDOWS
+
+#undef WINDOWS
+#ifdef _WIN32
+  #define WINDOWS
+#endif
+#ifdef __WIN32__
+  #define WINDOWS
 #endif
 
+#include "epanet2_export.h"
 #include "epanet2_enums.h"
 
 // --- Declare the EPANET toolkit functions

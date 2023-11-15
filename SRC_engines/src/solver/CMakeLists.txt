@@ -73,6 +73,19 @@ target_include_directories(epanet2
         $<INSTALL_INTERFACE:${INCLUDE_DIST}>
 )
 
+include(GenerateExportHeader)
+generate_export_header(epanet2
+    BASE_NAME epanet2
+    EXPORT_MACRO_NAME DLLEXPORT
+    EXPORT_FILE_NAME epanet2_export.h
+    STATIC_DEFINE SHARED_EXPORTS_BUILT_AS_STATIC
+)
+
+file(COPY ${CMAKE_CURRENT_BINARY_DIR}/epanet2_export.h
+    DESTINATION ${PROJECT_SOURCE_DIR}/include
+)
+
+
 if(APPLE)
     set(LIB_ROOT "@loader_path")
 else()
