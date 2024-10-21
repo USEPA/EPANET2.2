@@ -13,7 +13,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [windows-latest, ubuntu-latest, macos-latest]
+        os: [windows-latest, ubuntu-latest, macos-13, macos-14]
         include:
           - os: windows-latest
             cmake_generator: -G "Visual Studio 17 2022" -A "x64"
@@ -21,7 +21,10 @@ jobs:
           - os: ubuntu-latest
             cmake_generator: -G "Unix Makefiles"
             continue-on-error: false
-          - os: macos-latest
+          - os: macos-13
+            cmake_generator: -G "Xcode"
+            continue-on-error: false
+          - os: macos-14
             cmake_generator: -G "Xcode"
             continue-on-error: false
     runs-on: ${{ matrix.os }}
