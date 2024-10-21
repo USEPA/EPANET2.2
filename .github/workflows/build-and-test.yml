@@ -42,6 +42,11 @@ jobs:
         cmake -B build ${{ matrix.cmake_generator }} .
         cmake --build build --config Release --target package
 
+    - name: Qualify darwin versions
+      run: |
+        mv SRC_engines/build/*.zip  SRC_engines/build/*_${{ matrix.os }}.zip
+        mv SRC_engines/build/*.tar.gz SRC_engines/build/*_${{ matrix.os }}.tar.gz
+        
     - name: Upload artifacts
       if: ${{ always() }}
       uses: actions/upload-artifact@v3
