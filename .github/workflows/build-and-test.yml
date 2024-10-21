@@ -24,9 +24,11 @@ jobs:
           - os: macos-13
             cmake_generator: -G "Xcode"
             continue-on-error: false
+            alias: intel-mac
           - os: macos-14
             cmake_generator: -G "Xcode"
             continue-on-error: false
+            alias: apple-silicon
     runs-on: ${{ matrix.os }}
     continue-on-error: ${{ matrix.continue-on-error }}
 
@@ -46,10 +48,10 @@ jobs:
       if: matrix.os == 'macos-13' || matrix.os == 'macos-14'
       run: |
         cd SRC_engines/build
-        for file in *.zip; do mv "$file" "${file%.zip}-${{ matrix.os }}.zip"; done
-        for file in *.tar.gz; do mv "$file" "${file%.tar.gz}-${{ matrix.os }}.tar.gz"; done
+        for file in *.zip; do mv "$file" "${file%.zip}-${{ matrix.alias }}.zip"; done
+        for file in *.tar.gz; do mv "$file" "${file%.tar.gz}-${{ matrix.alias }}.tar.gz"; done
         cd ../..
-        
+
     - name: Upload artifacts
       if: ${{ always() }}
       uses: actions/upload-artifact@v3
