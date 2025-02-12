@@ -34,29 +34,29 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Build
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
       run: |
         cd SRC_engines
-        cmake -B build ${{ matrix.cmake_generator }} .
-        cmake --build build --config Release --target package
+        cmake -B build-${{ matrix.alias }} ${{ matrix.cmake_generator }} .
+        cmake --build build-${{ matrix.alias }} --config Release --target package
 
     - name: Qualify darwin artifacts with os versions
       if: matrix.os == 'macos-13' || matrix.os == 'macos-14'
       run: |
-        cd SRC_engines/build
+        cd SRC_engines/build-${{ matrix.alias }}
         for file in *.zip; do mv "$file" "${file%.zip}-${{ matrix.alias }}.zip"; done
         for file in *.tar.gz; do mv "$file" "${file%.tar.gz}-${{ matrix.alias }}.tar.gz"; done
         cd ../..
 
     - name: Upload artifacts
       if: ${{ always() }}
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: build-test-artifacts
         path: |
-          SRC_engines/build/*.zip
-          SRC_engines/build/*.tar.gz
+          SRC_engines/build-${{ matrix.alias }}/*.zip
+          SRC_engines/build-${{ matrix.alias }}/*.tar.gz
