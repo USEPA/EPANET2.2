@@ -18,9 +18,11 @@ jobs:
           - os: windows-latest
             cmake_generator: -G "Visual Studio 17 2022" -A "x64"
             continue-on-error: false
+            alias: win64
           - os: ubuntu-latest
             cmake_generator: -G "Unix Makefiles"
             continue-on-error: false
+            alias: linux
           - os: macos-13
             cmake_generator: -G "Xcode"
             continue-on-error: false
