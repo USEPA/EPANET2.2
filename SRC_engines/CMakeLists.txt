@@ -19,7 +19,12 @@ project(
     "EPANET"
     VERSION 2.2.0
     DESCRIPTION "The EPANET Program for Water Distribution System Analysis"
+    LANGUAGES C CXX
 )
+
+# Set the C++ standard to C++11
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Append local dir to module search path
 list(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake)
