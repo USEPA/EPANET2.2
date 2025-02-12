@@ -56,7 +56,7 @@ jobs:
       if: ${{ always() }}
       uses: actions/upload-artifact@v4
       with:
-        name: build-artifacts-${{ matrix.alias }}
+        name: 'build-artifacts-${{ matrix.alias }}'
         path: |
           SRC_engines/build-${{ matrix.alias }}/*.zip
           SRC_engines/build-${{ matrix.alias }}/*.tar.gz
