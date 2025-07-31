@@ -33,7 +33,7 @@ jobs:
         run: sphinx-build -b html $DOCS_DIR $DOCS_DIR/_build/html
 
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ${{ env.DOCS_DIR }}/_build/html
 
@@ -45,4 +45,4 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
