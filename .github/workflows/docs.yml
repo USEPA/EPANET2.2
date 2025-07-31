@@ -8,12 +8,16 @@ on:
 
 permissions:
   contents: write                 # gh-pages push
+  pages: write
+  id-token: write
 
+env:
+  DOCS_DIR: User_Manual/docs  # ← centralised path
+      
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      DOCS_DIR: User_Manual/docs  # ← centralised path
+    
     steps:
       - uses: actions/checkout@v4
 
@@ -23,15 +27,22 @@ jobs:
           python-version: '3.x'
 
       - name: Install Sphinx + theme
-        run: |
-          pip install -r $DOCS_DIR/requirements.txt
+        run: pip install -r $DOCS_DIR/requirements.txt
 
       - name: Build HTML
-        run: |
-          sphinx-build -b html $DOCS_DIR $DOCS_DIR/_build/html
+        run: sphinx-build -b html $DOCS_DIR $DOCS_DIR/_build/html
 
-      - name: Deploy to gh-pages
-        uses: peaceiris/actions-gh-pages@v4    # rock-solid Pages deployer
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ${{ env.DOCS_DIR }}/_build/html
+          path: ${{ env.DOCS_DIR }}/_build/html
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages          # GitHub creates this env automatically
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v2
