@@ -1,36 +1,36 @@
-name: Deploy EPANET 2.2 docs to GitHub Pages
+name: Build & Deploy EPANET2.2 Sphinx Docs
 
 on:
   push:
-    branches: [ master ]          # or main
-  pull_request:
-    branches: [ master ]
+    branches:
+      - master    
+  workflow_dispatch:  # allows manual runs from the Actions tab
 
-permissions:
-  contents: write                 # gh-pages push
-  pages: write
-  id-token: write
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
-env:
-  DOCS_DIR: User_Manual/docs  # ← centralised path
-      
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+    env:
+      DOCS_DIR: User_Manual/docs
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
-      - name: Install Sphinx + theme
-        run: pip install -r $DOCS_DIR/requirements.txt
+      - name: Install Sphinx dependencies
+        run: |
+          pip install -r ${{ env.DOCS_DIR }}/requirements.txt
 
       - name: Build HTML
-        run: sphinx-build -b html $DOCS_DIR $DOCS_DIR/_build/html
+        run: |
+          sphinx-build -b html ${{ env.DOCS_DIR }} ${{ env.DOCS_DIR }}/_build/html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
@@ -40,9 +40,13 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write          # to push to the github-pages environment
+      id-token: write       # required for OIDC deployment
     environment:
-      name: github-pages          # GitHub creates this env automatically
+      name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - id: deployment
+      - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
