@@ -3,12 +3,8 @@ name: Build & Deploy EPANET2.2 Sphinx Docs
 on:
   push:
     branches:
-      - master    
-  workflow_dispatch:  # allows manual runs from the Actions tab
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
+      - master    # or "main"
+  workflow_dispatch:  # optional manual trigger
 
 jobs:
   build:
@@ -25,28 +21,26 @@ jobs:
           python-version: '3.x'
 
       - name: Install Sphinx dependencies
-        run: |
-          pip install -r ${{ env.DOCS_DIR }}/requirements.txt
+        run: pip install -r ${{ env.DOCS_DIR }}/requirements.txt
 
       - name: Build HTML
-        run: |
-          sphinx-build -b html ${{ env.DOCS_DIR }} ${{ env.DOCS_DIR }}/_build/html
+        run: sphinx-build -b html ${{ env.DOCS_DIR }} ${{ env.DOCS_DIR }}/_build/html
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ env.DOCS_DIR }}/_build/html
+          path: ${{ env.DOCS_DIR }}/_build/html   # build output to deploy :contentReference[oaicite:0]{index=0}
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
     permissions:
-      pages: write          # to push to the github-pages environment
-      id-token: write       # required for OIDC deployment
+      pages: write        # required to deploy to Pages
+      id-token: write     # required for OIDC verification
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4       # official Pages deploy action :contentReference[oaicite:1]{index=1}
