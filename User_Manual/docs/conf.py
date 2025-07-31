@@ -98,6 +98,16 @@ html_theme = 'sphinx_rtd_theme'
 # documentation.
 #
 # html_theme_options = {}
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+
+# (Optional) tweak how deep the nav goes, whether sections collapse, etc.
+html_theme_options = {
+    "collapse_navigation": False,  # keep the full tree expanded
+    "navigation_depth": 4,         # how many levels to show
+    "sticky_navigation": True,     # nav stays visible on scroll
+    "titles_only": False,          # show section titles too
+}
+
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
