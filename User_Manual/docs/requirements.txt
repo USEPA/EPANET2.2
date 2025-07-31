@@ -1,0 +1,3 @@
+# User_Manual/docs/requirements.txt
+sphinx
+sphinx_rtd_theme          # or whatever theme you use
