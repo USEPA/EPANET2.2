@@ -317,8 +317,8 @@ Prolog Section
   | Pressure Units Option   |    Integer     |    4                  |
   |                         |                |                       |
   |   - 0 = psi             |                |                       |
-  |   - 1 = meters          |                |                       |
-  |   - 2 = kPa             |                |                       |
+  |   - 1 = kPa             |                |                       |
+  |   - 2 = meters          |                |                       |
   +-------------------------+----------------+-----------------------+
   | Statistics Flag         |    Integer     |    4                  |
   |                         |                |                       |
