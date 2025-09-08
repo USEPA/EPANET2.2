@@ -89,7 +89,7 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+html_theme = "sphinx_rtd_theme"
 #latex_logo = './media/logo.png'
 
 
@@ -102,11 +102,10 @@ html_theme = 'sphinx_rtd_theme'
 
 # (Optional) tweak how deep the nav goes, whether sections collapse, etc.
 html_theme_options = {
-    "collapse_navigation": True,  # keep the full tree expanded
+    "collapse_navigation": False,  # keep the full tree expanded
     "navigation_depth": 4,         # how many levels to show
     "sticky_navigation": True,     # nav stays visible on scroll
-    "titles_only": True,          # show section titles too
-    "show_toc_level": 2,
+    "titles_only": False,          # show section titles too
 
 }
 
