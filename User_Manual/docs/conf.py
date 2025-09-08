@@ -12,8 +12,8 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-#import os
-#import sys
+import os
+import sys
 #sys.path.insert(0, os.path.abspath('.'))
 import sphinx_rtd_theme
 
@@ -98,21 +98,24 @@ html_theme = 'sphinx_rtd_theme'
 # documentation.
 #
 # html_theme_options = {}
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+#html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # (Optional) tweak how deep the nav goes, whether sections collapse, etc.
 html_theme_options = {
-    "collapse_navigation": False,  # keep the full tree expanded
+    "collapse_navigation": True,  # keep the full tree expanded
     "navigation_depth": 4,         # how many levels to show
     "sticky_navigation": True,     # nav stays visible on scroll
-    "titles_only": False,          # show section titles too
+    "titles_only": True,          # show section titles too
+    "show_toc_level": 2,
+
 }
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+#html_static_path = ['_static']
+html_static_path = []
 
 html_context = {
     'css_files': [
