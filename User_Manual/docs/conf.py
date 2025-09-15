@@ -12,10 +12,10 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-import os
-import sys
+#import os
+#import sys
 #sys.path.insert(0, os.path.abspath('.'))
-import sphinx_rtd_theme
+#import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
@@ -43,16 +43,16 @@ release = '2.2'
 #    'sphinx.ext.todo',
 #    'sphinx.ext.mathjax'
 #]
-extensions = ['sphinx.ext.autodoc',
-    'sphinx.ext.doctest',
-    'sphinx.ext.intersphinx',
-    "sphinx_rtd_theme",
-    'sphinx.ext.todo',
-    'sphinx.ext.coverage',
-    'sphinx.ext.mathjax',
-    'sphinx.ext.ifconfig',
-    'sphinx.ext.viewcode',
-    'sphinx.ext.githubpages']
+#extensions = ['sphinx.ext.autodoc',
+#    'sphinx.ext.doctest',
+#    'sphinx.ext.intersphinx',
+#    "sphinx_rtd_theme",
+#    'sphinx.ext.todo',
+#    'sphinx.ext.coverage',
+#    'sphinx.ext.mathjax',
+#    'sphinx.ext.ifconfig',
+#    'sphinx.ext.viewcode',
+#    'sphinx.ext.githubpages']
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
@@ -101,13 +101,13 @@ html_theme = "sphinx_rtd_theme"
 #html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # (Optional) tweak how deep the nav goes, whether sections collapse, etc.
-html_theme_options = {
-    "collapse_navigation": False,  # keep the full tree expanded
-    "navigation_depth": 4,         # how many levels to show
-    "sticky_navigation": True,     # nav stays visible on scroll
-    "titles_only": False,          # show section titles too
-
-}
+#html_theme_options = {
+#    "collapse_navigation": False,  # keep the full tree expanded
+#    "navigation_depth": 4,         # how many levels to show
+#    "sticky_navigation": True,     # nav stays visible on scroll
+#    "titles_only": False,          # show section titles too
+#
+#}
 
 
 # Add any paths that contain custom static files (such as style sheets) here,
@@ -116,11 +116,11 @@ html_theme_options = {
 #html_static_path = ['_static']
 html_static_path = []
 
-html_context = {
-    'css_files': [
-        '_static/theme_overrides.css',  # override wide tables in RTD theme
-        ],
-     }
+#html_context = {
+#    'css_files': [
+#        '_static/theme_overrides.css',  # override wide tables in RTD theme
+#        ],
+#     }
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
